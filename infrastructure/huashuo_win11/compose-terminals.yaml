@@ -1,0 +1,75 @@
+name: plc-win11-terminals
+
+x-terminal-common: &terminal-common
+  image: plc-win11-runtime:0cff9eb0
+  pull_policy: never
+  environment: &terminal-environment
+    VERSION: "11"
+    LANGUAGE: "Chinese"
+    REGION: "zh-CN"
+    KEYBOARD: "zh-CN"
+    TZ: "Asia/Hong_Kong"
+    USERNAME: "qyb"
+    PASSWORD: "${RDP_PASSWORD}"
+    CPU_CORES: "8"
+    RAM_SIZE: "16G"
+    DISK_SIZE: "96G"
+    DISK_FMT: "qcow2"
+    MACHINE: "q35"
+    BOOT_MODE: "windows_secure"
+    NETWORK: "nat"
+    ADAPTER: "e1000e"
+    PROTECT: "Y"
+  devices:
+    - /dev/kvm
+    - /dev/net/tun
+  cap_add:
+    - NET_ADMIN
+  restart: unless-stopped
+  stop_grace_period: 2m
+
+services:
+  terminal-01:
+    <<: *terminal-common
+    container_name: plc-win11-01
+    environment:
+      <<: *terminal-environment
+      HOST: "PLC-WIN11-01"
+    ports:
+      - "8101:8006"
+      - "33901:3389/tcp"
+      - "33901:3389/udp"
+    volumes:
+      - /home/qyb/plc-win11/terminal-01:/storage
+      - /home/qyb/plc-win11/shared/terminal-01:/shared
+      - /home/qyb/plc-win11/installers:/shared/installers:ro
+
+  terminal-02:
+    <<: *terminal-common
+    container_name: plc-win11-02
+    environment:
+      <<: *terminal-environment
+      HOST: "PLC-WIN11-02"
+    ports:
+      - "8102:8006"
+      - "33902:3389/tcp"
+      - "33902:3389/udp"
+    volumes:
+      - /home/qyb/plc-win11/terminal-02:/storage
+      - /home/qyb/plc-win11/shared/terminal-02:/shared
+      - /home/qyb/plc-win11/installers:/shared/installers:ro
+
+  terminal-03:
+    <<: *terminal-common
+    container_name: plc-win11-03
+    environment:
+      <<: *terminal-environment
+      HOST: "PLC-WIN11-03"
+    ports:
+      - "8103:8006"
+      - "33903:3389/tcp"
+      - "33903:3389/udp"
+    volumes:
+      - /home/qyb/plc-win11/terminal-03:/storage
+      - /home/qyb/plc-win11/shared/terminal-03:/shared
+      - /home/qyb/plc-win11/installers:/shared/installers:ro

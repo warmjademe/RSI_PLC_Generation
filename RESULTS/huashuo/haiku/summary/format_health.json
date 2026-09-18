@@ -1,0 +1,60 @@
+{
+  "epoch": 1789635446.5640616,
+  "arms": {
+    "Full": {
+      "counts": {
+        "plc.generate:accepted": 727,
+        "source_encoding_warnings": 0,
+        "knowledge.review:accepted": 78,
+        "knowledge.curate:accepted": 83,
+        "plc.generate:rejected": 2
+      },
+      "rejection_reasons": {
+        "malformed JSON candidate: Expecting value: line 5 column 26 (char 8211)": 1,
+        "incomplete JSON candidate; complete closing delimiters are required": 1
+      },
+      "recent_generation_replies": 40,
+      "recent_rejected": 1,
+      "recent_rejection_rate": 0.025
+    },
+    "NoAssets": {
+      "counts": {
+        "plc.generate:accepted": 770,
+        "source_encoding_warnings": 0,
+        "plc.generate:rejected": 2
+      },
+      "rejection_reasons": {
+        "native response did not finish normally": 1,
+        "multiple candidate objects or complete ST blocks": 1
+      },
+      "recent_generation_replies": 40,
+      "recent_rejected": 0,
+      "recent_rejection_rate": 0.0
+    },
+    "NoFeedback": {
+      "counts": {
+        "plc.generate:accepted": 849,
+        "source_encoding_warnings": 0,
+        "knowledge.curate:accepted": 81,
+        "knowledge.review:accepted": 72
+      },
+      "rejection_reasons": {},
+      "recent_generation_replies": 40,
+      "recent_rejected": 0,
+      "recent_rejection_rate": 0.0
+    },
+    "Neither": {
+      "counts": {
+        "plc.generate:accepted": 780,
+        "source_encoding_warnings": 0
+      },
+      "rejection_reasons": {},
+      "recent_generation_replies": 40,
+      "recent_rejected": 0,
+      "recent_rejection_rate": 0.0
+    }
+  },
+  "scope": "Completed native replies with normalization receipts; transport failures remain in cost/operations ledgers.",
+  "score_modified": false,
+  "automatic_retries": false
+}

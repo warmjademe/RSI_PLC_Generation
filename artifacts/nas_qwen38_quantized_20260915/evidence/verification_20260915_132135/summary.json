@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "epoch": 1789449718.9497807,
+  "model": "qwen3.8-27b-q4_k_m",
+  "base_url": "http://127.0.0.1:18185/v1",
+  "single_stream_output_tokens_per_second": 39.95041814853824,
+  "parallel_clients": 8,
+  "parallel_wall_seconds": 11.629427112871781,
+  "parallel_aggregate_output_tokens_per_second": 176.10497749568552,
+  "parallel_median_client_output_tokens_per_second": 22.03902365269733,
+  "parallel_first_content_seconds": [
+    1.2055547588970512,
+    1.1985319138038903,
+    1.2017791271209717,
+    1.2041695879306644,
+    1.1974682949949056,
+    1.2007847679778934,
+    1.203286882955581,
+    1.199571245815605
+  ],
+  "cancelled_request_slot_released": true,
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 24002 MiB, 18 %",
+  "baseline_experiment_remains_stopped": true,
+  "scope": "short synthetic text probes; no PLC benchmark accuracy or full-context capacity claim",
+  "evidence_directory": "/home/qyb/qwen38-27b-quantized/evidence/verification_20260915_132135"
+}

@@ -1,0 +1,36 @@
+{
+  "provider": {
+    "kind": "replay",
+    "responses": [
+      {
+        "role": "plc.generate",
+        "response": {
+          "code": "FUNCTION_BLOCK Demo\nVAR_INPUT\n Start : BOOL;\nEND_VAR\nVAR_OUTPUT\n Run : BOOL;\nEND_VAR\nRun := Start;\nEND_FUNCTION_BLOCK\n"
+        }
+      }
+    ]
+  },
+  "budgets": {
+    "max_candidates": 5,
+    "max_model_calls": 100,
+    "max_tool_calls": 50,
+    "max_total_tokens": 500000,
+    "max_output_tokens": 4096,
+    "max_wall_seconds": 1800
+  },
+  "method": {
+    "memory_characters": 24000,
+    "validation_stages": [
+      "compile",
+      "specification"
+    ],
+    "unknown_tool_retries": 1,
+    "memory_root": "../artifacts/OurMethod",
+    "use_code_memory": true,
+    "use_repair_memory": true,
+    "program_top_k": 2,
+    "repair_top_k": 2,
+    "code_memory_characters": 14000
+  },
+  "validators": {}
+}

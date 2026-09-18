@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "independent_reranking": true,
+  "counts": {
+    "tasks": 100,
+    "test_suites": 100,
+    "evaluation_plans": 100
+  },
+  "first_id": "TR_C10_C10_09",
+  "last_id": "TR_C10_C08_05",
+  "min_lines": 100,
+  "median_lines": 110.0,
+  "max_lines": 160,
+  "manifest_sha256": "252ce3da4b63a66fe0aba91cda71a279f6d9e61a0a421c25cc10493756d79e34"
+}

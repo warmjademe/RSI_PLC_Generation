@@ -1,0 +1,37 @@
+{
+  "nas_root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1",
+  "local_dataset": "/Users/qyb/RESEARCH/RSI_PLC_Generation/source_codes/test_dataset_100_tasks",
+  "status": "pass",
+  "epoch": 1789539687.4884582,
+  "units": {
+    "plc-qwen38q4-100-max10-v1-vanilla-initial": "active",
+    "plc-qwen38q4-100-max10-v1-fewshot-initial": "active",
+    "plc-qwen38q4-100-max10-v1-finalcoderag-initial": "active",
+    "plc-qwen38q4-100-max10-v1-rawtrajectoryrag-initial": "active",
+    "plc-qwen38q4-100-max10-v1-memento-initial": "active",
+    "plc-qwen38q4-100-max10-v1-evermemos-initial": "active",
+    "plc-qwen38q4-100-max10-v1-memskill-initial": "active",
+    "plc-qwen38q4-100-max10-v1-msce-initial": "active"
+  },
+  "timer_active": "active",
+  "timer_enabled": "enabled",
+  "preserved_old_results": 185,
+  "old_run_still_stopped": true,
+  "current_results": 1,
+  "partial_audit": {
+    "status": "pass",
+    "partial": true,
+    "tasks": 1,
+    "model_calls": 1,
+    "actual_input_tokens": 1664,
+    "actual_output_tokens": 2430,
+    "unknown_usage_calls": 0,
+    "guard_aborted_calls": 0,
+    "bounded_learning_calls": 0,
+    "epoch": 1789539687.4857547,
+    "preloaded_history_records": 0,
+    "formal_executed": false
+  },
+  "dataset_manifest_sha256": "252ce3da4b63a66fe0aba91cda71a279f6d9e61a0a421c25cc10493756d79e34",
+  "protocol_lock_sha256": "e43ffb72cdb6a65b402935f3e53ee34c67279ae0d11dd51bb17f2a018c2d5b81"
+}

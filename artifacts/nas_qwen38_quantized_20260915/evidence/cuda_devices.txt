@@ -1,0 +1,4 @@
+Available devices:
+  CUDA0: NVIDIA GeForce RTX 4090 (24077 MiB, 23674 MiB free)
+0.00.328.608 I load_backend: loaded CUDA backend from /home/qyb/qwen38-27b-quantized/runtime/app/libggml-cuda.so
+0.00.334.081 I load_backend: loaded CPU backend from /home/qyb/qwen38-27b-quantized/runtime/app/libggml-cpu-haswell.so

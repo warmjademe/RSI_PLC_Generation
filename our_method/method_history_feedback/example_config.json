@@ -1,0 +1,38 @@
+{
+  "provider": {
+    "kind": "openai_compatible",
+    "base_url": "https://REPLACE_PROVIDER.invalid/v1",
+    "model": "REPLACE_MODEL",
+    "api_key_env": "PLC_HISTORY_API_KEY",
+    "temperature": 0,
+    "timeout_seconds": 180
+  },
+  "protocol_candidate_limit": 10,
+  "budgets": {
+    "max_candidates": 10,
+    "max_model_calls": 64,
+    "max_tool_calls": 120,
+    "max_total_tokens": 2000000,
+    "max_output_tokens": 16384,
+    "max_wall_seconds": 86400
+  },
+  "validation_stages": ["compile", "runtime", "formal"],
+  "validators": {
+    "compile": {"kind": "unavailable"},
+    "runtime": {"kind": "unavailable"},
+    "formal": {"kind": "unavailable"}
+  },
+  "method": {
+    "use_task_feedback": true,
+    "use_cross_task_knowledge": true,
+    "learn_cross_task_knowledge": true,
+    "reflect_after_attempt": true,
+    "unknown_tool_retries": 1,
+    "max_local_attempts": 4,
+    "max_knowledge_items": 4,
+    "knowledge_char_budget": 10000,
+    "max_curation_attempts": 4,
+    "max_new_claims": 3,
+    "min_support_tasks": 1
+  }
+}

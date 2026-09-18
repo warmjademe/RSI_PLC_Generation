@@ -1,0 +1,78 @@
+Sep 15 13:19:25 qyb-SJHY-ubuntu25 systemd[2968]: Starting nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference...
+Sep 15 13:19:25 qyb-SJHY-ubuntu25 systemd[2968]: Started nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference.
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.239.868 W Setting 'enable_thinking' via --chat-template-kwargs is deprecated. Use --reasoning on / --reasoning off instead.
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.240.001 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.246.429 I srv          init: The UI is disabled
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.246.431 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.248.573 W srv  llama_server: -----------------
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.248.575 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.248.575 W srv  llama_server: this can be a security risk (cross-origin attacks)
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.248.575 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.248.576 W srv  llama_server: -----------------
+Sep 15 13:19:26 qyb-SJHY-ubuntu25 python3[2397964]: 0.00.252.788 I srv    load_model: loading model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.706.135 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 720.28 MiB on device 0: cudaMalloc failed: out of memory
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.706.141 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 755269888
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.706.142 E graph_reserve: failed to allocate compute buffers
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.716.010 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.716.033 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.716.036 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.716.039 E srv    load_model: failed to create_context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.716.041 I srv    operator(): operator(): cleaning up before exit...
+Sep 15 13:19:33 qyb-SJHY-ubuntu25 python3[2397964]: 0.07.719.382 E srv  llama_server: exiting due to model loading error
+Sep 15 13:19:34 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Main process exited, code=exited, status=1/FAILURE
+Sep 15 13:19:34 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Failed with result 'exit-code'.
+Sep 15 13:19:34 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Consumed 7.919s CPU time, 261.9M memory peak.
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Scheduled restart job, restart counter is at 1.
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 systemd[2968]: Starting nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference...
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 systemd[2968]: Started nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference.
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.693 W Setting 'enable_thinking' via --chat-template-kwargs is deprecated. Use --reasoning on / --reasoning off instead.
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.799 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.893 I srv          init: The UI is disabled
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.894 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.948 W srv  llama_server: -----------------
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.949 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.949 W srv  llama_server: this can be a security risk (cross-origin attacks)
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.949 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.122.949 W srv  llama_server: -----------------
+Sep 15 13:19:49 qyb-SJHY-ubuntu25 python3[2398200]: 0.00.124.143 I srv    load_model: loading model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.538.680 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 720.28 MiB on device 0: cudaMalloc failed: out of memory
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.538.685 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 755269888
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.538.686 E graph_reserve: failed to allocate compute buffers
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.544.696 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.544.702 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.544.705 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.544.723 E srv    load_model: failed to create_context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.544.725 I srv    operator(): operator(): cleaning up before exit...
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 python3[2398200]: 0.07.545.154 E srv  llama_server: exiting due to model loading error
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Main process exited, code=exited, status=1/FAILURE
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Failed with result 'exit-code'.
+Sep 15 13:19:57 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Consumed 7.809s CPU time, 249.4M memory peak.
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Scheduled restart job, restart counter is at 2.
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 systemd[2968]: Starting nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference...
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 systemd[2968]: Started nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference.
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.577 W Setting 'enable_thinking' via --chat-template-kwargs is deprecated. Use --reasoning on / --reasoning off instead.
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.684 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.775 I srv          init: The UI is disabled
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.776 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.829 W srv  llama_server: -----------------
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.829 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.829 W srv  llama_server: this can be a security risk (cross-origin attacks)
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.829 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.124.830 W srv  llama_server: -----------------
+Sep 15 13:20:12 qyb-SJHY-ubuntu25 python3[2398491]: 0.00.126.013 I srv    load_model: loading model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.503.681 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 720.28 MiB on device 0: cudaMalloc failed: out of memory
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.503.687 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 755269888
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.503.687 E graph_reserve: failed to allocate compute buffers
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.509.633 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.509.657 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.509.660 E cmn  common_init_: failed to create context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.509.664 E srv    load_model: failed to create_context with model '/home/qyb/qwen38-27b-quantized/models/Qwen3.8-27B-Q4_K_M.gguf'
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.509.666 I srv    operator(): operator(): cleaning up before exit...
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 python3[2398491]: 0.07.510.053 E srv  llama_server: exiting due to model loading error
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Main process exited, code=exited, status=1/FAILURE
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Failed with result 'exit-code'.
+Sep 15 13:20:20 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Consumed 7.775s CPU time, 249.3M memory peak.
+Sep 15 13:20:35 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Scheduled restart job, restart counter is at 3.
+Sep 15 13:20:35 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Start request repeated too quickly.
+Sep 15 13:20:35 qyb-SJHY-ubuntu25 systemd[2968]: nas-qwen38-27b-q4km.service: Failed with result 'exit-code'.
+Sep 15 13:20:35 qyb-SJHY-ubuntu25 systemd[2968]: Failed to start nas-qwen38-27b-q4km.service - Qwen3.8-27B Q4_K_M local GPU inference.

@@ -1,0 +1,42 @@
+{
+  "id": "TR_C05_C10_02",
+  "requirement": "# TR_C05_C10_02: Composed supervisory control: Star-delta motor transition -> Alternating two-pump starts\n\n## Objective\n\nImplement `TR_C05_C10_02` as an IEC-ST Core v1 function block in the Timers and timeouts category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A_Start shall energize A_Main and A_Star when no A_Fault, A_Stop, or A_Overload is active.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: After 500 ms in A_Star, A_Star shall turn off before A_Delta turns on after a 200 ms transition gap.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: A_Star and A_Delta shall never be TRUE together.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_Stop or A_Overload shall immediately turn off all contactors; A_Overload latches A_Fault.\n- **R5**: Subsystem A shall satisfy: A_Reset clears A_Fault only while A_Start is FALSE and A_Overload is FALSE.\n- **R6** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Each rising B_Demand shall start at most one available pump.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When both pumps are available, successive B_Demand episodes shall alternate the selected pump.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: If the preferred pump is B_Unavailable, the other available pump shall run.\n- **R9**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Unavailable shall be TRUE exactly when B_Demand is TRUE and neither pump is available.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset without B_Demand shall set B_NextPump to 1 and stop both pumps.\n- **R11** **[safety-critical]**: A TRUE A_Main shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R12** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R13**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R14** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: A_Start may remain TRUE during normal operation.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The function block is called exactly once per PLC scan.\n- Subsystem B: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C05_C10_02",
+    "inputs": {
+      "A_Start": "BOOL",
+      "A_Stop": "BOOL",
+      "A_Overload": "BOOL",
+      "A_Reset": "BOOL",
+      "B_Demand": "BOOL",
+      "B_Pump1Available": "BOOL",
+      "B_Pump2Available": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Main": "BOOL",
+      "A_Star": "BOOL",
+      "A_Delta": "BOOL",
+      "A_Fault": "BOOL",
+      "B_Pump1Run": "BOOL",
+      "B_Pump2Run": "BOOL",
+      "B_NextPump": "INT",
+      "B_Unavailable": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

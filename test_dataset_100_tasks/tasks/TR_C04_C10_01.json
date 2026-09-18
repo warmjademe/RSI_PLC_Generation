@@ -1,0 +1,47 @@
+{
+  "id": "TR_C04_C10_01",
+  "requirement": "# TR_C04_C10_01: Composed supervisory control: Qualified dual-edge recorder with saturation and re-arm -> Fair two-client resource arbiter with emergency lockout\n\n## Objective\n\nImplement `TR_C04_C10_01` as an IEC-ST Core v1 function block in the Edge and event handling category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1** **[safety-critical]**: Subsystem A shall satisfy: Only a qualified, non-inhibited rising edge observed while not previously A_Locked may be accepted.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: Simultaneous eligible edges shall accept A only.\n- **R3**: Subsystem A shall satisfy: Each accepted event increments A_Count once and records A_LastSource.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: Except for a qualified A_Reset scan, A_Count shall saturate at A_MaxCount and latch A_Locked; A_MaxCount less than or equal to zero locks without counting.\n- **R5**: Subsystem A shall satisfy: A held-high event shall not retrigger until observed low and then rising again.\n- **R6**: Subsystem A shall satisfy: A_Reset clears A_Count, A_Locked, and A_LastSource only while both events are low.\n- **R7** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_GrantA and B_GrantB shall never be TRUE simultaneously.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When idle, a single request shall receive the resource; simultaneous requests shall follow B_Turn.\n- **R9**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Done shall release the resource before a new owner is selected on a later scan.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: After A completes B_Turn shall prefer B, and after B completes B_Turn shall prefer A.\n- **R11** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Emergency shall immediately revoke all grants and latch B_LockedOut.\n- **R12**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset shall clear B_LockedOut only while B_Emergency and both requests are FALSE.\n- **R13** **[safety-critical]**: A TRUE A_PulseA shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R14** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R15**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R16** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The function block is called exactly once per PLC scan.\n- Subsystem A: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem A: A_MaxCount remains constant during a test.\n- Subsystem B: The function block is called exactly once per PLC scan.\n- Subsystem B: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C04_C10_01",
+    "inputs": {
+      "A_EventA": "BOOL",
+      "A_EventB": "BOOL",
+      "A_Qualify": "BOOL",
+      "A_Inhibit": "BOOL",
+      "A_Reset": "BOOL",
+      "A_MaxCount": "INT",
+      "B_RequestA": "BOOL",
+      "B_RequestB": "BOOL",
+      "B_Done": "BOOL",
+      "B_Emergency": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_PulseA": "BOOL",
+      "A_PulseB": "BOOL",
+      "A_Count": "INT",
+      "A_Locked": "BOOL",
+      "A_LastSource": "INT",
+      "B_GrantA": "BOOL",
+      "B_GrantB": "BOOL",
+      "B_Busy": "BOOL",
+      "B_Turn": "INT",
+      "B_LockedOut": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

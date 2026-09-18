@@ -1,0 +1,1520 @@
+{
+  "id": "TR_C05_C06_03",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": true,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": true,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 10,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": false,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": false,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": false,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": false,
+              "A_MotorFeedback": false,
+              "A_Reset": true,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": true,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": false,
+              "A_MotorFeedback": true,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": true,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": true,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": true,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT06",
+        "steps": [
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": false,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 0,
+              "B_RejectLimit": 0,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Start": true,
+              "A_Stop": false,
+              "A_Permit": true,
+              "A_OilPressure": true,
+              "A_MotorFeedback": false,
+              "A_Reset": false,
+              "B_Inspected": true,
+              "B_Rejected": false,
+              "B_Reset": false,
+              "B_WindowSize": 2,
+              "B_RejectLimit": 1,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_WindowCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_WindowComplete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C05_C06_03.json",
+  "source_suite_sha256": "293a3500ee20b2a0d0b214c4403e18c88ab831dea4899c62506b79491d771ff9",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

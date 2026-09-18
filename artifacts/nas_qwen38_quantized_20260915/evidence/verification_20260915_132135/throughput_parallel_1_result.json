@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 11.612932161893696,
+  "first_content_seconds": 1.1985319138038903,
+  "content": "# Offline Verification Checklist for PLC Structured Text (ST) Programs\n**Version 1.0**\n**Scope:** Comprehensive static analysis, logical review, and simulation-based verification prior to online deployment.\n\n---\n\n### **Section 1: Code Structure & Syntax Compliance**\n1. **Syntax Validation:** Confirm that the code compiles without any syntax errors or warnings in the target IDE (e.g., TIA Portal, Studio 5000, CODESYS, Codesys, etc.).\n2. **Naming Convention Consistency:** Verify that all variables, tags, and function block instances follow the project’s defined naming convention (e.g., `PLC_`, `DI_`, `DO_`, `FB_`, `FC_`).\n3. **Comment Coverage:** Ensure that every function, function block, and complex logic block contains header comments explaining purpose, inputs, outputs, and author/date.\n4. **Inline Comments:** Verify that non-obvious logic, magic numbers, or complex calculations have inline comments explaining the \"why\" and \"how.\"\n5. **Indentation & Formatting:** Confirm consistent indentation (e.g., 4 spaces) and alignment of keywords (`IF`, `THEN`, `ELSE`, `END_IF`)",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 256,
+    "prompt_tokens": 41,
+    "total_tokens": 297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 22.044389516028538
+}

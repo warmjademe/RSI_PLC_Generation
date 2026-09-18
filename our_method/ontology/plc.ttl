@@ -1,0 +1,57 @@
+@prefix plc: <urn:plc-rsi:ontology:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+plc:Ontology a owl:Ontology ; owl:versionInfo "evidence-schema-v0" ;
+    rdfs:comment "Observed PLC training evidence. Ontological consistency is not program correctness." .
+plc:TrainingTask a owl:Class .
+plc:ProgramArtifact a owl:Class .
+plc:Variable a owl:Class .
+plc:CheckResult a owl:Class .
+plc:RepairObservation a owl:Class .
+plc:FullyPassingRepair a owl:Class ; rdfs:subClassOf plc:RepairObservation ;
+    rdfs:comment "Different before/after code; a recorded before failure; all recorded after checks pass, including compile/runtime/formal. Not causal or transfer proof." .
+plc:SkillProposal a owl:Class .
+plc:ReleasedSkill a owl:Class ; rdfs:subClassOf plc:SkillProposal .
+plc:ApplicabilityCondition a owl:Class .
+plc:AssetVersion a owl:Class .
+plc:AdmissionEvidence a owl:Class .
+plc:Stage a owl:Class .
+plc:Outcome a owl:Class .
+plc:Compile a plc:Stage .
+plc:Runtime a plc:Stage .
+plc:Formal a plc:Stage .
+plc:Pass a plc:Outcome .
+plc:Fail a plc:Outcome .
+plc:Unknown a plc:Outcome .
+plc:Skipped a plc:Outcome .
+
+plc:task a owl:ObjectProperty ; rdfs:range plc:TrainingTask .
+plc:before a owl:ObjectProperty ; rdfs:domain plc:RepairObservation ; rdfs:range plc:ProgramArtifact .
+plc:after a owl:ObjectProperty ; rdfs:domain plc:RepairObservation ; rdfs:range plc:ProgramArtifact .
+plc:hasCheck a owl:ObjectProperty ; rdfs:domain plc:ProgramArtifact ; rdfs:range plc:CheckResult .
+plc:hasVariable a owl:ObjectProperty ; rdfs:domain plc:TrainingTask ; rdfs:range plc:Variable .
+plc:hasFinalProgram a owl:ObjectProperty ; rdfs:domain plc:TrainingTask ; rdfs:range plc:ProgramArtifact .
+plc:stage a owl:ObjectProperty ; rdfs:domain plc:CheckResult ; rdfs:range plc:Stage .
+plc:outcome a owl:ObjectProperty ; rdfs:domain plc:CheckResult ; rdfs:range plc:Outcome .
+plc:supportedBy a owl:ObjectProperty ; rdfs:domain plc:SkillProposal ; rdfs:range plc:RepairObservation .
+plc:requires a owl:ObjectProperty ; rdfs:domain plc:SkillProposal ; rdfs:range plc:ApplicabilityCondition .
+plc:admittedBy a owl:ObjectProperty ; rdfs:domain plc:ReleasedSkill ; rdfs:range plc:AdmissionEvidence .
+plc:inVersion a owl:ObjectProperty ; rdfs:range plc:AssetVersion .
+plc:parentVersion a owl:ObjectProperty ; rdfs:domain plc:AssetVersion ; rdfs:range plc:AssetVersion .
+plc:sourceSha256 a owl:DatatypeProperty ; rdfs:range xsd:string .
+plc:codeSha256 a owl:DatatypeProperty ; rdfs:domain plc:ProgramArtifact ; rdfs:range xsd:string .
+plc:recordId a owl:DatatypeProperty ; rdfs:range xsd:string .
+plc:split a owl:DatatypeProperty ; rdfs:domain plc:TrainingTask ; rdfs:range xsd:string .
+plc:target a owl:DatatypeProperty ; rdfs:domain plc:TrainingTask ; rdfs:range xsd:string .
+plc:requirement a owl:DatatypeProperty ; rdfs:domain plc:TrainingTask ; rdfs:range xsd:string .
+plc:name a owl:DatatypeProperty ; rdfs:domain plc:Variable ; rdfs:range xsd:string .
+plc:datatype a owl:DatatypeProperty ; rdfs:domain plc:Variable ; rdfs:range xsd:string .
+plc:direction a owl:DatatypeProperty ; rdfs:domain plc:Variable ; rdfs:range xsd:string .
+plc:diagnostic a owl:DatatypeProperty ; rdfs:domain plc:CheckResult ; rdfs:range xsd:string .
+plc:operation a owl:DatatypeProperty ; rdfs:domain plc:SkillProposal ; rdfs:range xsd:string .
+plc:conditionField a owl:DatatypeProperty ; rdfs:domain plc:ApplicabilityCondition ; rdfs:range xsd:string .
+plc:conditionOperator a owl:DatatypeProperty ; rdfs:domain plc:ApplicabilityCondition ; rdfs:range xsd:string .
+plc:conditionValue a owl:DatatypeProperty ; rdfs:domain plc:ApplicabilityCondition ; rdfs:range xsd:string .

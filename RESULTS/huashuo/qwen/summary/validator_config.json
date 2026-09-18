@@ -1,0 +1,5 @@
+{
+  "tool_root": "/home/qyb/RESEARCH/RSI_PLC_Generation/dataset1_calibration_20260910/toolchain_mixed117_state_qualified_v2",
+  "scan_period_ms": 100,
+  "formal_enabled": false
+}

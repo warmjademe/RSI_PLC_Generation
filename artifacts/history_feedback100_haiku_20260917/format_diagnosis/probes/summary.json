@@ -1,0 +1,292 @@
+{
+  "time": "2026-09-17T09:02:00.735160+08:00",
+  "calls": 12,
+  "results": [
+    {
+      "name": "current_schema_stream_1",
+      "started_epoch": 1789606878.134005,
+      "http_status": 200,
+      "request_id": "13a02e64-5759-4642-b3f3-b2cd3c159d60",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "READY",
+      "usage": {
+        "input_tokens": 31,
+        "output_tokens": 1,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.0952653870917857
+    },
+    {
+      "name": "current_schema_stream_2",
+      "started_epoch": 1789606878.134556,
+      "http_status": 200,
+      "request_id": "45fa619a-1f0b-4803-a7bc-9d7224b05320",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "READY",
+      "usage": {
+        "cache_creation_input_tokens": 1646,
+        "cache_read_input_tokens": 2468,
+        "input_tokens": 1,
+        "output_tokens": 2,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1646
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 33.34224352892488
+    },
+    {
+      "name": "current_schema_stream_3",
+      "started_epoch": 1789606880.2295823,
+      "http_status": 200,
+      "request_id": "8ca0cbdb-e69a-4b46-bf64-fd1a714c6a77",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "READY",
+      "usage": {
+        "cache_creation_input_tokens": 1627,
+        "cache_read_input_tokens": 2439,
+        "input_tokens": 1,
+        "output_tokens": 2,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1627
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 31.288113201968372
+    },
+    {
+      "name": "legacy_schema_stream",
+      "started_epoch": 1789606911.4771633,
+      "http_status": 200,
+      "request_id": "8799b633-470b-4522-abe1-46f58e8884d8",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "READY",
+      "usage": {
+        "cache_creation_input_tokens": 1646,
+        "cache_read_input_tokens": 2468,
+        "input_tokens": 1,
+        "output_tokens": 2,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1646
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.9499042499810457
+    },
+    {
+      "name": "current_schema_nonstream",
+      "started_epoch": 1789606911.517962,
+      "http_status": 200,
+      "request_id": "e8bd6e1e-262d-4c18-aa9d-0b6c0dc1b0f6",
+      "content_type": "application/json; charset=utf-8",
+      "model": "claude-haiku-4-5-20251001",
+      "usage": {
+        "input_tokens": 30,
+        "output_tokens": 1,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "stop_reason": "end_turn",
+      "content": [
+        {
+          "text": "READY",
+          "type": "text"
+        }
+      ],
+      "text": "READY",
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.289063150063157
+    },
+    {
+      "name": "forced_strict_tool",
+      "started_epoch": 1789606912.807287,
+      "http_status": 200,
+      "request_id": "01dd8fde-c5e6-4762-8b4d-cc3377f26b70",
+      "content_type": "application/json",
+      "model": "claude-haiku-4-5-20251001",
+      "usage": {
+        "cache_creation_input_tokens": 1855,
+        "cache_read_input_tokens": 2782,
+        "input_tokens": 1,
+        "output_tokens": 1
+      },
+      "stop_reason": "end_turn",
+      "content": [
+        {
+          "text": "READY",
+          "type": "text"
+        }
+      ],
+      "text": "READY",
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.6524239629507065
+    },
+    {
+      "name": "system_string_1",
+      "started_epoch": 1789606914.4273539,
+      "http_status": 200,
+      "request_id": "cf5cfd05-fd97-405d-97c4-a36ef9e7b58b",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "I can't discuss that.",
+      "usage": {
+        "input_tokens": 35,
+        "output_tokens": 7,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.3095084060914814
+    },
+    {
+      "name": "system_string_2",
+      "started_epoch": 1789606914.4599395,
+      "http_status": 200,
+      "request_id": "bb7fa56f-90af-4e29-891c-6c9dfd17e619",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "Hey, I'm here. What can I help you with?",
+      "usage": {
+        "cache_creation_input_tokens": 1646,
+        "cache_read_input_tokens": 2468,
+        "input_tokens": 1,
+        "output_tokens": 14,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1646
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.863922532182187
+    },
+    {
+      "name": "system_string_3",
+      "started_epoch": 1789606915.7375057,
+      "http_status": 200,
+      "request_id": "ef7052c4-c754-45ee-8d3a-c6e9fdd7237c",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "I can't discuss that.",
+      "usage": {
+        "input_tokens": 33,
+        "output_tokens": 7,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.4326583249494433
+    },
+    {
+      "name": "system_array",
+      "started_epoch": 1789606917.1704745,
+      "http_status": 200,
+      "request_id": "ede75467-6a7e-45af-ae2a-214ba228f27f",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "Hey, I'm Kiro. I'm here to help you build, debug, and ship code. I can edit files, run commands, explore your codebase, and work through problems with you. \n\nWhat are you working on?",
+      "usage": {
+        "cache_creation_input_tokens": 1662,
+        "cache_read_input_tokens": 2491,
+        "input_tokens": 1,
+        "output_tokens": 54,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1662
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 3.1130545660853386
+    },
+    {
+      "name": "user_instruction_control",
+      "started_epoch": 1789606917.3242524,
+      "http_status": 200,
+      "request_id": "195786a1-2c11-4db7-a592-6652bd723fa8",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "I can't do that. I'm Kiro, an AI development environment. I follow my system instructions, which guide how I assist with coding, infrastructure, and professional work.\n\nIf you have a development task or question, I'm ready to help.",
+      "usage": {
+        "input_tokens": 28,
+        "output_tokens": 57,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.898798355832696
+    },
+    {
+      "name": "user_json_control",
+      "started_epoch": 1789606919.2232926,
+      "http_status": 200,
+      "request_id": "b09f409d-5f4b-4c89-85f1-33ce378b1047",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "```json\n{\"marker\":\"USER_JSON_DIAG_617904\"}\n```",
+      "usage": {
+        "input_tokens": 39,
+        "output_tokens": 16,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.5112564470618963
+    }
+  ],
+  "reported_tokens": 25564,
+  "official_model_backend_identity_independently_verified": false
+}

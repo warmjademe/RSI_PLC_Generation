@@ -1,0 +1,44 @@
+{
+  "id": "TR_C05_C10_01",
+  "requirement": "# TR_C05_C10_01: Composed supervisory control: Two-stage timed startup with safe abort -> Duty-standby pump feedback failover\n\n## Objective\n\nImplement `TR_C05_C10_01` as an IEC-ST Core v1 function block in the Timers and timeouts category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A_Start with A_Permit shall command A_Stage1 immediately.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: A_Stage2 shall not A_Start until A_Stage1Feedback has remained TRUE for at least 300 ms.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: If A_Stage1Feedback is absent for 600 ms after A_Stage1 starts, A_Fault shall latch and both stages shall A_Stop.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_Stop or loss of A_Permit shall turn both stages off immediately.\n- **R5**: Subsystem A shall satisfy: A_Fault remains latched until A_Stop is TRUE while A_Start is FALSE.\n- **R6**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A new B_Demand shall command the available duty pump, or the standby if the duty pump is unavailable.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: If the commanded pump lacks feedback for 300 ms, control shall transfer to an available standby pump.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Both run commands shall never be TRUE simultaneously.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Failure shall latch if B_Demand cannot be served by an available pump with feedback after failover.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Demand FALSE shall stop both pumps; B_Reset may clear B_Failure only with B_Demand FALSE.\n- **R11** **[safety-critical]**: A TRUE A_Stage1 shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R12** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R13**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R14** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: A_Permit changes are sampled at scan A_Start.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: Pump feedback is sampled at scan start.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C05_C10_01",
+    "inputs": {
+      "A_Start": "BOOL",
+      "A_Stop": "BOOL",
+      "A_Permit": "BOOL",
+      "A_Stage1Feedback": "BOOL",
+      "B_Demand": "BOOL",
+      "B_DutyIsPump1": "BOOL",
+      "B_Pump1Available": "BOOL",
+      "B_Pump2Available": "BOOL",
+      "B_Pump1Feedback": "BOOL",
+      "B_Pump2Feedback": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Stage1": "BOOL",
+      "A_Stage2": "BOOL",
+      "A_Fault": "BOOL",
+      "B_Pump1Run": "BOOL",
+      "B_Pump2Run": "BOOL",
+      "B_FailoverActive": "BOOL",
+      "B_Failure": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

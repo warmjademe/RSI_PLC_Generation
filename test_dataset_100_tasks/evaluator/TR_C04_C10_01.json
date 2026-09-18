@@ -1,0 +1,1580 @@
+{
+  "id": "TR_C04_C10_01",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": true,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": true,
+              "B_Done": true,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": true,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": true,
+              "A_MaxCount": 2,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": true,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_RequestA": false,
+              "B_RequestB": false,
+              "B_Done": false,
+              "B_Emergency": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_GrantA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_GrantB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Busy",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Turn",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C04_C10_01.json",
+  "source_suite_sha256": "d99e5825f94af5e87a96a045de08287522ed4c31f7e3b781d869bb978dfcd2e8",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

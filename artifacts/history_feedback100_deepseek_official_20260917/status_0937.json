@@ -1,0 +1,112 @@
+{
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1",
+  "summary": {
+    "epoch": 1789609030.299215,
+    "planned": 400,
+    "tasks_started": 55,
+    "tasks_completed": 51,
+    "successful_tasks": 38,
+    "completed_budgets_reconciled": true,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 10,
+        "success": 7,
+        "success_rate": 0.7,
+        "mean_calls_until_success_among_successes": 3.142857142857143,
+        "mean_accounted_tokens_until_success_among_successes": 36368.42857142857,
+        "completed_tasks_total_calls_including_failures_and_learning": 60,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 745557,
+        "completed_tasks_reported_tokens": 745557,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 8.571428571428571,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 106508.14285714286
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 20,
+        "success": 19,
+        "success_rate": 0.95,
+        "mean_calls_until_success_among_successes": 2.8947368421052633,
+        "mean_accounted_tokens_until_success_among_successes": 30550.157894736843,
+        "completed_tasks_total_calls_including_failures_and_learning": 65,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 703885,
+        "completed_tasks_reported_tokens": 703885,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 3.4210526315789473,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 37046.57894736842
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 10,
+        "success": 6,
+        "success_rate": 0.6,
+        "mean_calls_until_success_among_successes": 2.1666666666666665,
+        "mean_accounted_tokens_until_success_among_successes": 21283.5,
+        "completed_tasks_total_calls_including_failures_and_learning": 67,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 773890,
+        "completed_tasks_reported_tokens": 773890,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 11.166666666666666,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 128981.66666666667
+      },
+      {
+        "arm": "Neither",
+        "completed": 11,
+        "success": 6,
+        "success_rate": 0.5454545454545454,
+        "mean_calls_until_success_among_successes": 1.6666666666666667,
+        "mean_accounted_tokens_until_success_among_successes": 14292.166666666666,
+        "completed_tasks_total_calls_including_failures_and_learning": 60,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 514563,
+        "completed_tasks_reported_tokens": 514563,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 10.0,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 85760.5
+      }
+    ],
+    "previous_interrupted_launch_cost": null,
+    "definitions": {
+      "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+      "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+      "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+      "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+      "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+    }
+  },
+  "all_started_totals": {
+    "model_calls": 274,
+    "reported_usage_calls": 270,
+    "estimated_usage_calls": 0,
+    "pending_usage_calls": 4,
+    "reported_input_tokens": 2397792,
+    "reported_output_tokens": 520576,
+    "reported_total_tokens": 2918368
+  },
+  "ledger_epoch": 1789609030.299215,
+  "all_roles_normalization": {
+    "accepted": 282
+  },
+  "generation_normalization": {
+    "accepted": 260
+  },
+  "rejection_reasons": {},
+  "same_prefix": {
+    "tasks_per_arm": 10,
+    "success": {
+      "Full": 7,
+      "NoAssets": 9,
+      "NoFeedback": 6,
+      "Neither": 6
+    }
+  },
+  "noassets_candidate_outcomes": {
+    "passed": 19,
+    "runtime_fail": 30,
+    "compile_fail": 18
+  }
+}

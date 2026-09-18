@@ -1,0 +1,1097 @@
+{
+  "id": "TR_C03_C10_09",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": false,
+              "A_AirflowOK": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 8,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": true,
+              "A_GuardClosed": true,
+              "A_DamperOpen": false,
+              "A_AirflowOK": false,
+              "A_Reset": true,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": false,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": false,
+              "A_AirflowOK": false,
+              "A_Reset": true,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_Pump1Available": false,
+              "B_Pump2Available": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_DamperCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FanCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_HeaterCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_HeatRequest": true,
+              "A_Stop": false,
+              "A_GuardClosed": true,
+              "A_DamperOpen": true,
+              "A_AirflowOK": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_NextPump",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Unavailable",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C03_C10_09.json",
+  "source_suite_sha256": "35888b40650fc3f212f53d825ca001b741a95eb9ea971a7edda4c77d0fa00c26",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

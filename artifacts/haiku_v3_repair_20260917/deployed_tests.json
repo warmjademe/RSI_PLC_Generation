@@ -1,0 +1,8 @@
+{
+  "epoch": 1789615886.3414207,
+  "passed": true,
+  "tests": 26,
+  "failures": 0,
+  "errors": 0,
+  "fixture_amendment": "EOF-delimited incomplete SSE fixture to exercise same missing-final-receipt branch on Python 3.13; frozen production source untouched."
+}

@@ -1,0 +1,20 @@
+{
+  "model_id": "Qwen/Qwen3.8-27B-Q4_K_M",
+  "model_file": "/home/qyb/llm-services/qwen3.8-27b/models/Qwen3.8-27B-Q4_K_M.gguf",
+  "model_bytes": 18973870432,
+  "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+  "engine": "/home/qyb/llm-services/qwen3.8-27b/experiment_20260915/runtime/app/llama-server",
+  "unit": "qwen38-27b.service",
+  "host": "127.0.0.1",
+  "port": 18080,
+  "parallel_slots": 4,
+  "shared_context_tokens": 196608,
+  "slot_context_limit": 131072,
+  "kv_cache_type": "q4_0",
+  "batch_size": 1024,
+  "ubatch_size": 128,
+  "enable_thinking": false,
+  "default_max_output_tokens": 65536,
+  "deployment_root": "/home/qyb/llm-services/qwen3.8-27b/experiment_20260915",
+  "scope": "Local inference for four history-feedback ablations; token reservations must fit the shared KV pool"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "qwen3.8-27b-q4_k_m",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a detailed numbered checklist for offline verification of PLC Structured Text programs. Checklist version 0: include at least 40 detailed items."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0,
+  "seed": 20260915,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  }
+}

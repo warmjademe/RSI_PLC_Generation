@@ -1,0 +1,623 @@
+{
+  "schema_version": "1.0",
+  "suite": "openplc",
+  "task_id": "TR_C03_C10_08",
+  "scan_period_ms": 100,
+  "real_absolute_tolerance": 0.001,
+  "oracle_source": "independent_base_oracles_plus_explicit_composition_rules",
+  "independent_requirement_oracle": true,
+  "cases": [
+    {
+      "name": "A_feedback_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R6"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": true,
+            "A_FanCommand": true,
+            "A_HeaterCommand": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": true,
+            "A_FanCommand": true,
+            "A_HeaterCommand": true,
+            "A_Fault": false,
+            "A_State": 2,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT01"
+    },
+    {
+      "name": "B_feedback_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": true,
+            "A_FanCommand": true,
+            "A_HeaterCommand": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 1,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": true,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": true,
+            "B_GrantB": false,
+            "B_Busy": true,
+            "B_Turn": 1,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": true,
+            "B_Done": true,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 2,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": true,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": true,
+            "B_Busy": true,
+            "B_Turn": 2,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT02"
+    },
+    {
+      "name": "A_hidden_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": false,
+            "A_AirflowOK": false,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": false,
+            "A_FanCommand": false,
+            "A_HeaterCommand": false,
+            "A_Fault": true,
+            "A_State": 0,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false
+          },
+          "repeat": 8,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": true,
+            "A_GuardClosed": true,
+            "A_DamperOpen": false,
+            "A_AirflowOK": false,
+            "A_Reset": true,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": false,
+            "A_FanCommand": false,
+            "A_HeaterCommand": false,
+            "A_Fault": true,
+            "A_State": 0,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": false,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": false,
+            "A_AirflowOK": false,
+            "A_Reset": true,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": false,
+            "A_FanCommand": false,
+            "A_HeaterCommand": false,
+            "A_Fault": false,
+            "A_State": 0,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT03"
+    },
+    {
+      "name": "B_hidden_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R7",
+        "R11",
+        "R12"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": true,
+            "A_FanCommand": true,
+            "A_HeaterCommand": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": true,
+            "B_GrantB": false,
+            "B_Busy": true,
+            "B_Turn": 1,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": true,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 1,
+            "B_LockedOut": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": true,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 1,
+            "B_LockedOut": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 1,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT04"
+    },
+    {
+      "name": "cross_reset_priority",
+      "description": "The explicitly specified supervisory reset isolates B in the same scan.",
+      "requirement_ids": [
+        "R13",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_DamperCommand": true,
+            "A_FanCommand": true,
+            "A_HeaterCommand": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 1,
+            "B_LockedOut": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_HeatRequest": true,
+            "A_Stop": false,
+            "A_GuardClosed": true,
+            "A_DamperOpen": true,
+            "A_AirflowOK": true,
+            "A_Reset": false,
+            "B_RequestA": false,
+            "B_RequestB": false,
+            "B_Done": false,
+            "B_Emergency": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": true
+          },
+          "expect": {
+            "B_GrantA": false,
+            "B_GrantB": false,
+            "B_Busy": false,
+            "B_Turn": 0,
+            "B_LockedOut": false,
+            "CrossReady": false,
+            "CrossBlocked": true
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independently_specified_supervisory_contract",
+      "id": "OT05"
+    }
+  ]
+}

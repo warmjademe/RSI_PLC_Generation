@@ -1,0 +1,45 @@
+{
+  "id": "TR_C05_C10_03",
+  "requirement": "# TR_C05_C10_03: Composed supervisory control: Pre-lube motor lifecycle with feedback fault and cooldown -> Alternating two-pump starts\n\n## Objective\n\nImplement `TR_C05_C10_03` as an IEC-ST Core v1 function block in the Timers and timeouts category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A permitted A_Start shall enter pre-lube with A_LubePump TRUE and A_MotorCommand FALSE.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: A_MotorCommand may A_Start only after A_OilPressure remains TRUE for 300 ms.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: Failure to receive A_MotorFeedback within 400 ms of A_MotorCommand shall latch A_Fault and enter A_Cooldown.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_OilPressure loss while running shall immediately A_Stop the motor, latch A_Fault, and enter A_Cooldown.\n- **R5** **[safety-critical]**: Subsystem A shall satisfy: A_Stop or A_Permit loss shall A_Stop A_MotorCommand and enter a 300 ms A_Cooldown with A_LubePump remaining TRUE.\n- **R6**: Subsystem A shall satisfy: A_Reset clears A_Fault only in idle with A_Start FALSE; A_Cooldown completion returns idle without clearing A_Fault.\n- **R7** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Each rising B_Demand shall start at most one available pump.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When both pumps are available, successive B_Demand episodes shall alternate the selected pump.\n- **R9**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: If the preferred pump is B_Unavailable, the other available pump shall run.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Unavailable shall be TRUE exactly when B_Demand is TRUE and neither pump is available.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset without B_Demand shall set B_NextPump to 1 and stop both pumps.\n- **R12** **[safety-critical]**: A TRUE A_LubePump shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: A_Start may remain TRUE through startup.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The function block is called exactly once per PLC scan.\n- Subsystem B: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C05_C10_03",
+    "inputs": {
+      "A_Start": "BOOL",
+      "A_Stop": "BOOL",
+      "A_Permit": "BOOL",
+      "A_OilPressure": "BOOL",
+      "A_MotorFeedback": "BOOL",
+      "A_Reset": "BOOL",
+      "B_Demand": "BOOL",
+      "B_Pump1Available": "BOOL",
+      "B_Pump2Available": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_LubePump": "BOOL",
+      "A_MotorCommand": "BOOL",
+      "A_Cooldown": "BOOL",
+      "A_Fault": "BOOL",
+      "A_State": "INT",
+      "B_Pump1Run": "BOOL",
+      "B_Pump2Run": "BOOL",
+      "B_NextPump": "INT",
+      "B_Unavailable": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

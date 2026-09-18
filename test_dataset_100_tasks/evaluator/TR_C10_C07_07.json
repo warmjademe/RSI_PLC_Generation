@@ -1,0 +1,974 @@
+{
+  "id": "TR_C10_C07_07",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 11.5,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 1.5,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 9.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": -2.5,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": true,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 3.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": false,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C10_C07_07.json",
+  "source_suite_sha256": "a737fbfe01be9e48c1e436400aed8aa79dd8440b329f98e69b164fc181ee7d67",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

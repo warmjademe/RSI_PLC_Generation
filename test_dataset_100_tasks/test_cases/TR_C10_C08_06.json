@@ -1,0 +1,679 @@
+{
+  "schema_version": "1.0",
+  "suite": "openplc",
+  "task_id": "TR_C10_C08_06",
+  "scan_period_ms": 100,
+  "real_absolute_tolerance": 0.001,
+  "oracle_source": "independent_base_oracles_plus_explicit_composition_rules",
+  "independent_requirement_oracle": true,
+  "cases": [
+    {
+      "name": "A_feedback_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R1",
+        "R3",
+        "R5"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": true,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": false,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": false,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": false,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT01"
+    },
+    {
+      "name": "B_feedback_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R6",
+        "R7",
+        "R8"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": true,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": true,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": true,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": true,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": true,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": true,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": true,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": true,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": true,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": true,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 2,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT02"
+    },
+    {
+      "name": "A_hidden_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": false,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": false,
+            "A_Pump2Run": true,
+            "A_FailoverActive": true,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": false,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": false,
+            "A_Pump2Run": false,
+            "A_FailoverActive": true,
+            "A_Failure": true,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false
+          },
+          "repeat": 4,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Demand": false,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": false,
+            "A_Pump2Feedback": false,
+            "A_Reset": true,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": false,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT03"
+    },
+    {
+      "name": "B_hidden_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R9",
+        "R10"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": true,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": true,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": true,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": true,
+            "B_State": 0,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": true,
+            "B_State": 0,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT04"
+    },
+    {
+      "name": "cross_reset_priority",
+      "description": "The explicitly specified supervisory reset isolates B in the same scan.",
+      "requirement_ids": [
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_Pump1Run": true,
+            "A_Pump2Run": false,
+            "A_FailoverActive": false,
+            "A_Failure": false,
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Step1": true,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 1,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Demand": true,
+            "A_DutyIsPump1": true,
+            "A_Pump1Available": true,
+            "A_Pump2Available": true,
+            "A_Pump1Feedback": true,
+            "A_Pump2Feedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Advance": false,
+            "B_Pause": false,
+            "B_Resume": false,
+            "B_Abort": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": true
+          },
+          "expect": {
+            "B_Step1": false,
+            "B_Step2": false,
+            "B_Paused": false,
+            "B_Aborted": false,
+            "B_State": 0,
+            "CrossReady": false,
+            "CrossBlocked": true
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independently_specified_supervisory_contract",
+      "id": "OT05"
+    }
+  ]
+}

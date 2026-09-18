@@ -1,0 +1,27 @@
+{
+  "source_run": "history_feedback100_haiku_twolevel_20260917_v3",
+  "started_epoch": 1789695512.166624,
+  "completed_epoch": 1789695568.3444438,
+  "files": 84927,
+  "uncompressed_evidence_bytes": 1318597711,
+  "manifest_sha256": "7ccedc6b3089ef63e0f4145839afde1567c27ab9b7aaa4e51b82b152e91dff29",
+  "excluded_file_counts_by_top_directory": {
+    "launch.lock": 1,
+    "run.lock": 1,
+    "arms": 50695,
+    "cost_accounting": 1,
+    "operations_watchdog": 25,
+    "qualification_before_source_warning": 3,
+    "source": 2,
+    "tests": 7132,
+    "validation_slots": 4
+  },
+  "dereferenced_symlinks": {},
+  "secret_pattern_scan": "pass",
+  "scope": "Selected process evidence, not a byte-for-byte remote backup. Includes input data, frozen source, requests/responses, candidate/feedback/check receipts, authorized evaluation results and traces, cost ledgers, learning audits and final original-stream text state.",
+  "omitted": "Compiler binaries/intermediates, caches, repetitive intermediate knowledge states, vector arrays/controller weights/databases, monitor polling; successful SSE is omitted when response.json exists. Incomplete SSE is retained.",
+  "portability": "Original absolute paths are preserved as provenance; hashes in frozen protocol may refer to intentionally omitted files.",
+  "archive_bytes": 163621230,
+  "archive_sha256": "0e5c99e2e429d9317df96bae7404a6f8aeba0c977e93a15e182f9c3a7e76dbae",
+  "local_verification": "all_file_hashes_pass"
+}

@@ -1,0 +1,209 @@
+{
+  "counts": {
+    "Expecting property name enclosed in double quotes": 1,
+    "no_complete_json_block": 46
+  },
+  "examples": {
+    "Expecting property name enclosed in double quotes": {
+      "position": 116,
+      "near": "{\"B_FailoverActive\":true,\"B_Failure\":false,\"B_Pump1Run\":false,\"B_Pump2Run\":true,...},\n  \"repeat\":5\n}\n",
+      "head": "I need to analyze the current test failures and fix the subsystem B logic.\n\nLooking at the failures:\n\n1. **OT04 step 3**: A_Cooldown should be TRUE but is FALSE\n2. **OT05 steps 1-3**: B_Pump1Run, B_Pu",
+      "row": "arms/Full/wire/0003/00008"
+    },
+    "no_complete_json_block": {
+      "head": "I'll implement the `TR_C07_C07_06` function block according to the requirements. This is a composed supervisory control system with two subsystems: rate-of-change monitoring (A) and redundant sensor fusion with plausibility checking (B).\n\nLet me break down the requirements:\n\n**Subsystem A**: Rate-of-change monitor with latched trip\n- Track deltas between enabled samples\n- Trip if delta exceeds MaxRise or MaxFall\n- Latch trip until reset while disabled\n\n**Subsystem B**: Redundant sensor fusion (active only when SubsystemBEnable AND CrossReady)\n- Fuse two sensors with plausibility checking\n- Det",
+      "tail": ": Rate change 3.0 > MaxRate=2.0 → B_RateTrip=TRUE ✓\n- Step 5: Disagreement detected, B_Reset during disable → B_RateTrip cleared ✓\n- Step 6: B_Enable=FALSE → B_ValidOutput=FALSE ✓\n\n**Test OT05**: CrossReset isolation\n- Steps 1-3: Same as OT02 ✓\n- Step 4: CrossReset=TRUE → CrossReady=FALSE, CrossBlocked=TRUE, all B outputs isolated to defaults ✓\n\nThe implementation correctly handles all requirements including safety-critical latching, rate monitoring, sensor fusion, and cross-system coordination.",
+      "row": "arms/Full/wire/0004/00001"
+    }
+  },
+  "rows": [
+    {
+      "wire_path": "arms/Full/wire/0003/00008",
+      "subcategory": "Expecting property name enclosed in double quotes"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00006",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00007",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00008",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00009",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0004/00010",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0005/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0006/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Full/wire/0007/00010",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0002/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0002/00010",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0003/00003",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0003/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0003/00007",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0003/00008",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00002",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00003",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00006",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0004/00008",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0005/00003",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0005/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0005/00007",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/Neither/wire/0006/00006",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0001/00002",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0001/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0001/00005",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0002/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0003/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0003/00007",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0003/00008",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0006/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0007/00001",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0007/00002",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoAssets/wire/0007/00003",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0001/00008",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0002/00003",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0002/00004",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0003/00007",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0004/00002",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0004/00005",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0004/00010",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0005/00006",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0005/00010",
+      "subcategory": "no_complete_json_block"
+    },
+    {
+      "wire_path": "arms/NoFeedback/wire/0006/00006",
+      "subcategory": "no_complete_json_block"
+    }
+  ]
+}

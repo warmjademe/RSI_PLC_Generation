@@ -1,0 +1,521 @@
+{
+  "time": "2026-09-17T15:51:04.729709+08:00",
+  "models": {
+    "Qwen": {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1",
+      "ledger_epoch": 1789631435.4639792,
+      "completed": 289,
+      "success": 106,
+      "arms": [
+        {
+          "arm": "Full",
+          "completed": 85,
+          "success": 50,
+          "success_rate": 0.5882352941176471,
+          "mean_calls_until_success_among_successes": 5.46,
+          "mean_accounted_tokens_until_success_among_successes": 61718.44,
+          "completed_tasks_total_calls_including_failures_and_learning": 786,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 9261925,
+          "completed_tasks_reported_tokens": 9261925,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 15.72,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 185238.5
+        },
+        {
+          "arm": "NoAssets",
+          "completed": 83,
+          "success": 41,
+          "success_rate": 0.4939759036144578,
+          "mean_calls_until_success_among_successes": 5.414634146341464,
+          "mean_accounted_tokens_until_success_among_successes": 52066.58536585366,
+          "completed_tasks_total_calls_including_failures_and_learning": 642,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 6465660,
+          "completed_tasks_reported_tokens": 6465660,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 15.658536585365853,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 157699.0243902439
+        },
+        {
+          "arm": "NoFeedback",
+          "completed": 59,
+          "success": 8,
+          "success_rate": 0.13559322033898305,
+          "mean_calls_until_success_among_successes": 5,
+          "mean_accounted_tokens_until_success_among_successes": 41562.5,
+          "completed_tasks_total_calls_including_failures_and_learning": 610,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 5736699,
+          "completed_tasks_reported_tokens": 5736699,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 76.25,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 717087.375
+        },
+        {
+          "arm": "Neither",
+          "completed": 62,
+          "success": 7,
+          "success_rate": 0.11290322580645161,
+          "mean_calls_until_success_among_successes": 3.857142857142857,
+          "mean_accounted_tokens_until_success_among_successes": 26464.285714285714,
+          "completed_tasks_total_calls_including_failures_and_learning": 577,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 4288489,
+          "completed_tasks_reported_tokens": 4288489,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 82.42857142857143,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 612641.2857142857
+        }
+      ],
+      "call_counts": {
+        "reported": 2625,
+        "pending": 4
+      },
+      "tokens": {
+        "reported_input_tokens": 20127948,
+        "reported_output_tokens": 5709565,
+        "pending_input_tokens": 104744,
+        "pending_output_tokens": 65536
+      },
+      "STOP": false,
+      "live_status.json": {
+        "epoch": 1789631464.1442547,
+        "completed": 289,
+        "planned": 400,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 85,
+            "planned": 100,
+            "success": 50,
+            "first_success": 0,
+            "fail": 35,
+            "unknown": 0,
+            "completed_model_calls": 786,
+            "completed_tokens": 9261925,
+            "current": {
+              "phase": "generating",
+              "order": 86,
+              "task_id": "TR_C10_C04_07",
+              "epoch": 1789631039.1614726
+            }
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 83,
+            "planned": 100,
+            "success": 41,
+            "first_success": 2,
+            "fail": 42,
+            "unknown": 0,
+            "completed_model_calls": 642,
+            "completed_tokens": 6465660,
+            "current": {
+              "phase": "generating",
+              "order": 84,
+              "task_id": "TR_C10_C09_02",
+              "epoch": 1789631256.382534
+            }
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 59,
+            "planned": 100,
+            "success": 8,
+            "first_success": 0,
+            "fail": 51,
+            "unknown": 0,
+            "completed_model_calls": 610,
+            "completed_tokens": 5736699,
+            "current": {
+              "phase": "generating",
+              "order": 60,
+              "task_id": "TR_C10_C10_05",
+              "epoch": 1789630989.6146367
+            }
+          },
+          {
+            "arm": "Neither",
+            "completed": 62,
+            "planned": 100,
+            "success": 7,
+            "first_success": 1,
+            "fail": 55,
+            "unknown": 0,
+            "completed_model_calls": 577,
+            "completed_tokens": 4288489,
+            "current": {
+              "phase": "generating",
+              "order": 63,
+              "task_id": "TR_C09_C08_05",
+              "epoch": 1789630866.8885598
+            }
+          }
+        ],
+        "phase": "running"
+      },
+      "cost_accounting/health.json": {
+        "phase": "running",
+        "epoch": 1789631435.6019661,
+        "tasks_completed": 289,
+        "budget_reconciliation": "pass"
+      },
+      "service": "active"
+    },
+    "DeepSeek": {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_final_20260917",
+      "ledger_epoch": 1789621834.8053946,
+      "completed": 400,
+      "success": 291,
+      "arms": [
+        {
+          "arm": "Full",
+          "completed": 100,
+          "success": 84,
+          "success_rate": 0.84,
+          "mean_calls_until_success_among_successes": 6.238095238095238,
+          "mean_accounted_tokens_until_success_among_successes": 80145.88095238095,
+          "completed_tasks_total_calls_including_failures_and_learning": 1009,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 13114827,
+          "completed_tasks_reported_tokens": 13114827,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 12.011904761904763,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 156128.89285714287
+        },
+        {
+          "arm": "NoAssets",
+          "completed": 100,
+          "success": 73,
+          "success_rate": 0.73,
+          "mean_calls_until_success_among_successes": 3.6027397260273974,
+          "mean_accounted_tokens_until_success_among_successes": 37547.27397260274,
+          "completed_tasks_total_calls_including_failures_and_learning": 533,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 5785989,
+          "completed_tasks_reported_tokens": 5785989,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 7.301369863013699,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 79260.12328767123
+        },
+        {
+          "arm": "NoFeedback",
+          "completed": 100,
+          "success": 71,
+          "success_rate": 0.71,
+          "mean_calls_until_success_among_successes": 3.323943661971831,
+          "mean_accounted_tokens_until_success_among_successes": 33195.2676056338,
+          "completed_tasks_total_calls_including_failures_and_learning": 675,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 7694986,
+          "completed_tasks_reported_tokens": 7694986,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 9.507042253521126,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 108380.08450704225
+        },
+        {
+          "arm": "Neither",
+          "completed": 100,
+          "success": 63,
+          "success_rate": 0.63,
+          "mean_calls_until_success_among_successes": 4.079365079365079,
+          "mean_accounted_tokens_until_success_among_successes": 34376.77777777778,
+          "completed_tasks_total_calls_including_failures_and_learning": 627,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 5250518,
+          "completed_tasks_reported_tokens": 5250518,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 9.952380952380953,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 83341.55555555556
+        }
+      ],
+      "call_counts": {
+        "reported": 2844
+      },
+      "tokens": {
+        "reported_input_tokens": 26322441,
+        "reported_output_tokens": 5523879
+      },
+      "STOP": true,
+      "live_status.json": {
+        "phase": "complete",
+        "completed": 400,
+        "planned": 400,
+        "audit": "pass",
+        "epoch": 1789621849.5524673,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 100,
+            "planned": 100,
+            "success": 84,
+            "completed_model_calls": 1009,
+            "completed_tokens": 13114827
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 100,
+            "planned": 100,
+            "success": 73,
+            "completed_model_calls": 533,
+            "completed_tokens": 5785989
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 100,
+            "planned": 100,
+            "success": 71,
+            "completed_model_calls": 675,
+            "completed_tokens": 7694986
+          },
+          {
+            "arm": "Neither",
+            "completed": 100,
+            "planned": 100,
+            "success": 63,
+            "completed_model_calls": 627,
+            "completed_tokens": 5250518
+          }
+        ]
+      },
+      "completion_audit.json": {
+        "status": "pass",
+        "epoch": 1789621849.5523295,
+        "tasks_audited": 400,
+        "Full_success": 84,
+        "model_calls": 2844,
+        "Full_model_calls": 1009,
+        "Full_tokens": 13114827,
+        "native_requests_audited": 2844,
+        "tool_receipts_audited": 4869,
+        "cost_ledger_reconciled": true,
+        "scope": "Consolidated final results, native requests, source-bound receipts, real attempt logs and costs."
+      }
+    },
+    "Haiku": {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3",
+      "ledger_epoch": 1789631441.727249,
+      "completed": 364,
+      "success": 143,
+      "arms": [
+        {
+          "arm": "Full",
+          "completed": 88,
+          "success": 42,
+          "success_rate": 0.4772727272727273,
+          "mean_calls_until_success_among_successes": 4.5,
+          "mean_accounted_tokens_until_success_among_successes": 105617.02380952382,
+          "completed_tasks_total_calls_including_failures_and_learning": 778,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 18537459,
+          "completed_tasks_reported_tokens": 18481633,
+          "completed_tasks_estimated_tokens": 55826,
+          "estimated_usage_calls": 1,
+          "all_completed_calls_per_success_including_failures_and_learning": 18.523809523809526,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 441368.0714285714
+        },
+        {
+          "arm": "NoAssets",
+          "completed": 95,
+          "success": 43,
+          "success_rate": 0.45263157894736844,
+          "mean_calls_until_success_among_successes": 5.186046511627907,
+          "mean_accounted_tokens_until_success_among_successes": 98181.76744186046,
+          "completed_tasks_total_calls_including_failures_and_learning": 726,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 13969637,
+          "completed_tasks_reported_tokens": 13969637,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 16.88372093023256,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 324875.27906976745
+        },
+        {
+          "arm": "NoFeedback",
+          "completed": 81,
+          "success": 21,
+          "success_rate": 0.25925925925925924,
+          "mean_calls_until_success_among_successes": 4.095238095238095,
+          "mean_accounted_tokens_until_success_among_successes": 69136.76190476191,
+          "completed_tasks_total_calls_including_failures_and_learning": 795,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 16260520,
+          "completed_tasks_reported_tokens": 16260520,
+          "completed_tasks_estimated_tokens": 0,
+          "estimated_usage_calls": 0,
+          "all_completed_calls_per_success_including_failures_and_learning": 37.857142857142854,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 774310.4761904762
+        },
+        {
+          "arm": "Neither",
+          "completed": 100,
+          "success": 37,
+          "success_rate": 0.37,
+          "mean_calls_until_success_among_successes": 4.081081081081081,
+          "mean_accounted_tokens_until_success_among_successes": 51250.64864864865,
+          "completed_tasks_total_calls_including_failures_and_learning": 781,
+          "completed_tasks_accounted_tokens_including_failures_and_learning": 9912418,
+          "completed_tasks_reported_tokens": 9876901,
+          "completed_tasks_estimated_tokens": 35517,
+          "estimated_usage_calls": 1,
+          "all_completed_calls_per_success_including_failures_and_learning": 21.10810810810811,
+          "all_completed_accounted_tokens_per_success_including_failures_and_learning": 267903.1891891892
+        }
+      ],
+      "call_counts": {
+        "reported": 3098,
+        "estimated": 2,
+        "pending": 3
+      },
+      "tokens": {
+        "reported_input_tokens": 50995273,
+        "reported_output_tokens": 7984150,
+        "estimated_input_tokens": 58575,
+        "estimated_output_tokens": 32768,
+        "pending_input_tokens": 94558,
+        "pending_output_tokens": 49152
+      },
+      "STOP": false,
+      "live_status.json": {
+        "epoch": 1789631452.125078,
+        "completed": 364,
+        "planned": 400,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 88,
+            "planned": 100,
+            "success": 42,
+            "first_success": 4,
+            "fail": 45,
+            "unknown": 1,
+            "completed_model_calls": 778,
+            "completed_tokens": 18537459,
+            "current": {
+              "phase": "generating",
+              "order": 89,
+              "task_id": "TR_C10_C03_08",
+              "epoch": 1789631233.742951
+            }
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 95,
+            "planned": 100,
+            "success": 43,
+            "first_success": 0,
+            "fail": 50,
+            "unknown": 2,
+            "completed_model_calls": 726,
+            "completed_tokens": 13969637,
+            "current": {
+              "phase": "generating",
+              "order": 96,
+              "task_id": "TR_C10_C08_02",
+              "epoch": 1789631331.5853772
+            }
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 81,
+            "planned": 100,
+            "success": 21,
+            "first_success": 4,
+            "fail": 58,
+            "unknown": 2,
+            "completed_model_calls": 795,
+            "completed_tokens": 16260520,
+            "current": {
+              "phase": "generating",
+              "order": 82,
+              "task_id": "TR_C08_C05_07",
+              "epoch": 1789631287.884995
+            }
+          },
+          {
+            "arm": "Neither",
+            "completed": 100,
+            "planned": 100,
+            "success": 37,
+            "first_success": 8,
+            "fail": 63,
+            "unknown": 0,
+            "completed_model_calls": 781,
+            "completed_tokens": 9912418,
+            "current": {
+              "phase": "task_committed",
+              "completed": 100,
+              "task_id": "TR_C08_C10_01",
+              "epoch": 1789631198.6033876
+            }
+          }
+        ],
+        "phase": "running"
+      },
+      "format_health.json": {
+        "epoch": 1789631442.1554973,
+        "arms": {
+          "Full": {
+            "counts": {
+              "plc.generate:accepted": 646,
+              "source_encoding_warnings": 0,
+              "knowledge.review:accepted": 67,
+              "knowledge.curate:accepted": 71,
+              "plc.generate:rejected": 1
+            },
+            "rejection_reasons": {
+              "malformed JSON candidate: Expecting value: line 5 column 26 (char 8211)": 1
+            },
+            "recent_generation_replies": 40,
+            "recent_rejected": 0,
+            "recent_rejection_rate": 0.0
+          },
+          "NoAssets": {
+            "counts": {
+              "plc.generate:accepted": 729,
+              "source_encoding_warnings": 0,
+              "plc.generate:rejected": 2
+            },
+            "rejection_reasons": {
+              "native response did not finish normally": 1,
+              "multiple candidate objects or complete ST blocks": 1
+            },
+            "recent_generation_replies": 40,
+            "recent_rejected": 0,
+            "recent_rejection_rate": 0.0
+          },
+          "NoFeedback": {
+            "counts": {
+              "plc.generate:accepted": 679,
+              "source_encoding_warnings": 0,
+              "knowledge.curate:accepted": 65,
+              "knowledge.review:accepted": 58
+            },
+            "rejection_reasons": {},
+            "recent_generation_replies": 40,
+            "recent_rejected": 0,
+            "recent_rejection_rate": 0.0
+          },
+          "Neither": {
+            "counts": {
+              "plc.generate:accepted": 780,
+              "source_encoding_warnings": 0
+            },
+            "rejection_reasons": {},
+            "recent_generation_replies": 40,
+            "recent_rejected": 0,
+            "recent_rejection_rate": 0.0
+          }
+        },
+        "scope": "Completed native replies with normalization receipts; transport failures remain in cost/operations ledgers.",
+        "score_modified": false,
+        "automatic_retries": false
+      },
+      "cost_accounting/health.json": {
+        "phase": "running",
+        "epoch": 1789631442.1557062,
+        "tasks_completed": 364,
+        "budget_reconciliation": "pass"
+      },
+      "service": "active"
+    }
+  }
+}

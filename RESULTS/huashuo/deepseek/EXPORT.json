@@ -1,0 +1,34 @@
+{
+  "source_run": "history_feedback100_deepseek_final_20260917",
+  "started_epoch": 1789695401.7894564,
+  "completed_epoch": 1789695455.081405,
+  "files": 74787,
+  "uncompressed_evidence_bytes": 1080578930,
+  "manifest_sha256": "c35ad2dcd07a6aeabdb06fb662cb77577bef05eb7c9804c4c0acd9d97bbb0613",
+  "excluded_file_counts_by_top_directory": {
+    "STOP": 1,
+    "arms": 47790,
+    "source": 2,
+    "tests": 8740
+  },
+  "dereferenced_symlinks": {
+    "dataset": "history_feedback100_deepseek_official_twolevel_20260917_v1/dataset",
+    "evaluator_source": "history_feedback100_deepseek_official_twolevel_20260917_v1/evaluator_source",
+    "public_dataset": "history_feedback100_deepseek_official_twolevel_20260917_v1/public_dataset",
+    "qualification": "history_feedback100_deepseek_official_twolevel_20260917_v1/qualification",
+    "source": "history_feedback100_deepseek_official_twolevel_20260917_v1/source",
+    "arms/Neither": "history_feedback100_deepseek_official_twolevel_20260917_v1/arms/Neither",
+    "arms/NoAssets": "history_feedback100_deepseek_official_twolevel_20260917_v1/arms/NoAssets",
+    "arms/NoFeedback": "history_feedback100_deepseek_official_twolevel_20260917_v1/arms/NoFeedback",
+    "tests/Neither": "history_feedback100_deepseek_official_twolevel_20260917_v1/tests/Neither",
+    "tests/NoAssets": "history_feedback100_deepseek_official_twolevel_20260917_v1/tests/NoAssets",
+    "tests/NoFeedback": "history_feedback100_deepseek_official_twolevel_20260917_v1/tests/NoFeedback"
+  },
+  "secret_pattern_scan": "pass",
+  "scope": "Selected process evidence, not a byte-for-byte remote backup. Includes input data, frozen source, requests/responses, candidate/feedback/check receipts, authorized evaluation results and traces, cost ledgers, learning audits and final original-stream text state.",
+  "omitted": "Compiler binaries/intermediates, caches, repetitive intermediate knowledge states, vector arrays/controller weights/databases, monitor polling; successful SSE is omitted when response.json exists. Incomplete SSE is retained.",
+  "portability": "Original absolute paths are preserved as provenance; hashes in frozen protocol may refer to intentionally omitted files.",
+  "archive_bytes": 125190586,
+  "archive_sha256": "ebe5333b750d261ac456ee76f0bf5bca72bf9997ea0dcfaca633ffe0e1e6a489",
+  "local_verification": "all_file_hashes_pass"
+}

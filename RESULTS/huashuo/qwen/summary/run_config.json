@@ -1,0 +1,85 @@
+{
+  "budgets": {
+    "max_candidates": 10,
+    "max_model_calls": 64,
+    "max_tool_calls": 200,
+    "max_total_tokens": 2000000,
+    "max_output_tokens": 16384,
+    "max_wall_seconds": 86400
+  },
+  "method": {
+    "use_task_feedback": true,
+    "use_cross_task_knowledge": true,
+    "learn_cross_task_knowledge": true,
+    "reflect_after_attempt": false,
+    "unknown_tool_retries": 1,
+    "max_local_attempts": 4,
+    "max_knowledge_items": 4,
+    "knowledge_char_budget": 10000,
+    "max_curation_attempts": 4,
+    "max_new_claims": 3,
+    "min_support_tasks": 1,
+    "two_level_feedback": true
+  },
+  "protocol_candidate_limit": 10,
+  "provider": {
+    "allowed_resolved_models": [
+      "Qwen/Qwen3.8-27B-Q4_K_M"
+    ],
+    "api_key_env": "PLC_LOCAL_QWEN_PLACEHOLDER",
+    "base_url": "http://127.0.0.1:18080/v1",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "context_tokens": 131072,
+    "credential_file": "/home/qyb/.config/plc-evidence-loop/local_qwen_placeholder",
+    "kind": "openai_compatible",
+    "model": "Qwen/Qwen3.8-27B-Q4_K_M",
+    "model_concurrency": 4,
+    "seed": 20260914,
+    "slot_directory": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/model_slots",
+    "temperature": 0.7,
+    "timeout_seconds": 1800,
+    "context_slot_directory": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/context_slots"
+  },
+  "validation_admission": {
+    "directory": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/validation_slots",
+    "slots": 4
+  },
+  "validation_stages": [
+    "compile",
+    "runtime"
+  ],
+  "validators": {
+    "compile": {
+      "kind": "command",
+      "protocol": "json",
+      "timeout_seconds": 180,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/source/experiments/history_feedback200_study/validator.py",
+        "--root",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1"
+      ],
+      "env": {
+        "PYTHONPATH": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/evaluator_source:/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/source"
+      }
+    },
+    "runtime": {
+      "kind": "command",
+      "protocol": "json",
+      "timeout_seconds": 180,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/source/experiments/history_feedback200_study/validator.py",
+        "--root",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1"
+      ],
+      "env": {
+        "PYTHONPATH": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/evaluator_source:/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1/source"
+      }
+    }
+  }
+}

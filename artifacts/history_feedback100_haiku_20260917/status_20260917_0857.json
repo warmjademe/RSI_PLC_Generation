@@ -1,0 +1,198 @@
+{
+  "time": "2026-09-17T08:57:08.408361+08:00",
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v1",
+  "elapsed_minutes": 18.825219023227692,
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 6,
+      "success": 2,
+      "failed": 4,
+      "unknown": 0,
+      "first_success": 0,
+      "success_rate": 0.3333333333333333,
+      "calls": 51,
+      "reported_input_tokens": 606836,
+      "reported_output_tokens": 142183,
+      "reported_total_tokens": 749019,
+      "estimated_total_tokens": 0,
+      "pending_calls": 1,
+      "candidate_records": 50,
+      "invalid_response_candidates": 35,
+      "current": {
+        "phase": "generating",
+        "order": 7,
+        "task_id": "TR_C03_C10_06",
+        "epoch": 1789606579.416778
+      }
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 6,
+      "success": 3,
+      "failed": 2,
+      "unknown": 1,
+      "first_success": 0,
+      "success_rate": 0.5,
+      "calls": 46,
+      "reported_input_tokens": 564829,
+      "reported_output_tokens": 142851,
+      "reported_total_tokens": 707680,
+      "estimated_total_tokens": 0,
+      "pending_calls": 1,
+      "candidate_records": 45,
+      "invalid_response_candidates": 35,
+      "current": {
+        "phase": "generating",
+        "order": 7,
+        "task_id": "TR_C03_C10_06",
+        "epoch": 1789606599.8043623
+      }
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 4,
+      "success": 0,
+      "failed": 4,
+      "unknown": 0,
+      "first_success": 0,
+      "success_rate": 0.0,
+      "calls": 49,
+      "reported_input_tokens": 489446,
+      "reported_output_tokens": 144610,
+      "reported_total_tokens": 634056,
+      "estimated_total_tokens": 0,
+      "pending_calls": 1,
+      "candidate_records": 45,
+      "invalid_response_candidates": 29,
+      "current": {
+        "phase": "generating",
+        "order": 5,
+        "task_id": "TR_C10_C06_07",
+        "epoch": 1789606526.6829493
+      }
+    },
+    {
+      "arm": "Neither",
+      "completed": 4,
+      "success": 1,
+      "failed": 3,
+      "unknown": 0,
+      "first_success": 0,
+      "success_rate": 0.25,
+      "calls": 40,
+      "reported_input_tokens": 425539,
+      "reported_output_tokens": 131818,
+      "reported_total_tokens": 557357,
+      "estimated_total_tokens": 35712,
+      "pending_calls": 1,
+      "candidate_records": 40,
+      "invalid_response_candidates": 31,
+      "current": {
+        "phase": "generating",
+        "order": 5,
+        "task_id": "TR_C10_C06_07",
+        "epoch": 1789606489.5483787
+      }
+    }
+  ],
+  "cost_epoch": 1789606610.6403093,
+  "common_prefix": {
+    "tasks": 4,
+    "success": {
+      "Full": 1,
+      "NoAssets": 1,
+      "NoFeedback": 0,
+      "Neither": 1
+    }
+  },
+  "response_error_counts": {
+    "model did not return the required JSON object": 90,
+    "invalid or overlong generation field: change_summary": 30,
+    "invalid or overlong generation field: applicability_notes": 9,
+    "haiku_transport:interrupted_stream; original cost retained": 1
+  },
+  "stop_exists": false,
+  "watch_health": {
+    "epoch": 1789606609.9401088,
+    "completed": 20,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "order": 7,
+        "task_id": "TR_C03_C10_06",
+        "planned": 100,
+        "completed": 6,
+        "success": 2,
+        "phase": "generating",
+        "last_progress_epoch": 1789606609.1821632,
+        "task_seconds": 30.522470235824585,
+        "call_seconds": 2.5330088138580322,
+        "model_calls": 2,
+        "candidate_records": 1,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "NoAssets",
+        "order": 7,
+        "task_id": "TR_C03_C10_06",
+        "planned": 100,
+        "completed": 6,
+        "success": 3,
+        "phase": "generating",
+        "last_progress_epoch": 1789606599.809231,
+        "task_seconds": 10.134445190429688,
+        "call_seconds": 10.13169002532959,
+        "model_calls": 1,
+        "candidate_records": 0,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "NoFeedback",
+        "order": 5,
+        "task_id": "TR_C10_C06_07",
+        "planned": 100,
+        "completed": 4,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789606592.2433896,
+        "task_seconds": 83.25608372688293,
+        "call_seconds": 17.697702646255493,
+        "model_calls": 5,
+        "candidate_records": 4,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "Neither",
+        "order": 5,
+        "task_id": "TR_C10_C06_07",
+        "planned": 100,
+        "completed": 4,
+        "success": 1,
+        "phase": "generating",
+        "last_progress_epoch": 1789606607.6196942,
+        "task_seconds": 120.39038109779358,
+        "call_seconds": 2.321157932281494,
+        "model_calls": 7,
+        "candidate_records": 6,
+        "role": "plc.generate"
+      }
+    ],
+    "phase": "monitoring",
+    "experiment_service": {
+      "MainPID": "308041",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "monitored_unit": "plc-history-feedback100-haiku-20260917-v1.service"
+  },
+  "cost_health": {
+    "phase": "running",
+    "epoch": 1789606610.651098,
+    "tasks_completed": 20,
+    "budget_reconciliation": "pass"
+  },
+  "unknown_reason": "NoAssets task1: MatIEC native C driver compilation fails on generated VAR_TEMP array initialization; marked unknown after bounded retry, never pass.",
+  "missing_usage_reason": "Neither task3 call2: interrupted HTTP stream; conservative reservation retained, not reported actual tokens."
+}

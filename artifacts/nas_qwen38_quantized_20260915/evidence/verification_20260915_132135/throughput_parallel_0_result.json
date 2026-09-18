@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 11.617973753018305,
+  "first_content_seconds": 1.2055547588970512,
+  "content": "# Offline Verification Checklist for PLC Structured Text (ST) Programs\n**Version:** 0.0\n**Scope:** Static analysis, logical review, and simulation-based verification prior to online deployment.\n**Applicable Standards:** IEC 61131-3, IEC 61508 (Functional Safety), IEC 62424 (PLC Programming).\n\n> **Note:** This checklist is designed for *offline* verification. Items marked with **[Sim]** require a simulation environment (e.g., CODESYS, TIA Portal PLCSIM, Studio 5000 Logix Emulator). Items marked **[Doc]** require documentation review. Items marked **[Code]** require manual code inspection.\n\n---\n\n## 1. Project Structure & Configuration\n1. **[Code]** Verify that the project structure follows the organization’s naming conventions (e.g., `PLC_Logic`, `HMI_Interface`, `Safety_Logic`).\n2. **[Code]** Confirm that all data types are explicitly defined and used consistently (avoid implicit type conversions where possible).\n3. **[Code]** Ensure that all global variables are declared in a single, well-documented Global Variable Table (GVL) or equivalent.\n4",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 256,
+    "prompt_tokens": 41,
+    "total_tokens": 297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 22.034823407437308
+}

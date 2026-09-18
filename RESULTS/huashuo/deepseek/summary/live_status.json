@@ -1,0 +1,41 @@
+{
+  "phase": "complete",
+  "completed": 400,
+  "planned": 400,
+  "audit": "pass",
+  "epoch": 1789621849.5524673,
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 100,
+      "planned": 100,
+      "success": 84,
+      "completed_model_calls": 1009,
+      "completed_tokens": 13114827
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 100,
+      "planned": 100,
+      "success": 73,
+      "completed_model_calls": 533,
+      "completed_tokens": 5785989
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 100,
+      "planned": 100,
+      "success": 71,
+      "completed_model_calls": 675,
+      "completed_tokens": 7694986
+    },
+    {
+      "arm": "Neither",
+      "completed": 100,
+      "planned": 100,
+      "success": 63,
+      "completed_model_calls": 627,
+      "completed_tokens": 5250518
+    }
+  ]
+}

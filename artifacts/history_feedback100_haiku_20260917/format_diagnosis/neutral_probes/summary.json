@@ -1,0 +1,171 @@
+{
+  "time": "2026-09-17T09:03:13.194505+08:00",
+  "calls": 7,
+  "results": [
+    {
+      "name": "arithmetic_system_1",
+      "started_epoch": 1789606984.987276,
+      "http_status": 200,
+      "request_id": "37c7af5b-f3dc-4858-9bd8-2c05d35637a6",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "```json\n{\"answer\": 4}\n```",
+      "usage": {
+        "input_tokens": 52,
+        "output_tokens": 11,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.5085817612707615
+    },
+    {
+      "name": "arithmetic_user_1",
+      "started_epoch": 1789606984.9881482,
+      "http_status": 200,
+      "request_id": "c639a2a8-6a0d-4b4d-bfd8-57d6a562fbab",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "```json\n{\"answer\": 4}\n```",
+      "usage": {
+        "input_tokens": 52,
+        "output_tokens": 11,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.5140931238420308
+    },
+    {
+      "name": "arithmetic_system_2",
+      "started_epoch": 1789606986.4961057,
+      "http_status": 200,
+      "request_id": "b96a6599-8054-4493-b1b4-ab879e8b4474",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "4",
+      "usage": {
+        "cache_creation_input_tokens": 1624,
+        "cache_read_input_tokens": 2435,
+        "input_tokens": 1,
+        "output_tokens": 1,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1624
+        }
+      },
+      "complete": true,
+      "strict_json": true,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.916238552890718
+    },
+    {
+      "name": "arithmetic_user_2",
+      "started_epoch": 1789606986.5025332,
+      "http_status": 200,
+      "request_id": "d64526c2-f0b0-45e7-aabf-6516ee8cd541",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "```json\n{\"answer\": 4}\n```",
+      "usage": {
+        "input_tokens": 46,
+        "output_tokens": 11,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 1.2062327479943633
+    },
+    {
+      "name": "arithmetic_system_3",
+      "started_epoch": 1789606987.7091334,
+      "http_status": 200,
+      "request_id": "eeec918f-8abf-472f-9517-1fac10d339c2",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "4",
+      "usage": {
+        "cache_creation_input_tokens": 1644,
+        "cache_read_input_tokens": 2464,
+        "input_tokens": 1,
+        "output_tokens": 1,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1644
+        }
+      },
+      "complete": true,
+      "strict_json": true,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.623935930430889
+    },
+    {
+      "name": "arithmetic_user_3",
+      "started_epoch": 1789606989.4126492,
+      "http_status": 200,
+      "request_id": "ca2503db-3380-4746-a729-93b583ef63f4",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "```json\n{\"answer\": 4}\n```",
+      "usage": {
+        "cache_creation_input_tokens": 1637,
+        "cache_read_input_tokens": 2454,
+        "input_tokens": 1,
+        "output_tokens": 7,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1637
+        }
+      },
+      "complete": true,
+      "strict_json": false,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.7547486945986748
+    },
+    {
+      "name": "arithmetic_system_array",
+      "started_epoch": 1789606990.3333278,
+      "http_status": 200,
+      "request_id": "92d642f8-48f6-4d82-b171-575f483bdd6b",
+      "content_type": "text/event-stream",
+      "model": "claude-haiku-4-5-20251001",
+      "stop_reason": "end_turn",
+      "text": "4",
+      "usage": {
+        "cache_creation_input_tokens": 1624,
+        "cache_read_input_tokens": 2435,
+        "input_tokens": 1,
+        "output_tokens": 1,
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1624
+        }
+      },
+      "complete": true,
+      "strict_json": true,
+      "current_schema_valid": false,
+      "forced_tool_valid": false,
+      "elapsed_seconds": 2.8608271600678563
+    }
+  ],
+  "reported_tokens": 16514,
+  "official_model_backend_identity_independently_verified": false
+}

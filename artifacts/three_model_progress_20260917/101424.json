@@ -1,0 +1,380 @@
+{
+  "checked_at": "2026-09-17T10:14:24.346508",
+  "models": [
+    {
+      "model": "Qwen",
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1",
+      "units": {
+        "plc-history-feedback100-twolevel-20260916-v1.service": "active",
+        "plc-history-feedback100-twolevel-watchdog.service": "active",
+        "plc-history-feedback100-twolevel-costs.service": "active"
+      },
+      "stop_present": false,
+      "ledger_age_seconds": 19.2,
+      "summary": {
+        "epoch": 1789611245.257298,
+        "planned": 400,
+        "tasks_started": 227,
+        "tasks_completed": 223,
+        "successful_tasks": 82,
+        "completed_budgets_reconciled": true,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 67,
+            "success": 39,
+            "success_rate": 0.582089552238806,
+            "mean_calls_until_success_among_successes": 5.256410256410256,
+            "mean_accounted_tokens_until_success_among_successes": 59480.94871794872,
+            "completed_tasks_total_calls_including_failures_and_learning": 613,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 7242400,
+            "completed_tasks_reported_tokens": 7242400,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 15.717948717948717,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 185702.5641025641
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 61,
+            "success": 28,
+            "success_rate": 0.45901639344262296,
+            "mean_calls_until_success_among_successes": 5.607142857142857,
+            "mean_accounted_tokens_until_success_among_successes": 54370.5,
+            "completed_tasks_total_calls_including_failures_and_learning": 487,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 4933170,
+            "completed_tasks_reported_tokens": 4933170,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 17.392857142857142,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 176184.64285714287
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 46,
+            "success": 8,
+            "success_rate": 0.17391304347826086,
+            "mean_calls_until_success_among_successes": 5,
+            "mean_accounted_tokens_until_success_among_successes": 41562.5,
+            "completed_tasks_total_calls_including_failures_and_learning": 471,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 4453714,
+            "completed_tasks_reported_tokens": 4453714,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 58.875,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 556714.25
+          },
+          {
+            "arm": "Neither",
+            "completed": 49,
+            "success": 7,
+            "success_rate": 0.14285714285714285,
+            "mean_calls_until_success_among_successes": 3.857142857142857,
+            "mean_accounted_tokens_until_success_among_successes": 26464.285714285714,
+            "completed_tasks_total_calls_including_failures_and_learning": 447,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 3326088,
+            "completed_tasks_reported_tokens": 3326088,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 63.857142857142854,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 475155.4285714286
+          }
+        ],
+        "previous_interrupted_launch_cost": null,
+        "definitions": {
+          "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+          "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+          "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+          "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+          "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+        }
+      },
+      "all_started_tokens": {
+        "model_calls": 2043,
+        "reported_usage_calls": 2039,
+        "estimated_usage_calls": 0,
+        "pending_usage_calls": 4,
+        "reported_input_tokens": 15695590,
+        "reported_output_tokens": 4458657,
+        "reported_total_tokens": 20154247,
+        "estimated_total_tokens": 0
+      },
+      "latest_streams": [
+        {
+          "arm": "Full",
+          "age_seconds": 0.8,
+          "complete": false,
+          "characters": 2270
+        },
+        {
+          "arm": "NoAssets",
+          "age_seconds": 0.3,
+          "complete": false,
+          "characters": 6969
+        },
+        {
+          "arm": "NoFeedback",
+          "age_seconds": 0.1,
+          "complete": false,
+          "characters": 8905
+        },
+        {
+          "arm": "Neither",
+          "age_seconds": 0.2,
+          "complete": false,
+          "characters": 6085
+        }
+      ]
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1",
+      "units": {
+        "plc-history-feedback100-deepseek-official-20260917-v1.service": "active",
+        "plc-history-feedback100-deepseek-official-watchdog.service": "active",
+        "plc-history-feedback100-deepseek-official-costs.service": "active"
+      },
+      "stop_present": false,
+      "ledger_age_seconds": 1.9,
+      "summary": {
+        "epoch": 1789611262.584945,
+        "planned": 400,
+        "tasks_started": 222,
+        "tasks_completed": 218,
+        "successful_tasks": 150,
+        "completed_budgets_reconciled": true,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 48,
+            "success": 35,
+            "success_rate": 0.7291666666666666,
+            "mean_calls_until_success_among_successes": 4.771428571428571,
+            "mean_accounted_tokens_until_success_among_successes": 58579.91428571429,
+            "completed_tasks_total_calls_including_failures_and_learning": 366,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 4677342,
+            "completed_tasks_reported_tokens": 4677342,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 10.457142857142857,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 133638.34285714285
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 62,
+            "success": 46,
+            "success_rate": 0.7419354838709677,
+            "mean_calls_until_success_among_successes": 3.760869565217391,
+            "mean_accounted_tokens_until_success_among_successes": 39856.717391304344,
+            "completed_tasks_total_calls_including_failures_and_learning": 333,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 3654552,
+            "completed_tasks_reported_tokens": 3654552,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 7.239130434782608,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 79446.78260869565
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 54,
+            "success": 36,
+            "success_rate": 0.6666666666666666,
+            "mean_calls_until_success_among_successes": 2.9166666666666665,
+            "mean_accounted_tokens_until_success_among_successes": 29685.777777777777,
+            "completed_tasks_total_calls_including_failures_and_learning": 365,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 4201885,
+            "completed_tasks_reported_tokens": 4201885,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 10.13888888888889,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 116719.02777777778
+          },
+          {
+            "arm": "Neither",
+            "completed": 54,
+            "success": 33,
+            "success_rate": 0.6111111111111112,
+            "mean_calls_until_success_among_successes": 3.6666666666666665,
+            "mean_accounted_tokens_until_success_among_successes": 31233.242424242424,
+            "completed_tasks_total_calls_including_failures_and_learning": 331,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 2813099,
+            "completed_tasks_reported_tokens": 2813099,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 10.030303030303031,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 85245.42424242424
+          }
+        ],
+        "previous_interrupted_launch_cost": null,
+        "definitions": {
+          "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+          "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+          "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+          "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+          "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+        }
+      },
+      "all_started_tokens": {
+        "model_calls": 1400,
+        "reported_usage_calls": 1397,
+        "estimated_usage_calls": 0,
+        "pending_usage_calls": 3,
+        "reported_input_tokens": 12582991,
+        "reported_output_tokens": 2779808,
+        "reported_total_tokens": 15362799,
+        "estimated_total_tokens": 0
+      },
+      "latest_streams": [
+        {
+          "arm": "Full",
+          "age_seconds": 0.2,
+          "complete": false,
+          "characters": 3938
+        },
+        {
+          "arm": "NoAssets",
+          "age_seconds": 0.0,
+          "complete": false,
+          "characters": 1157
+        },
+        {
+          "arm": "NoFeedback",
+          "age_seconds": 0.5,
+          "complete": false,
+          "characters": 4536
+        },
+        {
+          "arm": "Neither",
+          "age_seconds": 2.2,
+          "complete": true,
+          "characters": 6465
+        }
+      ]
+    },
+    {
+      "model": "Haiku",
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2",
+      "units": {
+        "plc-history-feedback100-haiku-20260917-v2.service": "active",
+        "plc-history-feedback100-haiku-v2-watchdog.service": "active",
+        "plc-history-feedback100-haiku-v2-costs.service": "active"
+      },
+      "stop_present": false,
+      "ledger_age_seconds": 13.0,
+      "summary": {
+        "epoch": 1789611251.484448,
+        "planned": 400,
+        "tasks_started": 68,
+        "tasks_completed": 64,
+        "successful_tasks": 26,
+        "completed_budgets_reconciled": true,
+        "arms": [
+          {
+            "arm": "Full",
+            "completed": 16,
+            "success": 8,
+            "success_rate": 0.5,
+            "mean_calls_until_success_among_successes": 4.75,
+            "mean_accounted_tokens_until_success_among_successes": 80278.375,
+            "completed_tasks_total_calls_including_failures_and_learning": 144,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 2533663,
+            "completed_tasks_reported_tokens": 2533663,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 18.0,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 316707.875
+          },
+          {
+            "arm": "NoAssets",
+            "completed": 16,
+            "success": 4,
+            "success_rate": 0.25,
+            "mean_calls_until_success_among_successes": 4.5,
+            "mean_accounted_tokens_until_success_among_successes": 65364.75,
+            "completed_tasks_total_calls_including_failures_and_learning": 130,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 1977021,
+            "completed_tasks_reported_tokens": 1977021,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 32.5,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 494255.25
+          },
+          {
+            "arm": "NoFeedback",
+            "completed": 15,
+            "success": 7,
+            "success_rate": 0.4666666666666667,
+            "mean_calls_until_success_among_successes": 5.714285714285714,
+            "mean_accounted_tokens_until_success_among_successes": 82104.42857142857,
+            "completed_tasks_total_calls_including_failures_and_learning": 148,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 2353912,
+            "completed_tasks_reported_tokens": 2353912,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 21.142857142857142,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 336273.14285714284
+          },
+          {
+            "arm": "Neither",
+            "completed": 17,
+            "success": 7,
+            "success_rate": 0.4117647058823529,
+            "mean_calls_until_success_among_successes": 5.571428571428571,
+            "mean_accounted_tokens_until_success_among_successes": 70889.14285714286,
+            "completed_tasks_total_calls_including_failures_and_learning": 139,
+            "completed_tasks_accounted_tokens_including_failures_and_learning": 1720059,
+            "completed_tasks_reported_tokens": 1720059,
+            "completed_tasks_estimated_tokens": 0,
+            "estimated_usage_calls": 0,
+            "all_completed_calls_per_success_including_failures_and_learning": 19.857142857142858,
+            "all_completed_accounted_tokens_per_success_including_failures_and_learning": 245722.7142857143
+          }
+        ],
+        "previous_interrupted_launch_cost": null,
+        "definitions": {
+          "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+          "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+          "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+          "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+          "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+        }
+      },
+      "all_started_tokens": {
+        "model_calls": 582,
+        "reported_usage_calls": 579,
+        "estimated_usage_calls": 0,
+        "pending_usage_calls": 3,
+        "reported_input_tokens": 7491876,
+        "reported_output_tokens": 1358117,
+        "reported_total_tokens": 8849993,
+        "estimated_total_tokens": 0
+      },
+      "latest_streams": [
+        {
+          "arm": "Full",
+          "age_seconds": 39.0,
+          "complete": true,
+          "characters": 8583
+        },
+        {
+          "arm": "NoAssets",
+          "age_seconds": 13.1,
+          "complete": true,
+          "characters": 9536
+        },
+        {
+          "arm": "NoFeedback",
+          "age_seconds": 40.1,
+          "complete": true,
+          "characters": 8446
+        },
+        {
+          "arm": "Neither",
+          "age_seconds": 40.1,
+          "complete": true,
+          "characters": 6940
+        }
+      ]
+    }
+  ]
+}

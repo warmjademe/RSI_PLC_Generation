@@ -1,0 +1,1 @@
+{"model": "claude-haiku-4-5-20251001", "max_tokens": 128, "temperature": 0, "stream": true, "messages": [{"role": "user", "content": "Return exactly one JSON object with ok set to true. No other text."}]}

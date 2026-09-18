@@ -1,0 +1,1071 @@
+{
+  "id": "TR_C10_C08_05",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": true,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": true,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": true,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": true,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_HighLevel": false,
+              "B_MixDone": false,
+              "B_LowLevel": false,
+              "B_Abort": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_FillValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Mixer",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_DrainValve",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Complete",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C10_C08_05.json",
+  "source_suite_sha256": "ed7a1f247878b260358e5b6b03df2fc5bf976406e4e8c2510a6e143f1ae48009",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

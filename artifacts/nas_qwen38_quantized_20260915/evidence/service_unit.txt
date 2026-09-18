@@ -1,0 +1,20 @@
+# /home/qyb/.config/systemd/user/nas-qwen38-27b-q4km.service
+[Unit]
+Description=Qwen3.8-27B Q4_K_M local GPU inference
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=exec
+WorkingDirectory=/home/qyb/qwen38-27b-quantized
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/python3 -u -B /home/qyb/qwen38-27b-quantized/ops/serve.py
+KillMode=control-group
+MemoryMax=40G
+TimeoutStopSec=30
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,297 @@
+{
+  "checked_at": "2026-09-17T07:48:45.379771+08:00",
+  "units": {
+    "qwen38-27b.service": {
+      "MainPID": "252419",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-twolevel-20260916-v1.service": {
+      "MainPID": "284168",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-twolevel-watchdog.service": {
+      "MainPID": "284170",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-twolevel-costs.service": {
+      "MainPID": "284172",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-deepseek-recovery-prefill-20260917.service": {
+      "MainPID": "305435",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-deepseek-watchdog.service": {
+      "MainPID": "305437",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-deepseek-costs.service": {
+      "MainPID": "304962",
+      "ActiveState": "active"
+    },
+    "plc-history-feedback100-deepseek-tunnel.service": {
+      "MainPID": "304879",
+      "ActiveState": "active"
+    }
+  },
+  "qwen_protocol_unchanged": true,
+  "deepseek_frozen_protocol_unchanged": true,
+  "budgets_unchanged": true,
+  "task_order_unchanged": true,
+  "old_successor_disabled": true,
+  "qwen_status": {
+    "epoch": 1789602525.1065843,
+    "completed": 194,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 58,
+        "planned": 100,
+        "success": 32,
+        "first_success": 0,
+        "fail": 26,
+        "unknown": 0,
+        "completed_model_calls": 538,
+        "completed_tokens": 6383069,
+        "current": {
+          "phase": "generating",
+          "order": 59,
+          "task_id": "TR_C07_C06_03",
+          "epoch": 1789601905.8015635
+        }
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 54,
+        "planned": 100,
+        "success": 26,
+        "first_success": 2,
+        "fail": 28,
+        "unknown": 0,
+        "completed_model_calls": 427,
+        "completed_tokens": 4366026,
+        "current": {
+          "phase": "generating",
+          "order": 55,
+          "task_id": "TR_C10_C08_05",
+          "epoch": 1789601463.68548
+        }
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 40,
+        "planned": 100,
+        "success": 7,
+        "first_success": 0,
+        "fail": 33,
+        "unknown": 0,
+        "completed_model_calls": 410,
+        "completed_tokens": 3888811,
+        "current": {
+          "phase": "generating",
+          "order": 41,
+          "task_id": "TR_C10_C04_09",
+          "epoch": 1789602318.9950502
+        }
+      },
+      {
+        "arm": "Neither",
+        "completed": 42,
+        "planned": 100,
+        "success": 5,
+        "first_success": 1,
+        "fail": 37,
+        "unknown": 0,
+        "completed_model_calls": 385,
+        "completed_tokens": 2882492,
+        "current": {
+          "phase": "generating",
+          "order": 43,
+          "task_id": "TR_C10_C05_02",
+          "epoch": 1789602000.8826983
+        }
+      }
+    ],
+    "phase": "running"
+  },
+  "deepseek_status": {
+    "epoch": 1789602511.307516,
+    "completed": 0,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789602421.541491
+        }
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789602421.6002266
+        }
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789602421.5329661
+        }
+      },
+      {
+        "arm": "Neither",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789602421.6002266
+        }
+      }
+    ],
+    "phase": "running"
+  },
+  "deepseek_current_calls": [
+    {
+      "arm": "Full",
+      "current_call": 3,
+      "model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+      "dispatched_stream": true,
+      "stream": {
+        "bytes_received": 2,
+        "content_characters": 0,
+        "content_idle_seconds": 99.4450079491362,
+        "epoch": 1789602521.0625894,
+        "events": 0,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": null,
+        "role": "plc.generate",
+        "slow_guard_policy_version": "deepseek_prefill_wait_20260917_v1"
+      }
+    },
+    {
+      "arm": "NoAssets",
+      "current_call": 2,
+      "model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+      "dispatched_stream": false
+    },
+    {
+      "arm": "NoFeedback",
+      "current_call": 2,
+      "model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+      "dispatched_stream": true,
+      "stream": {
+        "bytes_received": 284,
+        "content_characters": 0,
+        "content_idle_seconds": 89.09997714171186,
+        "epoch": 1789602510.7090943,
+        "events": 0,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": null,
+        "role": "plc.generate",
+        "slow_guard_policy_version": "deepseek_prefill_wait_20260917_v1"
+      }
+    },
+    {
+      "arm": "Neither",
+      "current_call": 3,
+      "model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+      "dispatched_stream": false
+    }
+  ],
+  "cost_health": {
+    "phase": "running",
+    "epoch": 1789602512.381172,
+    "tasks_completed": 0,
+    "budget_reconciliation": "pass"
+  },
+  "operational_amendment": {
+    "epoch": 1789602421.1743598,
+    "unit": "plc-history-feedback100-deepseek-recovery-prefill-20260917.service",
+    "original_source_unchanged": true,
+    "protocol_sha256": "59dc93b7d2719961cbecd7720b8660c7d78d3ff4d9cb356524faa7824e1e9cb5",
+    "budgets_reset": false,
+    "first_content_wait_seconds": 900,
+    "minimum_character_rate": 0,
+    "content_idle_seconds": 120,
+    "call_cap_seconds": 900
+  },
+  "local_offline_tests": 38,
+  "resource_usage": "               total        used        free      shared  buff/cache   available\nMem:           94095       74185        1389          83       19608       19909\nSwap:           8191        5711        2480\n",
+  "post_recovery_stream_check": {
+    "checked_at": "2026-09-17T07:49:29.191107+08:00",
+    "samples": [
+      {
+        "arm": "Full",
+        "call": 3,
+        "content": 0,
+        "reasoning_content": 0,
+        "events": 0
+      },
+      {
+        "arm": "NoAssets",
+        "call": 2,
+        "content": 0,
+        "reasoning_content": 0,
+        "events": 0
+      },
+      {
+        "arm": "NoFeedback",
+        "call": 2,
+        "content": 24,
+        "reasoning_content": 0,
+        "events": 8
+      },
+      {
+        "arm": "Neither",
+        "call": 3,
+        "content": 0,
+        "reasoning_content": 0,
+        "events": 0
+      }
+    ]
+  },
+  "status": "parallel experiment launch and healthy-prefill amendment verified; experiment ongoing"
+}

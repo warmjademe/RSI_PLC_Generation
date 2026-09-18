@@ -1,0 +1,274 @@
+{
+  "epoch": 1789539486.720364,
+  "snapshot_cst": "2026-09-16T14:18:06.720380",
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1",
+  "protocol_verified": true,
+  "units": {
+    "plc-history-feedback100-twolevel-20260916-v1.service": {
+      "MainPID": "284168",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-twolevel-watchdog.service": {
+      "MainPID": "284170",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-twolevel-costs.service": {
+      "MainPID": "284172",
+      "ActiveState": "active",
+      "SubState": "running"
+    }
+  },
+  "arms": {
+    "Full": {
+      "first_task_id": "TR_C07_C10_06",
+      "logical_requests": 1,
+      "wire_requests": 1,
+      "first_seed": 1933007818,
+      "first_output_cap": 16384,
+      "temperature": 0.7,
+      "empty_initial_knowledge": true,
+      "visibility_audit": "pass",
+      "latest_stream_progress": {
+        "bytes_received": 180864,
+        "content_characters": 2201,
+        "content_idle_seconds": 0.04781791381537914,
+        "epoch": 1789539486.312403,
+        "events": 702,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": "chatcmpl-iGseWTikj00PYMbKZAdQB8LHZWy0blVm",
+        "role": "plc.generate",
+        "slow_guard_policy_version": "local_quantized_task_wall_20260915_v1"
+      }
+    },
+    "NoAssets": {
+      "first_task_id": "TR_C07_C10_06",
+      "logical_requests": 1,
+      "wire_requests": 1,
+      "first_seed": 1933007818,
+      "first_output_cap": 16384,
+      "temperature": 0.7,
+      "empty_initial_knowledge": true,
+      "visibility_audit": "pass",
+      "latest_stream_progress": {
+        "bytes_received": 183462,
+        "content_characters": 2257,
+        "content_idle_seconds": 0.04770937887951732,
+        "epoch": 1789539486.255672,
+        "events": 712,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": "chatcmpl-Rbl8kuB1HeBaYOFnISxSUoo9hvghML9I",
+        "role": "plc.generate",
+        "slow_guard_policy_version": "local_quantized_task_wall_20260915_v1"
+      }
+    },
+    "NoFeedback": {
+      "first_task_id": "TR_C07_C10_06",
+      "logical_requests": 1,
+      "wire_requests": 1,
+      "first_seed": 1933007818,
+      "first_output_cap": 16384,
+      "temperature": 0.7,
+      "empty_initial_knowledge": true,
+      "visibility_audit": "pass",
+      "latest_stream_progress": {
+        "bytes_received": 179329,
+        "content_characters": 2190,
+        "content_idle_seconds": 0.04947070777416229,
+        "epoch": 1789539486.2691,
+        "events": 696,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": "chatcmpl-7bLppSL7QaXxJm0xdHzgQVxRZMoPlAnh",
+        "role": "plc.generate",
+        "slow_guard_policy_version": "local_quantized_task_wall_20260915_v1"
+      }
+    },
+    "Neither": {
+      "first_task_id": "TR_C07_C10_06",
+      "logical_requests": 1,
+      "wire_requests": 1,
+      "first_seed": 1933007818,
+      "first_output_cap": 16384,
+      "temperature": 0.7,
+      "empty_initial_knowledge": true,
+      "visibility_audit": "pass",
+      "latest_stream_progress": {
+        "bytes_received": 181865,
+        "content_characters": 2180,
+        "content_idle_seconds": 0.04809462511911988,
+        "epoch": 1789539486.308362,
+        "events": 706,
+        "final_usage_received": false,
+        "generation_guard_version": "generation_guard_20260915_v2",
+        "response_id": "chatcmpl-X0JdYregLQXnx6NyPSriK3ZAQuATINVv",
+        "role": "plc.generate",
+        "slow_guard_policy_version": "local_quantized_task_wall_20260915_v1"
+      }
+    }
+  },
+  "live_status.json": {
+    "epoch": 1789539478.0080526,
+    "completed": 0,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789539433.2910962
+        }
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789539433.326983
+        }
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789539433.327745
+        }
+      },
+      {
+        "arm": "Neither",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789539433.2910938
+        }
+      }
+    ],
+    "phase": "running"
+  },
+  "operations_watchdog/health.json": {
+    "epoch": 1789539463.0227585,
+    "completed": 0,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789539462.7200334,
+        "task_seconds": 29.717503786087036,
+        "call_seconds": 29.712993621826172,
+        "model_calls": 1,
+        "candidate_records": 0,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "NoAssets",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789539462.6674924,
+        "task_seconds": 29.679154634475708,
+        "call_seconds": 29.676084518432617,
+        "model_calls": 1,
+        "candidate_records": 0,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "NoFeedback",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789539462.7246747,
+        "task_seconds": 29.679195642471313,
+        "call_seconds": 29.673945426940918,
+        "model_calls": 1,
+        "candidate_records": 0,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "Neither",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789539462.7170994,
+        "task_seconds": 29.717772722244263,
+        "call_seconds": 29.714668035507202,
+        "model_calls": 1,
+        "candidate_records": 0,
+        "role": "plc.generate"
+      }
+    ],
+    "phase": "monitoring",
+    "experiment_service": {
+      "MainPID": "284168",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "monitored_unit": "plc-history-feedback100-twolevel-20260916-v1.service"
+  },
+  "cost_accounting/health.json": {
+    "phase": "running",
+    "epoch": 1789539463.0321753,
+    "tasks_completed": 0,
+    "budget_reconciliation": "pass"
+  },
+  "requests": {
+    "llamacpp:requests_processing": 4.0,
+    "llamacpp:requests_deferred": 0.0
+  },
+  "old_runs_remain_stopped": true
+}

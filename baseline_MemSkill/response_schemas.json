@@ -1,0 +1,7 @@
+{
+  "generation_role": "plc.generate",
+  "response": {
+    "code": "one complete ST FUNCTION_BLOCK"
+  },
+  "learning": "See training.py and learning.py/engine for method-specific schemas; no fabricated successes."
+}

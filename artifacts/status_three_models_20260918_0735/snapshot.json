@@ -1,0 +1,428 @@
+{
+  "time": "2026-09-18T07:35:50.363287+08:00",
+  "models": [
+    {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1",
+      "model": "qwen3.8-27b-q4_k_m",
+      "rows": [
+        {
+          "method": "Vanilla",
+          "closed": 100,
+          "passed": 21,
+          "unknown_tasks": 43,
+          "input_tokens": 910588,
+          "output_tokens": 1828002,
+          "known_calls": 572,
+          "unknown_usage_calls": 39,
+          "inflight_calls": 0,
+          "total_tokens": 2738590
+        },
+        {
+          "method": "FewShot",
+          "closed": 91,
+          "passed": 22,
+          "unknown_tasks": 7,
+          "input_tokens": 4459712,
+          "output_tokens": 2003964,
+          "known_calls": 699,
+          "unknown_usage_calls": 36,
+          "inflight_calls": 1,
+          "total_tokens": 6463676
+        },
+        {
+          "method": "FinalCodeRAG",
+          "closed": 100,
+          "passed": 43,
+          "unknown_tasks": 7,
+          "input_tokens": 3695274,
+          "output_tokens": 1459875,
+          "known_calls": 572,
+          "unknown_usage_calls": 5,
+          "inflight_calls": 0,
+          "total_tokens": 5155149
+        },
+        {
+          "method": "RawTrajectoryRAG",
+          "closed": 100,
+          "passed": 5,
+          "unknown_tasks": 69,
+          "input_tokens": 2126784,
+          "output_tokens": 652439,
+          "known_calls": 352,
+          "unknown_usage_calls": 3,
+          "inflight_calls": 0,
+          "total_tokens": 2779223
+        },
+        {
+          "method": "Memento",
+          "closed": 100,
+          "passed": 3,
+          "unknown_tasks": 42,
+          "input_tokens": 2998072,
+          "output_tokens": 1257954,
+          "known_calls": 595,
+          "unknown_usage_calls": 5,
+          "inflight_calls": 0,
+          "total_tokens": 4256026
+        },
+        {
+          "method": "EverMemOS",
+          "closed": 100,
+          "passed": 20,
+          "unknown_tasks": 19,
+          "input_tokens": 14730509,
+          "output_tokens": 1682357,
+          "known_calls": 1476,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 16412866
+        },
+        {
+          "method": "MemSkill",
+          "closed": 97,
+          "passed": 4,
+          "unknown_tasks": 4,
+          "input_tokens": 10732819,
+          "output_tokens": 1922769,
+          "known_calls": 992,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 1,
+          "total_tokens": 12655588
+        },
+        {
+          "method": "MSCE",
+          "closed": 95,
+          "passed": 10,
+          "unknown_tasks": 9,
+          "input_tokens": 8589181,
+          "output_tokens": 2106759,
+          "known_calls": 907,
+          "unknown_usage_calls": 7,
+          "inflight_calls": 1,
+          "total_tokens": 10695940
+        }
+      ],
+      "totals": {
+        "closed": 783,
+        "passed": 128,
+        "unknown_tasks": 200,
+        "input_tokens": 48242939,
+        "output_tokens": 12914119,
+        "known_calls": 6165,
+        "unknown_usage_calls": 96,
+        "inflight_calls": 3,
+        "total_tokens": 61157058
+      },
+      "status": {
+        "watchdog": {
+          "epoch": 1789688143.601624,
+          "phase": "monitoring",
+          "blocked": null,
+          "recovering": {}
+        }
+      }
+    },
+    {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_deepseek_v41_official_100_max10_20260917_v1",
+      "model": "deepseek-flash",
+      "rows": [
+        {
+          "method": "Vanilla",
+          "closed": 100,
+          "passed": 25,
+          "unknown_tasks": 1,
+          "input_tokens": 1374325,
+          "output_tokens": 3298875,
+          "known_calls": 851,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 4673200
+        },
+        {
+          "method": "FewShot",
+          "closed": 100,
+          "passed": 51,
+          "unknown_tasks": 1,
+          "input_tokens": 4279694,
+          "output_tokens": 1328015,
+          "known_calls": 556,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 5607709
+        },
+        {
+          "method": "FinalCodeRAG",
+          "closed": 100,
+          "passed": 48,
+          "unknown_tasks": 0,
+          "input_tokens": 4411521,
+          "output_tokens": 1326596,
+          "known_calls": 575,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 5738117
+        },
+        {
+          "method": "RawTrajectoryRAG",
+          "closed": 100,
+          "passed": 0,
+          "unknown_tasks": 1,
+          "input_tokens": 6246467,
+          "output_tokens": 2507126,
+          "known_calls": 999,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 8753593
+        },
+        {
+          "method": "Memento",
+          "closed": 100,
+          "passed": 15,
+          "unknown_tasks": 0,
+          "input_tokens": 4628098,
+          "output_tokens": 2088791,
+          "known_calls": 893,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 6716889
+        },
+        {
+          "method": "EverMemOS",
+          "closed": 100,
+          "passed": 38,
+          "unknown_tasks": 0,
+          "input_tokens": 13659332,
+          "output_tokens": 1753845,
+          "known_calls": 1533,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 15413177
+        },
+        {
+          "method": "MemSkill",
+          "closed": 100,
+          "passed": 31,
+          "unknown_tasks": 2,
+          "input_tokens": 8635817,
+          "output_tokens": 1617828,
+          "known_calls": 806,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 10253645
+        },
+        {
+          "method": "MSCE",
+          "closed": 100,
+          "passed": 16,
+          "unknown_tasks": 0,
+          "input_tokens": 7546659,
+          "output_tokens": 2153831,
+          "known_calls": 943,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 9700490
+        }
+      ],
+      "totals": {
+        "closed": 800,
+        "passed": 224,
+        "unknown_tasks": 5,
+        "input_tokens": 50781913,
+        "output_tokens": 16074907,
+        "known_calls": 7156,
+        "unknown_usage_calls": 2,
+        "inflight_calls": 0,
+        "total_tokens": 66856820
+      },
+      "status": {
+        "completion_audit.json": {
+          "actual_input_tokens": 50781913,
+          "actual_output_tokens": 16074907,
+          "bounded_learning_calls": 1033,
+          "epoch": 1789638379.2012992,
+          "formal_executed": false,
+          "guard_aborted_calls": 0,
+          "model_calls": 7158,
+          "partial": false,
+          "preloaded_history_records": 0,
+          "status": "pass",
+          "tasks": 800,
+          "unknown_usage_calls": 2
+        },
+        "watchdog": {
+          "epoch": 1789688131.6398573,
+          "phase": "complete",
+          "blocked": null,
+          "recovering": {}
+        }
+      }
+    },
+    {
+      "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_haiku45_100_extend10_20260917_v1",
+      "model": "claude-haiku-4-5-20251001",
+      "rows": [
+        {
+          "method": "Vanilla",
+          "closed": 100,
+          "passed": 20,
+          "unknown_tasks": 7,
+          "input_tokens": 2424256,
+          "output_tokens": 2116697,
+          "known_calls": 882,
+          "unknown_usage_calls": 2,
+          "inflight_calls": 0,
+          "total_tokens": 4540953
+        },
+        {
+          "method": "FewShot",
+          "closed": 100,
+          "passed": 28,
+          "unknown_tasks": 0,
+          "input_tokens": 10605247,
+          "output_tokens": 2381978,
+          "known_calls": 837,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 12987225
+        },
+        {
+          "method": "FinalCodeRAG",
+          "closed": 100,
+          "passed": 42,
+          "unknown_tasks": 0,
+          "input_tokens": 9062510,
+          "output_tokens": 1656084,
+          "known_calls": 684,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 10718594
+        },
+        {
+          "method": "RawTrajectoryRAG",
+          "closed": 100,
+          "passed": 6,
+          "unknown_tasks": 0,
+          "input_tokens": 8843081,
+          "output_tokens": 2558195,
+          "known_calls": 975,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 11401276
+        },
+        {
+          "method": "Memento",
+          "closed": 100,
+          "passed": 12,
+          "unknown_tasks": 35,
+          "input_tokens": 11717424,
+          "output_tokens": 2231843,
+          "known_calls": 915,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 13949267
+        },
+        {
+          "method": "EverMemOS",
+          "closed": 100,
+          "passed": 13,
+          "unknown_tasks": 9,
+          "input_tokens": 41898132,
+          "output_tokens": 2904220,
+          "known_calls": 2664,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 44802352
+        },
+        {
+          "method": "MemSkill",
+          "closed": 100,
+          "passed": 7,
+          "unknown_tasks": 8,
+          "input_tokens": 17887140,
+          "output_tokens": 2426589,
+          "known_calls": 1102,
+          "unknown_usage_calls": 0,
+          "inflight_calls": 0,
+          "total_tokens": 20313729
+        },
+        {
+          "method": "MSCE",
+          "closed": 100,
+          "passed": 8,
+          "unknown_tasks": 2,
+          "input_tokens": 16351064,
+          "output_tokens": 2444216,
+          "known_calls": 1087,
+          "unknown_usage_calls": 1,
+          "inflight_calls": 0,
+          "total_tokens": 18795280
+        }
+      ],
+      "totals": {
+        "closed": 800,
+        "passed": 136,
+        "unknown_tasks": 61,
+        "input_tokens": 118788854,
+        "output_tokens": 18719822,
+        "known_calls": 9146,
+        "unknown_usage_calls": 6,
+        "inflight_calls": 0,
+        "total_tokens": 137508676
+      },
+      "status": {
+        "extension_completion.json": {
+          "closed": 800,
+          "epoch": 1789676200.4346015,
+          "full": true,
+          "planned": 800,
+          "scope": "Retrospective 4-to-10 extension with original pre-task memory snapshots; not an uninterrupted online-10 run. Original calls and learning costs are retained. Additional learning is archived separately and is not exposed to other tasks. Unknown tool outcomes are not negative labels; they allow a fresh candidate without error feedback.",
+          "status": "pass"
+        },
+        "services": {
+          "Vanilla": "inactive",
+          "FewShot": "inactive",
+          "FinalCodeRAG": "inactive",
+          "RawTrajectoryRAG": "inactive",
+          "Memento": "inactive",
+          "EverMemOS": "inactive",
+          "MemSkill": "inactive",
+          "MSCE": "inactive"
+        },
+        "progress": {
+          "Vanilla": {
+            "epoch": 1789654006.652981,
+            "phase": "complete"
+          },
+          "FewShot": {
+            "epoch": 1789653576.4171603,
+            "phase": "complete"
+          },
+          "FinalCodeRAG": {
+            "epoch": 1789651414.7248747,
+            "phase": "complete"
+          },
+          "RawTrajectoryRAG": {
+            "epoch": 1789654929.2907722,
+            "phase": "complete"
+          },
+          "Memento": {
+            "epoch": 1789661751.9552536,
+            "phase": "complete"
+          },
+          "EverMemOS": {
+            "epoch": 1789665432.1129415,
+            "phase": "complete"
+          },
+          "MemSkill": {
+            "epoch": 1789676117.4020245,
+            "phase": "complete"
+          },
+          "MSCE": {
+            "epoch": 1789655906.683529,
+            "phase": "complete"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3902 @@
+{
+  "time_cst": "2026-09-17T07:36:16.155407+08:00",
+  "qwen_root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1",
+  "model": "qwen3.8-27b-q4_k_m",
+  "planned": 800,
+  "completed": 382,
+  "success": 47,
+  "success_rate_percent": 12.3,
+  "rows": [
+    {
+      "method": "Vanilla",
+      "completed": 39,
+      "success": 6,
+      "fail": 17,
+      "unknown": 16,
+      "success_rate_percent": 15.4,
+      "common_prefix_success": 6,
+      "common_prefix_rate_percent": 18.2,
+      "first_attempt_success": 2
+    },
+    {
+      "method": "FewShot",
+      "completed": 34,
+      "success": 9,
+      "fail": 23,
+      "unknown": 2,
+      "success_rate_percent": 26.5,
+      "common_prefix_success": 9,
+      "common_prefix_rate_percent": 27.3,
+      "first_attempt_success": 4
+    },
+    {
+      "method": "FinalCodeRAG",
+      "completed": 44,
+      "success": 16,
+      "fail": 25,
+      "unknown": 3,
+      "success_rate_percent": 36.4,
+      "common_prefix_success": 10,
+      "common_prefix_rate_percent": 30.3,
+      "first_attempt_success": 12
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "completed": 100,
+      "success": 5,
+      "fail": 26,
+      "unknown": 69,
+      "success_rate_percent": 5.0,
+      "common_prefix_success": 3,
+      "common_prefix_rate_percent": 9.1,
+      "first_attempt_success": 5
+    },
+    {
+      "method": "Memento",
+      "completed": 57,
+      "success": 0,
+      "fail": 32,
+      "unknown": 25,
+      "success_rate_percent": 0.0,
+      "common_prefix_success": 0,
+      "common_prefix_rate_percent": 0.0,
+      "first_attempt_success": 0
+    },
+    {
+      "method": "EverMemOS",
+      "completed": 41,
+      "success": 10,
+      "fail": 27,
+      "unknown": 4,
+      "success_rate_percent": 24.4,
+      "common_prefix_success": 8,
+      "common_prefix_rate_percent": 24.2,
+      "first_attempt_success": 7
+    },
+    {
+      "method": "MemSkill",
+      "completed": 34,
+      "success": 0,
+      "fail": 33,
+      "unknown": 1,
+      "success_rate_percent": 0.0,
+      "common_prefix_success": 0,
+      "common_prefix_rate_percent": 0.0,
+      "first_attempt_success": 0
+    },
+    {
+      "method": "MSCE",
+      "completed": 33,
+      "success": 1,
+      "fail": 28,
+      "unknown": 4,
+      "success_rate_percent": 3.0,
+      "common_prefix_success": 1,
+      "common_prefix_rate_percent": 3.0,
+      "first_attempt_success": 0
+    }
+  ],
+  "common_prefix_tasks": 33,
+  "unknown_ended_before_10_attempts": 120,
+  "verified_successes": [
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C10_C08_01",
+      "assertions": 220,
+      "attempts": 5,
+      "code_hash": "04becca7c2cdf246a0aef3d72cea2ac015e8964431dc2456db5d6524ca820331"
+    },
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 2,
+      "code_hash": "047203ce79f1f53dbf1a099372cd94624d579462124012f500576fe3fbac29b6"
+    },
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C08_C08_05",
+      "assertions": 231,
+      "attempts": 4,
+      "code_hash": "87cc8681a5d21e8b08e3b3e2ab89900b1a3773684a11a9318538c04ff463e076"
+    },
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C07_C05_07",
+      "assertions": 119,
+      "attempts": 1,
+      "code_hash": "947fbb521b32d80b29d8ba73edb4dff7f1ab0dc2a23db7e1d9f7f46a0826ae72"
+    },
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C07_C04_03",
+      "assertions": 165,
+      "attempts": 8,
+      "code_hash": "8249c439566b2280e11cd655a17b29a2ddfd51d5261731c9d3c8870d33c914a1"
+    },
+    {
+      "method": "Vanilla",
+      "task_id": "TR_C08_C07_09",
+      "assertions": 191,
+      "attempts": 1,
+      "code_hash": "e7bdadcee27171c241a463323d25f42244dd6834a22cd15a8f4ea3846554f5ae"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C10_C08_01",
+      "assertions": 220,
+      "attempts": 1,
+      "code_hash": "0cf3b84b05aff19d6d4beceb9d4c197d3c15d5f50f9ec4ec45b33ba5a1937481"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C10_C06_09",
+      "assertions": 145,
+      "attempts": 9,
+      "code_hash": "bac93f0ff98106a3f7022c8633cf308ed0844e32b4e937e367d9624ee880982f"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 1,
+      "code_hash": "dbad5d07481b237d2be27bd72ff19ce7e5b8d8dd59f2b9f72d18671cc71ed125"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C07_C07_03",
+      "assertions": 169,
+      "attempts": 1,
+      "code_hash": "0cd3c4893c7e1786d69d5a51760b1bd91a18e4d2a986de7be87a8fd5707565cd"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C07_C05_07",
+      "assertions": 119,
+      "attempts": 7,
+      "code_hash": "050c33793b307aca93bf425d09b06c15024e47cf9920c42e6578e35b0adb643c"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C08_C10_05",
+      "assertions": 165,
+      "attempts": 10,
+      "code_hash": "0de04a839169c9014ee51ae35a2f57472316b1976570f8952b9dc8ae7dd07d22"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C10_C06_07",
+      "assertions": 206,
+      "attempts": 6,
+      "code_hash": "9b757620ca6714a21c710d43874f0d578e004f5ee2a4c088af2b8ac9cd85f8f2"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C08_C07_09",
+      "assertions": 191,
+      "attempts": 1,
+      "code_hash": "2e3a08d480de7f71640930a734059887d50e5ab0339376199b5b82d7501af8f3"
+    },
+    {
+      "method": "FewShot",
+      "task_id": "TR_C08_C08_02",
+      "assertions": 197,
+      "attempts": 2,
+      "code_hash": "cd79aa3d24fa61431f00f6e72a98df221e5804701a81eec0b6dab7a511f58b57"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C05_02",
+      "assertions": 177,
+      "attempts": 1,
+      "code_hash": "90faf3d28b09d787c0303130ab576f9dac3c3d8712152063c3b1f42c01a1b559"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C01_10",
+      "assertions": 103,
+      "attempts": 4,
+      "code_hash": "f5eee382148c161fdbabc302a5008b66ee53c989abf730e8d4cd92fd84df85c8"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C08_01",
+      "assertions": 220,
+      "attempts": 1,
+      "code_hash": "4885ee9fd03ee4015e9fe68f6d432c23cce952fa595778e320d1cf824fc39be2"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C04_09",
+      "assertions": 111,
+      "attempts": 1,
+      "code_hash": "3553944c5a139f35fd9d7d7d7a713c63ee39e590f3a2afd4a56353ac2ad79bf9"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 2,
+      "code_hash": "81a0636c8d1213ea647811f9b8ba06eab9542a47e7bb7059724524f7d745c6cf"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C07_C07_03",
+      "assertions": 169,
+      "attempts": 1,
+      "code_hash": "3823e2a8de3da56c140b3fe04534ec8cb953b97e3e87fea15fc68ade2b0515d2"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C08_C08_05",
+      "assertions": 231,
+      "attempts": 4,
+      "code_hash": "0339b6dadf2c83b95a0af141e30b00d23d4524fcdb918aaad8256035aa169017"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C02_02",
+      "assertions": 115,
+      "attempts": 1,
+      "code_hash": "0f0c17339baf78cde963668cbee0d1d0909e5ab9e809a67e71cc01deb6b94c80"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C07_C05_07",
+      "assertions": 119,
+      "attempts": 1,
+      "code_hash": "3221115339b4126580e8d9e2b9ea0428a3a31cfa7127f16dd3a513e629f14eff"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C07_C04_03",
+      "assertions": 165,
+      "attempts": 1,
+      "code_hash": "024fc949f5586d83192e53b9a09654609ef9e3d057e11b81e3c581219cb61eb0"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C07_02",
+      "assertions": 199,
+      "attempts": 1,
+      "code_hash": "645577706d1bafd3706e213c8649596000cb70ef30ae54946545ee8fd4915bfc"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C06_07",
+      "assertions": 206,
+      "attempts": 4,
+      "code_hash": "3d7744db94da02b889e8645fb7b3cf2a78118d37bc5cb6cf8e6691409499cebe"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C01_C10_08",
+      "assertions": 122,
+      "attempts": 1,
+      "code_hash": "b5213fb903073ceba72bd8bd4c6ef65a8dbba648415b41ef86925b167b2dedcf"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C10_C10_02",
+      "assertions": 151,
+      "attempts": 1,
+      "code_hash": "8f91086796c6ff70cc3e1c6ee21d4638924db400254f99e190cfc8618ba26b05"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C08_C07_09",
+      "assertions": 191,
+      "attempts": 1,
+      "code_hash": "b4734681a65b542b95c05f610fbeb3e2ce28f887726afcf4d396aae52454a054"
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C08_C08_02",
+      "assertions": 197,
+      "attempts": 1,
+      "code_hash": "07ccb9434407d32c0a01f9525b19c6ca0b5045483b90d2d3acb5191b66407423"
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C05_C07_01",
+      "assertions": 149,
+      "attempts": 1,
+      "code_hash": "f00b2bbc1157ceaa5d87230e40b0768763b085cecea6a976dba9f863c0bcb457"
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 1,
+      "code_hash": "806c95540f04ed1e1fc4fd9a9a2fd43ce5c4d85a979ba083313c8e3009d30c72"
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C07_C07_03",
+      "assertions": 169,
+      "attempts": 1,
+      "code_hash": "01ae0ebf0b59d0ad6e805eb644fda1cc6c6ae9824bbc0022a9f66e93ccd29926"
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C10_C07_02",
+      "assertions": 199,
+      "attempts": 1,
+      "code_hash": "667d519c9d6ca28503f1e087aaf98525a730d6bd9b47c051006734fb4ccfdb82"
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C08_C07_09",
+      "assertions": 191,
+      "attempts": 1,
+      "code_hash": "a8de7e577923dcfb7bf4b9a977d6fca1cb9715ba0970f79329b685aa820423a1"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C03_C10_06",
+      "assertions": 129,
+      "attempts": 2,
+      "code_hash": "2055c2226b6ae6a636bd3182609cb6191e0cb49123dd54bbc946c44a2cada40c"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C10_C08_01",
+      "assertions": 220,
+      "attempts": 1,
+      "code_hash": "c5296a13099fd634afc23abcff5ebba81c629a0dae7ea07e0c047e974f87c081"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 1,
+      "code_hash": "6cf98b742a9eb029607dd2dbd6e1b488140a1f8d7690984cef39315871781a0b"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C10_C02_02",
+      "assertions": 115,
+      "attempts": 1,
+      "code_hash": "1ac9589655deda65e000da035ed0b44dc914bec4c5df628058d59b86d0233011"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C10_C02_06",
+      "assertions": 128,
+      "attempts": 2,
+      "code_hash": "4f77d453720ebb872a614c8bd196c1b365ed5439ed6e1f5afc3eae3ed453f50c"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C04_C10_07",
+      "assertions": 189,
+      "attempts": 3,
+      "code_hash": "4d6a08a1186383724acd95a57ff25c9fbeeed510b50b6a4c22fcab3fcd2a57a4"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C01_C10_08",
+      "assertions": 122,
+      "attempts": 1,
+      "code_hash": "90d007cff11c81b781ef1a86f8f35f61a9bb14813559bbfcca3fe7ca0f462395"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C02_C10_06",
+      "assertions": 131,
+      "attempts": 1,
+      "code_hash": "9f286e49714f6ba946128f7c1d877f8e07bcda4760f6f0d51bd166644dfc02f3"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C08_C07_09",
+      "assertions": 191,
+      "attempts": 1,
+      "code_hash": "660314a0de90f4f06d0c8c01b25db854664407a133bccf7ecf932896a642239c"
+    },
+    {
+      "method": "EverMemOS",
+      "task_id": "TR_C08_C08_02",
+      "assertions": 197,
+      "attempts": 1,
+      "code_hash": "4c7f08282ba16fcf1680e1f0538b712173cc8cd8e6bec11964bfab5ce8cc3572"
+    },
+    {
+      "method": "MSCE",
+      "task_id": "TR_C07_C07_06",
+      "assertions": 176,
+      "attempts": 2,
+      "code_hash": "0fdf51564c0ef95b8841fd6ffde2d23a6936ebd3c42455d0ea72daa5170f822d"
+    }
+  ],
+  "verified_assertions": 8000,
+  "watchdog_epoch": 1789601761.6326869,
+  "watchdog_phase": "monitoring",
+  "active_lanes": 7,
+  "watchdog_blocked": {},
+  "deepseek_queue": {
+    "completed": 382,
+    "epoch": 1789601749.6861897,
+    "phase": "waiting",
+    "ready": false,
+    "reason": "waiting_for_all_qwen_results",
+    "required": 800
+  },
+  "deepseek_completed": 0,
+  "records": {
+    "Vanilla": [
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542807.5330756
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 8,
+        "completed_epoch": 1789543674.28242
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 6,
+        "completed_epoch": 1789544729.5521731
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789544897.9304311
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789546119.3983932
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 5,
+        "completed_epoch": 1789546612.7481644
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789546930.896125
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 3,
+        "completed_epoch": 1789547304.5823514
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789547404.46602
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789548861.2049403
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 4,
+        "completed_epoch": 1789549541.6518388
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789550610.0029984
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 8,
+        "completed_epoch": 1789554624.9103932
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 4,
+        "completed_epoch": 1789555959.6463466
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 10,
+        "completed_epoch": 1789558407.8616362
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789560750.6527712
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562907.654608
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789563030.5600524
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789567301.9920638
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789569066.3968964
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789572202.439855
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789573697.2546575
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789574044.927642
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789575495.2808971
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789577634.1705415
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789582235.9619951
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789585133.0907154
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 2,
+        "completed_epoch": 1789585870.7894328
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789590051.6386452
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789591540.4789145
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 5,
+        "completed_epoch": 1789593019.875117
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789593089.8536751
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789593170.551932
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 2,
+        "completed_epoch": 1789593591.7004776
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C10_02",
+        "order": 35,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 6,
+        "completed_epoch": 1789595894.0465834
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C01_C10_08",
+        "order": 36,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 5,
+        "completed_epoch": 1789597418.3169222
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C07_09",
+        "order": 37,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789599207.5226927
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C10_03",
+        "order": 38,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789599309.576974
+      },
+      {
+        "method": "Vanilla",
+        "task_id": "TR_C10_C02_02",
+        "order": 39,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 5,
+        "completed_epoch": 1789600981.0622604
+      }
+    ],
+    "FewShot": [
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542950.1653428
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789543936.605126
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789545518.3333576
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789545612.3965914
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 6,
+        "completed_epoch": 1789546103.1393285
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789546212.4508986
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789549378.2071333
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789550620.5148318
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789551715.5039778
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789553806.3964808
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789555068.0084336
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789558958.024237
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562269.38365
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 9,
+        "completed_epoch": 1789564114.6339812
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 6,
+        "completed_epoch": 1789567075.4153094
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789568969.1429915
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789570439.582723
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 7,
+        "completed_epoch": 1789571781.9328742
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789574479.6666281
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789576170.0531707
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 10,
+        "completed_epoch": 1789582202.78949
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789583773.808251
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789585555.3805501
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789586697.6728091
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789588844.6722786
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 10,
+        "completed_epoch": 1789590317.9811852
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789592045.266577
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594222.9064121
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789596952.1588767
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789597260.081763
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789599498.6027558
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789599587.7808125
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789599674.7000575
+      },
+      {
+        "method": "FewShot",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789600996.4637194
+      }
+    ],
+    "FinalCodeRAG": [
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 2,
+        "completed_epoch": 1789540217.5582588
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789540334.539668
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 7,
+        "completed_epoch": 1789541804.745129
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789541998.2029576
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 4,
+        "completed_epoch": 1789542581.8322608
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789542702.1741095
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789544743.510548
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789545910.5554988
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789547101.7264967
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789549362.287361
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 4,
+        "completed_epoch": 1789550480.2244718
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789552757.3378716
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789552991.072889
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789555858.2294433
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789558415.616773
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789559987.540561
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789561840.1169193
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789561953.341995
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789565244.7884552
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789567209.2693133
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789570626.6834369
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789572262.220052
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789575159.057518
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789576707.942643
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 4,
+        "completed_epoch": 1789577906.7983863
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789580052.1982305
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789582812.4165218
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789585967.6351364
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789588970.880021
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789589126.8630395
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789591860.5556881
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789591972.3168411
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789592076.6434624
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594163.5565
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C10_02",
+        "order": 35,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789594391.2914746
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C01_C10_08",
+        "order": 36,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789594642.5911767
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C07_09",
+        "order": 37,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789596614.9284976
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C10_03",
+        "order": 38,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789598106.8489108
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C02_02",
+        "order": 39,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789598318.321341
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C04_07",
+        "order": 40,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789599699.7350996
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C04_09",
+        "order": 41,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789599902.6660693
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C05_C08_09",
+        "order": 42,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789601398.8665838
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C05_02",
+        "order": 43,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789601533.064148
+      },
+      {
+        "method": "FinalCodeRAG",
+        "task_id": "TR_C10_C07_02",
+        "order": 44,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789601633.605119
+      }
+    ],
+    "RawTrajectoryRAG": [
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789539686.0914938
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789539789.0860016
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789541862.838065
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789541938.5400171
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 5,
+        "completed_epoch": 1789542375.0815938
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789542496.437963
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789542638.3465457
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789542824.3197584
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 6,
+        "completed_epoch": 1789543366.6433165
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 4,
+        "completed_epoch": 1789543748.925941
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789544764.3068347
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789546560.432146
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789546792.145462
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789546987.6750746
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789547152.0638132
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789548547.4608257
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789548793.788969
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789548962.1585038
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789549221.2683606
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789549442.235451
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789549650.5748367
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789549805.692372
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789549971.5208232
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789550127.3059924
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789550294.0760393
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789551457.1122282
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789551638.438845
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789551851.778839
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789552100.4465928
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789553118.0550907
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789553299.8253145
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789553382.3580015
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789553454.088033
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789554703.8764038
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_02",
+        "order": 35,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789554928.0838518
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C01_C10_08",
+        "order": 36,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789555093.4639828
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_09",
+        "order": 37,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789555262.6592195
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_03",
+        "order": 38,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789555360.34672
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C02_02",
+        "order": 39,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789555632.33962
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C04_07",
+        "order": 40,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789556886.9928706
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C04_09",
+        "order": 41,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789557060.935258
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C08_09",
+        "order": 42,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789558517.9888563
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C05_02",
+        "order": 43,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789558708.1401918
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_02",
+        "order": 44,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789558785.0514836
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C08_02",
+        "order": 45,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789559968.1332548
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C03_04",
+        "order": 46,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789560126.3852832
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C05_09",
+        "order": 47,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789561398.02827
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C02_C10_08",
+        "order": 48,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789561575.2081172
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C03_09",
+        "order": 49,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789561789.6814685
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C05_05",
+        "order": 50,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789561936.102678
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_07",
+        "order": 51,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562638.6473758
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C07_03",
+        "order": 52,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789563986.2464108
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C02_01",
+        "order": 53,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564160.5673535
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_07",
+        "order": 54,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564353.9948313
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C08_05",
+        "order": 55,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564533.97481
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C01_C10_09",
+        "order": 56,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564710.3996716
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C05_10",
+        "order": 57,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564898.7387528
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C10_05",
+        "order": 58,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565034.3348563
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C06_03",
+        "order": 59,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565154.3999653
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_05",
+        "order": 60,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565338.7510822
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C05_03",
+        "order": 61,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565524.4300418
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C03_09",
+        "order": 62,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565700.7593756
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C08_05",
+        "order": 63,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789565912.0732741
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C08_09",
+        "order": 64,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789567335.7708201
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C10_08",
+        "order": 65,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789567486.9954858
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C07_04",
+        "order": 66,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789568399.066474
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C06_03",
+        "order": 67,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789568705.285433
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C10_03",
+        "order": 68,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789570014.6289907
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C10_09",
+        "order": 69,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789570137.7674603
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_06",
+        "order": 70,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789570363.362661
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C02_C07_03",
+        "order": 71,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789571371.2987127
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C07_01",
+        "order": 72,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789571559.381016
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C10_08",
+        "order": 73,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789571950.39458
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C10_10",
+        "order": 74,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572181.9663155
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_01",
+        "order": 75,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572329.2010307
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C02_03",
+        "order": 76,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572502.7331214
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C10_10",
+        "order": 77,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572734.4262834
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C04_C08_01",
+        "order": 78,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572840.0036273
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C06_C05_01",
+        "order": 79,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789573027.5583558
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C08_04",
+        "order": 80,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789574433.139966
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C07_01",
+        "order": 81,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789574569.8525715
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C05_07",
+        "order": 82,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789575703.4700325
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C03_C07_03",
+        "order": 83,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789575814.903496
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C09_02",
+        "order": 84,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789575976.6571565
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_10",
+        "order": 85,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789576156.6827157
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C04_07",
+        "order": 86,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789579761.493927
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C05_C10_02",
+        "order": 87,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789581168.1845946
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C08_06",
+        "order": 88,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789581405.7279994
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C03_08",
+        "order": 89,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789581620.640398
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C05_04",
+        "order": 90,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789582618.7151034
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_05",
+        "order": 91,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789582725.542513
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_08",
+        "order": 92,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789582989.0604935
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C01_C07_09",
+        "order": 93,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789584074.9204915
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C05_08",
+        "order": 94,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789584282.1279166
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C07_C10_02",
+        "order": 95,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789586059.0704727
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C08_02",
+        "order": 96,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 10,
+        "completed_epoch": 1789588427.0879753
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C09_C10_06",
+        "order": 97,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789588693.7994277
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C07_03",
+        "order": 98,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789589920.4199038
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C10_C10_04",
+        "order": 99,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789590113.6833305
+      },
+      {
+        "method": "RawTrajectoryRAG",
+        "task_id": "TR_C08_C10_01",
+        "order": 100,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789591288.4367194
+      }
+    ],
+    "Memento": [
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789541577.2837105
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542401.918432
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789544238.691934
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789545493.5625913
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789546373.5564582
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789547105.6734257
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 2,
+        "completed_epoch": 1789547951.3289177
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789548133.4357276
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789549474.0649734
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789551139.6345565
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789552680.2689633
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789553737.9041703
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789554344.4890819
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789554688.6480927
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789554933.3386998
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789556678.7713168
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789558210.4340622
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789559727.9631464
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789560154.5958698
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562235.5788503
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 3,
+        "completed_epoch": 1789562968.5374126
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789564478.7541664
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789564920.9229133
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789566759.8326433
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789567012.6254354
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789568927.3634508
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789569235.3812683
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789569593.2182012
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789570021.9316263
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789571696.3595028
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789572000.768415
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789573003.3314588
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789573130.3638637
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789574986.0817714
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C10_02",
+        "order": 35,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789575468.152594
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C01_C10_08",
+        "order": 36,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789575895.0656264
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C07_09",
+        "order": 37,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789576191.2811353
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C10_03",
+        "order": 38,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789577067.1736212
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C02_02",
+        "order": 39,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789577339.8057485
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C04_07",
+        "order": 40,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789579124.9595006
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C04_09",
+        "order": 41,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789579434.93379
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C08_09",
+        "order": 42,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789581871.0758214
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C05_02",
+        "order": 43,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789583210.0479708
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C07_02",
+        "order": 44,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789584171.0052385
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C08_02",
+        "order": 45,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789586138.9260645
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C03_04",
+        "order": 46,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789586473.0460353
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C08_C05_09",
+        "order": 47,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789589632.2647219
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C02_C10_08",
+        "order": 48,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789590022.3473675
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C07_C03_09",
+        "order": 49,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789591479.7291467
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C06_C05_05",
+        "order": 50,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789592615.4749713
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C07_07",
+        "order": 51,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594271.4858322
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C06_C07_03",
+        "order": 52,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789595538.448378
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C02_01",
+        "order": 53,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789595853.805708
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C10_07",
+        "order": 54,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789596163.1984537
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C10_C08_05",
+        "order": 55,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789600675.1143913
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C01_C10_09",
+        "order": 56,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789600957.0825171
+      },
+      {
+        "method": "Memento",
+        "task_id": "TR_C05_C05_10",
+        "order": 57,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789601231.3102725
+      }
+    ],
+    "EverMemOS": [
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789541146.5822878
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542413.867759
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789542665.7316144
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789542852.479502
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789545200.5453837
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789545385.7048998
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789545856.3352873
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789547557.4854171
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789549041.7237673
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789550862.0295365
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789553660.2281995
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789555540.6873732
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789555719.5710654
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789557575.4302146
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789557861.0062003
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789559868.4152362
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562176.9097254
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789563988.9161267
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789567160.2594717
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789569002.1852396
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789569209.7505229
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789569360.7476976
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789571776.3132634
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789573496.1593988
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789575293.222421
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789577947.7205312
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 3,
+        "completed_epoch": 1789578619.2942472
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789581322.8290012
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789585264.4671543
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789585522.4617422
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789586283.6052718
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789586473.8633738
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789587750.6622624
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789589730.583445
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C10_02",
+        "order": 35,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789592316.7890208
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C01_C10_08",
+        "order": 36,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789592556.1647115
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C07_09",
+        "order": 37,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594548.1843696
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C10_03",
+        "order": 38,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789595940.0795655
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C02_02",
+        "order": 39,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 1,
+        "completed_epoch": 1789596209.002437
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C05_C04_07",
+        "order": 40,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789597883.6652434
+      },
+      {
+        "method": "EverMemOS",
+        "task_id": "TR_C10_C04_09",
+        "order": 41,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789599920.4275498
+      }
+    ],
+    "MemSkill": [
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542100.655171
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789543210.7061586
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789543397.5951643
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789544463.0716577
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789546942.353542
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789548272.238218
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789550320.1088245
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789552030.8251915
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789553207.7297015
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789554824.5728867
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789556605.45584
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789557999.7697008
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789559964.9888628
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789562012.0107214
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789564113.0815344
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789565849.4002893
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789567480.803648
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789568601.8610907
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789571315.0027163
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789573255.8956928
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789576174.7642918
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789577496.9420278
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789579592.2174568
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789581209.9544861
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789583533.3336513
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789585262.12985
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789587410.9440014
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789589931.7979822
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789592721.6979818
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594911.8878582
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789596749.2100155
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789598195.3544881
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789599165.4985664
+      },
+      {
+        "method": "MemSkill",
+        "task_id": "TR_C08_C10_08",
+        "order": 34,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789600870.3227684
+      }
+    ],
+    "MSCE": [
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C10_06",
+        "order": 1,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789541378.2211354
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C04_03",
+        "order": 2,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789542504.922354
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C05_C10_04",
+        "order": 3,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789544368.4956186
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C07_06",
+        "order": 4,
+        "success": true,
+        "judge_status": "pass",
+        "generation_calls": 2,
+        "completed_epoch": 1789544568.518992
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C06_07",
+        "order": 5,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789546119.1621706
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C08_01",
+        "order": 6,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789547266.457572
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C03_C10_06",
+        "order": 7,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 10,
+        "completed_epoch": 1789553179.7716997
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C05_08",
+        "order": 8,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789553318.4565544
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C04_C10_01",
+        "order": 9,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789554347.3075993
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C03_C10_08",
+        "order": 10,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789555897.351928
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C08_C08_05",
+        "order": 11,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789558688.3208067
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C09_C10_01",
+        "order": 12,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789560572.39838
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C05_07",
+        "order": 13,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789561780.3131232
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C06_09",
+        "order": 14,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789563697.2580795
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C02_C10_06",
+        "order": 15,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789563986.0654435
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C01_C08_05",
+        "order": 16,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789566346.8559318
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C05_C10_01",
+        "order": 17,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789568092.8230011
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C05_07",
+        "order": 18,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789570300.135425
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C05_10",
+        "order": 19,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789572698.0024886
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C06_C10_09",
+        "order": 20,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789574650.9474988
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C05_C10_05",
+        "order": 21,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789577438.7281995
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C05_C05_01",
+        "order": 22,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789579086.8064353
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C09_06",
+        "order": 23,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789581265.842029
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C05_C06_03",
+        "order": 24,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789582907.9945786
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C01_10",
+        "order": 25,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789584612.58218
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C08_C10_05",
+        "order": 26,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789586072.7592869
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C04_C10_07",
+        "order": 27,
+        "success": false,
+        "judge_status": "unknown",
+        "generation_calls": 1,
+        "completed_epoch": 1789586458.243851
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C08_08",
+        "order": 28,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789590156.9074328
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C10_09",
+        "order": 29,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789592781.510843
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C08_C08_02",
+        "order": 30,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789594625.2026405
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C10_C02_06",
+        "order": 31,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789597142.8215196
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C08_C07_09",
+        "order": 32,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789598303.4441807
+      },
+      {
+        "method": "MSCE",
+        "task_id": "TR_C07_C07_03",
+        "order": 33,
+        "success": false,
+        "judge_status": "fail",
+        "generation_calls": 10,
+        "completed_epoch": 1789600132.0600507
+      }
+    ]
+  }
+}

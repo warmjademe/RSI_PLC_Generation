@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "epoch": 1789621849.5523295,
+  "tasks_audited": 400,
+  "Full_success": 84,
+  "model_calls": 2844,
+  "Full_model_calls": 1009,
+  "Full_tokens": 13114827,
+  "native_requests_audited": 2844,
+  "tool_receipts_audited": 4869,
+  "cost_ledger_reconciled": true,
+  "scope": "Consolidated final results, native requests, source-bound receipts, real attempt logs and costs."
+}

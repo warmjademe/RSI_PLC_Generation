@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-14",
+  "scope": "Local implementation and synthetic protocol validation; no paid model or real PLC experiment",
+  "source_sha256": "a41cb273a12dbf32c7957e9bf4b54be003c20492555a9e3bfee7a2582aa46a7f",
+  "tests": {
+    "passed": 55,
+    "new_online_method_tests": 27,
+    "shared_context_provider_tests": 25,
+    "shared_bound_edit_tests": 3,
+    "command": "TMPDIR=/private/tmp python3 -m unittest our_method.method_history_feedback.tests.test_online tests.test_common tests.test_revision_feedback.RevisionTests.test_edits_are_simultaneous_and_bound_to_one_version tests.test_revision_feedback.RevisionTests.test_ambiguous_and_overlapping_edits_are_rejected tests.test_revision_feedback.RevisionTests.test_full_replacement_fallback_is_explicit_and_bound",
+    "environment_note": "An initial shared test run had one existing macOS /var versus /private/var temporary-path assertion failure. All 55 passed with canonical TMPDIR; no shared source/test files were changed."
+  },
+  "compileall": "passed",
+  "public_dataset_initialization": {
+    "public_tasks_frozen": 117,
+    "unique_task_ids": 117,
+    "preloaded_history_records": 0,
+    "initial_knowledge_records": 0,
+    "completed_real_tasks": 0,
+    "model_calls": 0
+  },
+  "synthetic_demo": {
+    "artifact_directory": "/tmp/plc-history-feedback-demo-final-20260914",
+    "tasks": 2,
+    "synthetic_passed": 2,
+    "active_claims": 1,
+    "scripted_model_calls": 7,
+    "synthetic_tool_calls": 8,
+    "cross_task_retrieval_observed": true,
+    "completed_study_resume_added_calls": 0,
+    "evidence_mode": "replay",
+    "real_PLC_correctness_claim": false
+  },
+  "credential_scan": "No recognizable credential flags in new source, configuration and documentation",
+  "remaining_live_setup": [
+    "Set an explicit frozen API model and environment-based credential",
+    "Configure calibrated compile/runtime/formal JSON validator commands",
+    "Run tool/environment preflight before starting a new paid study"
+  ]
+}

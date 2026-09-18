@@ -1,0 +1,9 @@
+[project]
+name = "plc-st-rsi-comparison"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Frozen-training PLC ST baseline and RSI comparison workflows"
+dependencies = []
+
+[tool.unittest]
+start-directory = "tests"

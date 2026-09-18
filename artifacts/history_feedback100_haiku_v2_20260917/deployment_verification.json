@@ -1,0 +1,602 @@
+{
+  "epoch": 1789608279.4983478,
+  "protocol": "pass",
+  "ops": "pass",
+  "native_calls_audited": 43,
+  "normalization": {
+    "accepted": 43
+  },
+  "rejection_reasons": {},
+  "checks": {
+    "compile|pass": 11,
+    "runtime|fail": 9,
+    "runtime|pass": 2,
+    "compile|fail": 17
+  },
+  "returned_calls": 32,
+  "input_tokens": 389022,
+  "output_tokens": 78476,
+  "live": {
+    "epoch": 1789608279.5826006,
+    "completed": 3,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 1,
+        "planned": 100,
+        "success": 1,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 6,
+        "completed_tokens": 98193,
+        "current": {
+          "phase": "generating",
+          "order": 2,
+          "task_id": "TR_C07_C04_03",
+          "epoch": 1789608165.6868317
+        }
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 0,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 0,
+        "completed_tokens": 0,
+        "current": {
+          "phase": "generating",
+          "order": 1,
+          "task_id": "TR_C07_C10_06",
+          "epoch": 1789608063.3494098
+        }
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 1,
+        "planned": 100,
+        "success": 1,
+        "first_success": 0,
+        "fail": 0,
+        "unknown": 0,
+        "completed_model_calls": 6,
+        "completed_tokens": 89517,
+        "current": {
+          "phase": "generating",
+          "order": 2,
+          "task_id": "TR_C07_C04_03",
+          "epoch": 1789608166.599861
+        }
+      },
+      {
+        "arm": "Neither",
+        "completed": 1,
+        "planned": 100,
+        "success": 0,
+        "first_success": 0,
+        "fail": 1,
+        "unknown": 0,
+        "completed_model_calls": 10,
+        "completed_tokens": 142299,
+        "current": {
+          "phase": "generating",
+          "order": 2,
+          "task_id": "TR_C07_C04_03",
+          "epoch": 1789608271.0564198
+        }
+      }
+    ],
+    "phase": "running"
+  },
+  "qualification_current": {
+    "status": "pass",
+    "failed": 0,
+    "epoch": 1789608053.5000646,
+    "calls": 8,
+    "generation_calls": 4,
+    "curation_calls": 2,
+    "review_calls": 2,
+    "normalization_revision": "haiku_output_contract_20260917_v2",
+    "reported_tokens": 120312,
+    "results": [
+      {
+        "call": 1,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 6691,
+          "output_tokens": 2570
+        },
+        "provider_usage": {
+          "input_tokens": 6691,
+          "output_tokens": 2570,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [
+          {
+            "field": "change_summary",
+            "kind": "display_truncated",
+            "original_characters": 910,
+            "original_sha256": "add47ba4574358ada691c35f5e1958b01ea2558b10417aea35b51b3728adc97c",
+            "display_only": true
+          }
+        ],
+        "elapsed_seconds": 17.741714156698436
+      },
+      {
+        "call": 2,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 14866,
+          "output_tokens": 3058
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 5946,
+          "cache_read_input_tokens": 8919,
+          "input_tokens": 1,
+          "output_tokens": 3058,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 5946
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 23.780086275190115
+      },
+      {
+        "call": 3,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 14385,
+          "output_tokens": 2522
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 5754,
+          "cache_read_input_tokens": 8630,
+          "input_tokens": 1,
+          "output_tokens": 2522,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 5754
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [
+          {
+            "field": "change_summary",
+            "kind": "display_truncated",
+            "original_characters": 818,
+            "original_sha256": "029feb4a5e3b0cce8141a89c99fd92cd59beb16f42ac8a5dae6737f12c99a589",
+            "display_only": true
+          },
+          {
+            "field": "applicability_notes",
+            "kind": "display_truncated",
+            "original_characters": 555,
+            "original_sha256": "6b90d2d2d675d71d269195fcea619b5c65035a84b64487b5ef22e18acd744f75",
+            "display_only": true
+          }
+        ],
+        "elapsed_seconds": 20.89318082202226
+      },
+      {
+        "call": 4,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 9908,
+          "output_tokens": 2813
+        },
+        "provider_usage": {
+          "input_tokens": 9908,
+          "output_tokens": 2813,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [
+          {
+            "field": "change_summary",
+            "kind": "display_truncated",
+            "original_characters": 1144,
+            "original_sha256": "6fb1619ee5454b87d16dea76f6ae3a460d6f4a8072259e6adb4920b61ee6363f",
+            "display_only": true
+          },
+          {
+            "field": "applicability_notes",
+            "kind": "display_truncated",
+            "original_characters": 578,
+            "original_sha256": "60c1526679685ffbe9bacbf3d0789671380c5718ebe75be10714a01e1065a2b4",
+            "display_only": true
+          }
+        ],
+        "elapsed_seconds": 19.129451617598534
+      },
+      {
+        "call": 5,
+        "role": "knowledge.curate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 16645,
+          "output_tokens": 540
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6658,
+          "cache_read_input_tokens": 9986,
+          "input_tokens": 1,
+          "output_tokens": 540,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6658
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 7.88950320892036
+      },
+      {
+        "call": 6,
+        "role": "knowledge.curate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 16907,
+          "output_tokens": 855
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6763,
+          "cache_read_input_tokens": 10143,
+          "input_tokens": 1,
+          "output_tokens": 855,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6763
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 9.471956435125321
+      },
+      {
+        "call": 7,
+        "role": "knowledge.review",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 16815,
+          "output_tokens": 116
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6726,
+          "cache_read_input_tokens": 10088,
+          "input_tokens": 1,
+          "output_tokens": 116,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6726
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 4.149605697952211
+      },
+      {
+        "call": 8,
+        "role": "knowledge.review",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 11516,
+          "output_tokens": 105
+        },
+        "provider_usage": {
+          "input_tokens": 11516,
+          "output_tokens": 105,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 3.048401535023004
+      }
+    ],
+    "hard_json_grammar_claimed": false,
+    "formal_experiment_calls": 0
+  },
+  "qualification_prior_preserved": {
+    "status": "failed_learning_field_audit",
+    "failed": 1,
+    "epoch": 1789607953.356455,
+    "calls": 8,
+    "generation_calls": 4,
+    "curation_calls": 2,
+    "review_calls": 2,
+    "normalization_revision": "haiku_output_contract_20260917_v2",
+    "reported_tokens": 115225,
+    "results": [
+      {
+        "call": 1,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 14752,
+          "output_tokens": 2844
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 5901,
+          "cache_read_input_tokens": 8850,
+          "input_tokens": 1,
+          "output_tokens": 2844,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 5901
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [
+          {
+            "field": "change_summary",
+            "kind": "display_truncated",
+            "original_characters": 989,
+            "original_sha256": "0d44c049357253c0c17b9ced3a75cfaf6902151e63c71e3a84bcc2177fde1cf3",
+            "display_only": true
+          }
+        ],
+        "elapsed_seconds": 22.73467744095251
+      },
+      {
+        "call": 2,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 6620,
+          "output_tokens": 2888
+        },
+        "provider_usage": {
+          "input_tokens": 6620,
+          "output_tokens": 2888,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 18.373903544154018
+      },
+      {
+        "call": 3,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 15093,
+          "output_tokens": 3158
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6037,
+          "cache_read_input_tokens": 9055,
+          "input_tokens": 1,
+          "output_tokens": 3158,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6037
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 24.084343003109097
+      },
+      {
+        "call": 4,
+        "role": "plc.generate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 9803,
+          "output_tokens": 2757
+        },
+        "provider_usage": {
+          "input_tokens": 9803,
+          "output_tokens": 2757,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 18.141454313881695
+      },
+      {
+        "call": 5,
+        "role": "knowledge.curate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 11233,
+          "output_tokens": 381
+        },
+        "provider_usage": {
+          "input_tokens": 11233,
+          "output_tokens": 381,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 5.515212757978588
+      },
+      {
+        "call": 6,
+        "role": "knowledge.curate",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 11233,
+          "output_tokens": 393
+        },
+        "provider_usage": {
+          "input_tokens": 11233,
+          "output_tokens": 393,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 5.606510539073497
+      },
+      {
+        "call": 7,
+        "role": "knowledge.review",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 16853,
+          "output_tokens": 273
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6741,
+          "cache_read_input_tokens": 10111,
+          "input_tokens": 1,
+          "output_tokens": 273,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6741
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 6.460515771992505
+      },
+      {
+        "call": 8,
+        "role": "knowledge.review",
+        "status": "pass",
+        "model": "claude-haiku-4-5-20251001",
+        "usage": {
+          "input_tokens": 16768,
+          "output_tokens": 176
+        },
+        "provider_usage": {
+          "cache_creation_input_tokens": 6707,
+          "cache_read_input_tokens": 10060,
+          "input_tokens": 1,
+          "output_tokens": 176,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 6707
+          }
+        },
+        "representation": "whole_json",
+        "metadata_issues": [],
+        "elapsed_seconds": 5.8199716648086905
+      }
+    ],
+    "hard_json_grammar_claimed": false,
+    "formal_experiment_calls": 0,
+    "reason": "call 7 knowledge.review reason exceeds unchanged 500 character bound; original 8 receipts retained",
+    "audit_epoch": 1789608023.3683882
+  },
+  "units": {
+    "plc-history-feedback100-haiku-20260917-v2.service": "active",
+    "plc-history-feedback100-haiku-v2-watchdog.service": "active",
+    "plc-history-feedback100-haiku-v2-costs.service": "active"
+  },
+  "cost_summary": {
+    "epoch": 1789608273.3600576,
+    "planned": 400,
+    "tasks_started": 7,
+    "tasks_completed": 3,
+    "successful_tasks": 2,
+    "completed_budgets_reconciled": true,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 1,
+        "success": 1,
+        "success_rate": 1.0,
+        "mean_calls_until_success_among_successes": 4,
+        "mean_accounted_tokens_until_success_among_successes": 59618,
+        "completed_tasks_total_calls_including_failures_and_learning": 6,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 98193,
+        "completed_tasks_reported_tokens": 98193,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 6.0,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 98193.0
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 0,
+        "success": 0,
+        "success_rate": null,
+        "mean_calls_until_success_among_successes": null,
+        "mean_accounted_tokens_until_success_among_successes": null,
+        "completed_tasks_total_calls_including_failures_and_learning": 0,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 0,
+        "completed_tasks_reported_tokens": 0,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": null,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": null
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 1,
+        "success": 1,
+        "success_rate": 1.0,
+        "mean_calls_until_success_among_successes": 4,
+        "mean_accounted_tokens_until_success_among_successes": 39153,
+        "completed_tasks_total_calls_including_failures_and_learning": 6,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 89517,
+        "completed_tasks_reported_tokens": 89517,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 6.0,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 89517.0
+      },
+      {
+        "arm": "Neither",
+        "completed": 1,
+        "success": 0,
+        "success_rate": 0.0,
+        "mean_calls_until_success_among_successes": null,
+        "mean_accounted_tokens_until_success_among_successes": null,
+        "completed_tasks_total_calls_including_failures_and_learning": 10,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 142299,
+        "completed_tasks_reported_tokens": 142299,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": null,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": null
+      }
+    ],
+    "previous_interrupted_launch_cost": null,
+    "definitions": {
+      "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+      "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+      "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+      "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+      "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+    }
+  },
+  "repair_diagnostic_costs": {
+    "paid_calls": 16,
+    "reported_tokens": 235537,
+    "old_trial_preserved": true,
+    "included_in_formal_task_budget": false
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "time": "2026-09-17T09:05:11.040114+08:00",
+  "inference_api": {
+    "/health": {
+      "status": "ok"
+    },
+    "/slots": [
+      {
+        "id": 0,
+        "is_processing": false,
+        "n_ctx": 131072,
+        "id_task": 24831
+      },
+      {
+        "id": 1,
+        "is_processing": false,
+        "n_ctx": 131072,
+        "id_task": 24758
+      }
+    ]
+  },
+  "tunnel": "MainPID=304879\nActiveState=active\n",
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 0,
+      "success": 0,
+      "model_calls": 11,
+      "reported_tokens": 43321,
+      "estimated_tokens": 252899,
+      "pending_calls": 1
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 1,
+      "success": 0,
+      "model_calls": 8,
+      "reported_tokens": 20434,
+      "estimated_tokens": 235763,
+      "pending_calls": 0
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 0,
+      "success": 0,
+      "model_calls": 9,
+      "reported_tokens": 27937,
+      "estimated_tokens": 178395,
+      "pending_calls": 1
+    },
+    {
+      "arm": "Neither",
+      "completed": 1,
+      "success": 0,
+      "model_calls": 12,
+      "reported_tokens": 34018,
+      "estimated_tokens": 249848,
+      "pending_calls": 1
+    }
+  ],
+  "stop": {
+    "automatic_retry": false,
+    "epoch": 1789606697.5929363,
+    "error_type": "ProviderError",
+    "revision": "reflection_guard_20260914_v1"
+  },
+  "watch_health": {
+    "epoch": 1789607089.8551586,
+    "completed": 2,
+    "planned": 400,
+    "arms": [
+      {
+        "arm": "Full",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789606696.6305203,
+        "task_seconds": 4934.438864707947,
+        "call_seconds": 393.4512131214142,
+        "model_calls": 11,
+        "candidate_records": 10,
+        "role": "knowledge.curate"
+      },
+      {
+        "arm": "NoAssets",
+        "order": 2,
+        "task_id": "TR_C07_C04_03",
+        "planned": 100,
+        "completed": 1,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789606697.595873,
+        "task_seconds": 1292.2669026851654,
+        "call_seconds": 0,
+        "model_calls": 1,
+        "candidate_records": 1,
+        "role": null
+      },
+      {
+        "arm": "NoFeedback",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "planned": 100,
+        "completed": 0,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789606708.9570127,
+        "task_seconds": 4934.838475704193,
+        "call_seconds": 700.2638626098633,
+        "model_calls": 9,
+        "candidate_records": 8,
+        "role": "plc.generate"
+      },
+      {
+        "arm": "Neither",
+        "order": 2,
+        "task_id": "TR_C07_C04_03",
+        "planned": 100,
+        "completed": 1,
+        "success": 0,
+        "phase": "generating",
+        "last_progress_epoch": 1789606611.3469653,
+        "task_seconds": 849.5517311096191,
+        "call_seconds": 478.50861406326294,
+        "model_calls": 2,
+        "candidate_records": 1,
+        "role": "plc.generate"
+      }
+    ],
+    "phase": "blocked_recovery_limit",
+    "experiment_service": {
+      "MainPID": "0",
+      "ActiveState": "failed",
+      "SubState": "failed"
+    },
+    "monitored_unit": "plc-history-feedback200-recovery-20260917-084315.service"
+  },
+  "queue_failure_proof": {
+    "elapsed_seconds": 900.0008631050587,
+    "endpoint_scope": "dedicated SSH loopback tunnel",
+    "generation_dispatched": false,
+    "generation_guard_policy": {
+      "max_call_seconds": 900,
+      "max_content_characters": 131072,
+      "numbered_declarations_max_templates": 8,
+      "numbered_declarations_min_numbers": 32,
+      "numbered_declarations_window": 128,
+      "on_abort": "unusable response; consume original call and candidate, continue remaining budget",
+      "output_token_reservation_unchanged": true,
+      "repeat_check_interval": 256,
+      "repeat_max_period": 128,
+      "repeat_min_characters": 256,
+      "repeat_min_count": 16,
+      "roles": "all non-reflection model calls; existing reflection policy retained",
+      "unknown_usage": "original reservation estimate; never label as actual usage",
+      "version": "generation_guard_20260915_v2"
+    },
+    "http_status": null,
+    "kv_cache_precision": "f16",
+    "precision": "UD-Q8_K_XL",
+    "provider": "kemei_deepseek_flash_gguf",
+    "request_body_sha256": "f1340e774676e38a6fc8ffe6355d5d6096928afc620980242e58d6938fc522ee",
+    "requested_model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+    "response_json_scope": "assembled from response.sse; original events retained",
+    "role": "plc.generate",
+    "runtime": "pinned llama.cpp build-v2",
+    "socket_timeout_scope": "inactivity between reads; original timeout value retained",
+    "started_epoch": 1789605797.5912392,
+    "total_timeout_scope": "minimum of remaining task budget and generation guard 900 seconds",
+    "transport_revision": "recorded_sse_with_final_usage_v1"
+  }
+}

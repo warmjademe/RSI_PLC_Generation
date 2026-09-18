@@ -1,0 +1,17 @@
+{
+  "epoch": 1789608488.7647073,
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1",
+  "units": [
+    "plc-history-feedback100-deepseek-official-20260917-v1.service",
+    "plc-history-feedback100-deepseek-official-watchdog.service",
+    "plc-history-feedback100-deepseek-official-costs.service"
+  ],
+  "tasks_per_arm": 100,
+  "planned": 400,
+  "candidate_limit": 10,
+  "total_model_call_limit": 64,
+  "model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/v1",
+  "status": "launched, ongoing",
+  "previous_preserved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_twolevel_20260916_v1"
+}

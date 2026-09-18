@@ -1,0 +1,45 @@
+{
+  "id": "TR_C07_C05_04",
+  "requirement": "# TR_C07_C05_04: Composed supervisory control: Rate-of-change monitoring with latched trip -> Pre-lube motor lifecycle with feedback fault and cooldown\n\n## Objective\n\nImplement `TR_C07_C05_04` as an IEC-ST Core v1 function block in the Analog processing category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: The first enabled sample shall initialize history, set A_Ready, and shall not A_Trip.\n- **R2**: Subsystem A shall satisfy: For subsequent enabled samples, A_Delta shall equal A_Value minus the A_Previous enabled A_Value.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: A A_Delta above A_MaxRise or below negative A_MaxFall shall latch A_Trip.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_Trip shall remain set until A_Reset occurs while A_Enable is FALSE.\n- **R5**: Subsystem A shall satisfy: Disabling monitoring shall clear A_Ready but shall not by itself clear A_Trip.\n- **R6**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A permitted B_Start shall enter pre-lube with B_LubePump TRUE and B_MotorCommand FALSE.\n- **R7** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_MotorCommand may B_Start only after B_OilPressure remains TRUE for 300 ms.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Failure to receive B_MotorFeedback within 400 ms of B_MotorCommand shall latch B_Fault and enter B_Cooldown.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_OilPressure loss while running shall immediately B_Stop the motor, latch B_Fault, and enter B_Cooldown.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Stop or B_Permit loss shall B_Stop B_MotorCommand and enter a 300 ms B_Cooldown with B_LubePump remaining TRUE.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset clears B_Fault only in idle with B_Start FALSE; B_Cooldown completion returns idle without clearing B_Fault.\n- **R12** **[safety-critical]**: A TRUE A_Trip shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The function block is called exactly once per PLC scan.\n- Subsystem A: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem A: A_MaxRise and A_MaxFall are non-negative and remain constant during a test.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: B_Start may remain TRUE through startup.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C07_C05_04",
+    "inputs": {
+      "A_Value": "REAL",
+      "A_Enable": "BOOL",
+      "A_MaxRise": "REAL",
+      "A_MaxFall": "REAL",
+      "A_Reset": "BOOL",
+      "B_Start": "BOOL",
+      "B_Stop": "BOOL",
+      "B_Permit": "BOOL",
+      "B_OilPressure": "BOOL",
+      "B_MotorFeedback": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Delta": "REAL",
+      "A_Trip": "BOOL",
+      "A_Ready": "BOOL",
+      "B_LubePump": "BOOL",
+      "B_MotorCommand": "BOOL",
+      "B_Cooldown": "BOOL",
+      "B_Fault": "BOOL",
+      "B_State": "INT",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

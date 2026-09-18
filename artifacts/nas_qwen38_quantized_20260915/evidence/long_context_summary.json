@@ -1,0 +1,21 @@
+{
+  "elapsed_seconds": 22.016220486955717,
+  "first_content_seconds": 21.2577534429729,
+  "content": "{\n  \"reference_code\": \"NAS-QWEN38-CHECK-20260915\"\n}",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 39153,
+    "total_tokens": 39182,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 1.317210645541185,
+  "status": "pass",
+  "raw_prompt_tokens": 39141,
+  "scope": "one long prompt; not a full 128K or eight-long-prompt capacity test"
+}

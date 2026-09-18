@@ -1,0 +1,274 @@
+{
+  "status": "pass",
+  "tasks": [
+    {
+      "order": 3,
+      "task_id": "TR_C05_C10_04",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 18,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 7,
+      "task_id": "TR_C03_C10_06",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 16,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 10,
+      "task_id": "TR_C03_C10_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 19,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 11,
+      "task_id": "TR_C08_C08_05",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 10,
+      "retained_tool_calls": 10,
+      "next_mode": "repair"
+    },
+    {
+      "order": 19,
+      "task_id": "TR_C10_C05_10",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 19,
+      "next_mode": "repair"
+    },
+    {
+      "order": 23,
+      "task_id": "TR_C10_C09_06",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 16,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 28,
+      "task_id": "TR_C10_C08_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 12,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 31,
+      "task_id": "TR_C10_C02_06",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 17,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 34,
+      "task_id": "TR_C08_C10_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 18,
+      "next_mode": "repair"
+    },
+    {
+      "order": 37,
+      "task_id": "TR_C10_C07_09",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 19,
+      "next_mode": "repair"
+    },
+    {
+      "order": 41,
+      "task_id": "TR_C10_C04_09",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 12,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 47,
+      "task_id": "TR_C08_C05_09",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 13,
+      "next_mode": "repair"
+    },
+    {
+      "order": 48,
+      "task_id": "TR_C02_C10_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 13,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 51,
+      "task_id": "TR_C10_C07_07",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 19,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 54,
+      "task_id": "TR_C10_C10_07",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 17,
+      "next_mode": "repair"
+    },
+    {
+      "order": 58,
+      "task_id": "TR_C03_C10_05",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 11,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 60,
+      "task_id": "TR_C10_C10_05",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 19,
+      "next_mode": "repair"
+    },
+    {
+      "order": 65,
+      "task_id": "TR_C06_C10_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 18,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 71,
+      "task_id": "TR_C02_C07_03",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 19,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 74,
+      "task_id": "TR_C06_C10_10",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 19,
+      "next_mode": "repair"
+    },
+    {
+      "order": 75,
+      "task_id": "TR_C10_C10_01",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 17,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 85,
+      "task_id": "TR_C10_C07_10",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 10,
+      "retained_tool_calls": 20,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 86,
+      "task_id": "TR_C10_C04_07",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 18,
+      "next_mode": "repair"
+    },
+    {
+      "order": 88,
+      "task_id": "TR_C10_C08_06",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 10,
+      "retained_tool_calls": 20,
+      "next_mode": "repair"
+    },
+    {
+      "order": 91,
+      "task_id": "TR_C10_C07_05",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 19,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 92,
+      "task_id": "TR_C10_C10_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 12,
+      "retained_tool_calls": 19,
+      "next_mode": "restore_best"
+    },
+    {
+      "order": 94,
+      "task_id": "TR_C10_C05_08",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 18,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 97,
+      "task_id": "TR_C09_C10_06",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 11,
+      "retained_tool_calls": 18,
+      "next_mode": "rebuild"
+    },
+    {
+      "order": 98,
+      "task_id": "TR_C10_C07_03",
+      "retained_candidates": 10,
+      "next_candidate": 11,
+      "retained_model_calls": 10,
+      "retained_tool_calls": 20,
+      "next_mode": "rebuild"
+    }
+  ],
+  "physical_model_calls": 0,
+  "physical_tool_calls": 0,
+  "assertions": [
+    "identical original requests, responses, candidate records and tool receipts",
+    "same pre-task knowledge snapshot",
+    "old learning costs retained",
+    "next candidate is 11; maximum 20"
+  ]
+}

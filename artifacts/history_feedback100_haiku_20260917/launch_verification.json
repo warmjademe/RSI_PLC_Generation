@@ -1,0 +1,291 @@
+{
+  "time": "2026-09-17T08:39:54.131283+08:00",
+  "epoch": 1789605594.1313083,
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v1",
+  "protocol_sha256": "dea8a2c89a5a9065605dc3418afaa8e52d5a6a91600b792d6ba3c2ad837472d7",
+  "tasks_per_arm": 100,
+  "planned": 400,
+  "candidate_limit": 10,
+  "max_model_calls": 64,
+  "model_requested": "claude-haiku-4-5",
+  "model_reported": "claude-haiku-4-5-20251001",
+  "endpoint": "https://api.teamorouter.cn/v1",
+  "offline_tests_passed": 33,
+  "services": {
+    "plc-history-feedback100-haiku-20260917-v1.service": {
+      "MainPID": "308041",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-haiku-watchdog.service": {
+      "MainPID": "308043",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-haiku-costs.service": {
+      "MainPID": "308044",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-twolevel-20260916-v1.service": {
+      "MainPID": "284168",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-deepseek-watchdog.service": {
+      "MainPID": "306934",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback100-deepseek-costs.service": {
+      "MainPID": "304962",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "plc-history-feedback200-recovery-20260917-082037.service": {
+      "MainPID": "306542",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "qwen38-27b.service": {
+      "MainPID": "252419",
+      "ActiveState": "active",
+      "SubState": "running"
+    }
+  },
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 0,
+      "success": 0,
+      "success_rate": null,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789605499.2636287
+      },
+      "calls": 5,
+      "reported_input_tokens": 35422,
+      "reported_output_tokens": 9964,
+      "estimated_tokens": 0,
+      "pending_calls": 1,
+      "completed_native_responses": 4
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 0,
+      "success": 0,
+      "success_rate": null,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789605499.247856
+      },
+      "calls": 2,
+      "reported_input_tokens": 13444,
+      "reported_output_tokens": 2187,
+      "estimated_tokens": 0,
+      "pending_calls": 1,
+      "completed_native_responses": 1
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 0,
+      "success": 0,
+      "success_rate": null,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789605499.2874691
+      },
+      "calls": 5,
+      "reported_input_tokens": 33594,
+      "reported_output_tokens": 10576,
+      "estimated_tokens": 0,
+      "pending_calls": 1,
+      "completed_native_responses": 4
+    },
+    {
+      "arm": "Neither",
+      "completed": 1,
+      "success": 1,
+      "success_rate": 1.0,
+      "current": {
+        "phase": "generating",
+        "order": 2,
+        "task_id": "TR_C07_C04_03",
+        "epoch": 1789605558.9657328
+      },
+      "calls": 5,
+      "reported_input_tokens": 24702,
+      "reported_output_tokens": 10060,
+      "estimated_tokens": 0,
+      "pending_calls": 1,
+      "completed_native_responses": 5
+    }
+  ],
+  "cost_snapshot_epoch": 1789605589.097622,
+  "previous_runs": {
+    "history_feedback100_twolevel_20260916_v1": {
+      "epoch": 1789605588.0108182,
+      "completed": 206,
+      "planned": 400,
+      "arms": [
+        {
+          "arm": "Full",
+          "completed": 62,
+          "planned": 100,
+          "success": 35,
+          "first_success": 0,
+          "fail": 27,
+          "unknown": 0,
+          "completed_model_calls": 568,
+          "completed_tokens": 6712470,
+          "current": {
+            "phase": "generating",
+            "order": 63,
+            "task_id": "TR_C09_C08_05",
+            "epoch": 1789605085.204868
+          }
+        },
+        {
+          "arm": "NoAssets",
+          "completed": 57,
+          "planned": 100,
+          "success": 27,
+          "first_success": 2,
+          "fail": 30,
+          "unknown": 0,
+          "completed_model_calls": 454,
+          "completed_tokens": 4611160,
+          "current": {
+            "phase": "generating",
+            "order": 58,
+            "task_id": "TR_C03_C10_05",
+            "epoch": 1789605077.41982
+          }
+        },
+        {
+          "arm": "NoFeedback",
+          "completed": 42,
+          "planned": 100,
+          "success": 8,
+          "first_success": 0,
+          "fail": 34,
+          "unknown": 0,
+          "completed_model_calls": 425,
+          "completed_tokens": 4027677,
+          "current": {
+            "phase": "generating",
+            "order": 43,
+            "task_id": "TR_C10_C05_02",
+            "epoch": 1789604589.6635547
+          }
+        },
+        {
+          "arm": "Neither",
+          "completed": 45,
+          "planned": 100,
+          "success": 6,
+          "first_success": 1,
+          "fail": 39,
+          "unknown": 0,
+          "completed_model_calls": 409,
+          "completed_tokens": 3045588,
+          "current": {
+            "phase": "generating",
+            "order": 46,
+            "task_id": "TR_C10_C03_04",
+            "epoch": 1789604724.8410466
+          }
+        }
+      ],
+      "phase": "running"
+    },
+    "history_feedback100_deepseek_twolevel_20260916_v1": {
+      "epoch": 1789605592.793305,
+      "completed": 0,
+      "planned": 400,
+      "arms": [
+        {
+          "arm": "Full",
+          "completed": 0,
+          "planned": 100,
+          "success": 0,
+          "first_success": 0,
+          "fail": 0,
+          "unknown": 0,
+          "completed_model_calls": 0,
+          "completed_tokens": 0,
+          "current": {
+            "phase": "generating",
+            "order": 1,
+            "task_id": "TR_C07_C10_06",
+            "epoch": 1789604438.001165
+          }
+        },
+        {
+          "arm": "NoAssets",
+          "completed": 0,
+          "planned": 100,
+          "success": 0,
+          "first_success": 0,
+          "fail": 0,
+          "unknown": 0,
+          "completed_model_calls": 0,
+          "completed_tokens": 0,
+          "current": {
+            "phase": "generating",
+            "order": 1,
+            "task_id": "TR_C07_C10_06",
+            "epoch": 1789604437.9985063
+          }
+        },
+        {
+          "arm": "NoFeedback",
+          "completed": 0,
+          "planned": 100,
+          "success": 0,
+          "first_success": 0,
+          "fail": 0,
+          "unknown": 0,
+          "completed_model_calls": 0,
+          "completed_tokens": 0,
+          "current": {
+            "phase": "generating",
+            "order": 1,
+            "task_id": "TR_C07_C10_06",
+            "epoch": 1789604437.997215
+          }
+        },
+        {
+          "arm": "Neither",
+          "completed": 0,
+          "planned": 100,
+          "success": 0,
+          "first_success": 0,
+          "fail": 0,
+          "unknown": 0,
+          "completed_model_calls": 0,
+          "completed_tokens": 0,
+          "current": {
+            "phase": "generating",
+            "order": 1,
+            "task_id": "TR_C07_C10_06",
+            "epoch": 1789604437.99624
+          }
+        }
+      ],
+      "phase": "running"
+    }
+  },
+  "validator_reused_without_new_preflight": true,
+  "free_mib": "               total        used        free      shared  buff/cache   available\nMem:           94095       74809        1464          84       19597       19285\nSwap:           8191        5705        2486\n",
+  "load": " 08:39:54 up 35 days, 18:45, 10 users,  load average: 10.46, 10.25, 10.26\n",
+  "gpu": "22861 MiB, 24564 MiB, 91 %\n",
+  "strict_native_json_grammar_verified": false,
+  "provider_reported_tokens_not_independent_upstream_billing": true
+}

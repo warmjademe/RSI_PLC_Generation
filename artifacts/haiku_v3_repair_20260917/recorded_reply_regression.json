@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "mode": "recorded_reply_regression",
+  "epoch": 1789615787.7144802,
+  "source_previous": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2",
+  "normalization_revision": "haiku_output_contract_20260917_v3",
+  "by_role": {
+    "plc.generate": {
+      "total": 1101,
+      "accepted": 1098,
+      "unchanged_previous_acceptances": 1013,
+      "rejected": 3,
+      "recovered": 85
+    },
+    "knowledge.curate": {
+      "total": 48,
+      "accepted": 48,
+      "unchanged_previous_acceptances": 47,
+      "recovered": 1
+    },
+    "knowledge.review": {
+      "total": 45,
+      "accepted": 45,
+      "unchanged_previous_acceptances": 44,
+      "recovered": 1
+    }
+  },
+  "regressions": 0,
+  "new_model_calls": 0,
+  "new_PLC_tests": 0,
+  "new_tokens": 0,
+  "newly_extracted_candidates_are_not_test_passes": true,
+  "original_scores_unchanged": true,
+  "no_diagnostic_knowledge_imported": true
+}

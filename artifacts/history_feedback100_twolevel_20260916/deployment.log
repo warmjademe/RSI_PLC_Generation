@@ -1,0 +1,12 @@
+Created isolated source snapshot; old runs remain stopped.
+Initialized 100 tasks x four isolated arms; no model/PLC preflight calls.
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 7.899s
+
+OK
+
+{"epoch": 1789539432.8629277, "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1", "units": ["plc-history-feedback100-twolevel-20260916-v1.service", "plc-history-feedback100-twolevel-watchdog.service", "plc-history-feedback100-twolevel-costs.service"], "arms": ["Full", "NoAssets", "NoFeedback", "Neither"], "tasks_per_arm": 100, "planned": 400, "method_revision": "two_level_feedback_20260915_v1", "speed_changes_applied": false, "old_runs_preserved_and_stopped": ["/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback200_full_twolevel_20260915_v1", "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback200_ablation_twolevel_20260916_v1"], "model_preflight_calls": 0, "PLC_preflight_calls": 0, "status": "launched, ongoing"}
+Running as unit: plc-history-feedback100-twolevel-20260916-v1.service; invocation ID: 4d645d6d80414a2f9aa58017a948660b
+Running as unit: plc-history-feedback100-twolevel-watchdog.service; invocation ID: 6e802c529e454fe8bbf806028f2e03f5
+Running as unit: plc-history-feedback100-twolevel-costs.service; invocation ID: 3743d649790e4695b4e73b5d7fe961b5

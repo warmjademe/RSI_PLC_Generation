@@ -1,0 +1,50 @@
+{
+  "id": "TR_C07_C03_09",
+  "requirement": "# TR_C07_C03_09: Composed supervisory control: Redundant sensor fusion with plausibility and rate trip -> Ventilated heater startup with proof timeout\n\n## Objective\n\nImplement `TR_C07_C03_09` as an IEC-ST Core v1 function block in the Analog processing category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: When both sensors are valid and their absolute difference is at most A_MaxDifference, the A_Candidate value is their average.\n- **R2**: Subsystem A shall satisfy: When exactly one sensor is valid, the A_Candidate is that sensor and A_Degraded is TRUE.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: When both valid sensors differ by more than A_MaxDifference, A_Disagree is TRUE and A_ValidOutput is FALSE.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: After initialization, an otherwise valid A_Candidate changing by more than A_MaxRate shall latch A_RateTrip and shall not replace A_ProcessValue.\n- **R5** **[safety-critical]**: Subsystem A shall satisfy: A_RateTrip or A_Enable FALSE shall force A_ValidOutput FALSE; A_Reset clears A_RateTrip only while disabled.\n- **R6**: Subsystem A shall satisfy: At equality boundaries for A_MaxDifference and A_MaxRate, the A_Candidate remains acceptable.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A healthy B_HeatRequest shall enter ventilation proving and command the damper and fan before the heater.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_HeaterCommand may energize only after B_DamperOpen and B_AirflowOK remain TRUE for 300 ms.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Failure to establish both proofs within 600 ms shall latch B_Fault and force all commands FALSE.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Loss of B_GuardClosed, B_DamperOpen, or B_AirflowOK while heating shall immediately trip and latch B_Fault.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Stop shall return to idle without clearing B_Fault; B_Reset clears B_Fault only while idle with B_HeatRequest FALSE.\n- **R12** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_HeaterCommand shall never be TRUE unless B_DamperCommand and B_FanCommand are both TRUE.\n- **R13** **[safety-critical]**: A TRUE A_ValidOutput shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R14** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R15**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R16** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The function block is called exactly once per PLC scan.\n- Subsystem A: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: Proof inputs are sampled at scan start.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C07_C03_09",
+    "inputs": {
+      "A_SensorA": "REAL",
+      "A_SensorB": "REAL",
+      "A_ValidA": "BOOL",
+      "A_ValidB": "BOOL",
+      "A_Enable": "BOOL",
+      "A_MaxDifference": "REAL",
+      "A_MaxRate": "REAL",
+      "A_Reset": "BOOL",
+      "B_HeatRequest": "BOOL",
+      "B_Stop": "BOOL",
+      "B_GuardClosed": "BOOL",
+      "B_DamperOpen": "BOOL",
+      "B_AirflowOK": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_ProcessValue": "REAL",
+      "A_ValidOutput": "BOOL",
+      "A_Degraded": "BOOL",
+      "A_Disagree": "BOOL",
+      "A_RateTrip": "BOOL",
+      "B_DamperCommand": "BOOL",
+      "B_FanCommand": "BOOL",
+      "B_HeaterCommand": "BOOL",
+      "B_Fault": "BOOL",
+      "B_State": "INT",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

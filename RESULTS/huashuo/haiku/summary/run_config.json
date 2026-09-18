@@ -1,0 +1,80 @@
+{
+  "budgets": {
+    "max_candidates": 10,
+    "max_model_calls": 64,
+    "max_tool_calls": 200,
+    "max_total_tokens": 2000000,
+    "max_output_tokens": 16384,
+    "max_wall_seconds": 86400
+  },
+  "method": {
+    "use_task_feedback": true,
+    "use_cross_task_knowledge": true,
+    "learn_cross_task_knowledge": true,
+    "reflect_after_attempt": false,
+    "unknown_tool_retries": 1,
+    "max_local_attempts": 4,
+    "max_knowledge_items": 4,
+    "knowledge_char_budget": 10000,
+    "max_curation_attempts": 4,
+    "max_new_claims": 3,
+    "min_support_tasks": 1,
+    "two_level_feedback": true
+  },
+  "protocol_candidate_limit": 10,
+  "provider": {
+    "kind": "anthropic",
+    "model": "claude-haiku-4-5",
+    "allowed_resolved_models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "base_url": "https://api.teamorouter.cn/v1",
+    "api_key_env": "PLC_HAIKU_TEAMOROUTER_KEY",
+    "credential_file": "/home/qyb/.config/plc-evidence-loop/teamorouter_api_key",
+    "identity_receipt_file": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/qualification/identity.json",
+    "model_concurrency": 4,
+    "temperature": 0.7,
+    "timeout_seconds": 900,
+    "context_tokens": 131072
+  },
+  "validation_admission": {
+    "directory": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/validation_slots",
+    "slots": 4
+  },
+  "validation_stages": [
+    "compile",
+    "runtime"
+  ],
+  "validators": {
+    "compile": {
+      "kind": "command",
+      "protocol": "json",
+      "timeout_seconds": 180,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/source/experiments/history_feedback200_study/validator.py",
+        "--root",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3"
+      ],
+      "env": {
+        "PYTHONPATH": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/evaluator_source:/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/source"
+      }
+    },
+    "runtime": {
+      "kind": "command",
+      "protocol": "json",
+      "timeout_seconds": 180,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/source/experiments/history_feedback200_study/validator.py",
+        "--root",
+        "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3"
+      ],
+      "env": {
+        "PYTHONPATH": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/evaluator_source:/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3/source"
+      }
+    }
+  }
+}

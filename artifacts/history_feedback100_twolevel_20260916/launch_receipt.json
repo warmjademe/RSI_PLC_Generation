@@ -1,0 +1,26 @@
+{
+  "epoch": 1789539432.8629277,
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1",
+  "units": [
+    "plc-history-feedback100-twolevel-20260916-v1.service",
+    "plc-history-feedback100-twolevel-watchdog.service",
+    "plc-history-feedback100-twolevel-costs.service"
+  ],
+  "arms": [
+    "Full",
+    "NoAssets",
+    "NoFeedback",
+    "Neither"
+  ],
+  "tasks_per_arm": 100,
+  "planned": 400,
+  "method_revision": "two_level_feedback_20260915_v1",
+  "speed_changes_applied": false,
+  "old_runs_preserved_and_stopped": [
+    "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback200_full_twolevel_20260915_v1",
+    "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback200_ablation_twolevel_20260916_v1"
+  ],
+  "model_preflight_calls": 0,
+  "PLC_preflight_calls": 0,
+  "status": "launched, ongoing"
+}

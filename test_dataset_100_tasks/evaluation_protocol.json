@@ -1,0 +1,30 @@
+{
+  "dataset_id": "plc_longest100_runtime_v1_20260916",
+  "required_stages": [
+    "compile",
+    "runtime"
+  ],
+  "formal_enabled": false,
+  "vendor_verification_required": false,
+  "task_inputs": [
+    "requirement",
+    "interface"
+  ],
+  "test_suite_policy": "all supplied cases; preserve expected values and original repeat/check behavior",
+  "scan_period_ms": 100,
+  "pass": "candidate compiles and every specified output assertion passes during actual execution",
+  "fail": "candidate is rejected by the compiler or at least one executed output assertion mismatches",
+  "unknown": "infrastructure failure, timeout, unsupported execution or missing observations; never count as pass",
+  "metrics": [
+    "first_candidate_test_pass_rate",
+    "task_pass_rate_with_reported_candidate_budget"
+  ],
+  "aggregation": "report the actual denominator; missing/incomplete evaluations are not successful tasks",
+  "excluded_checks": [
+    "formal_properties",
+    "PLCverif",
+    "SMT_model_checking",
+    "vendor_GUI_validation"
+  ],
+  "execution_status": "Dataset packaging performs no PLC executions; experiment status is recorded separately."
+}

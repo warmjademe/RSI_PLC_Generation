@@ -1,0 +1,48 @@
+{
+  "id": "TR_C10_C03_08",
+  "requirement": "# TR_C10_C03_08: Composed supervisory control: Duty-standby pump feedback failover -> Ventilated heater startup with proof timeout\n\n## Objective\n\nImplement `TR_C10_C03_08` as an IEC-ST Core v1 function block in the Multi-device coordination category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A new A_Demand shall command the available duty pump, or the standby if the duty pump is unavailable.\n- **R2**: Subsystem A shall satisfy: If the commanded pump lacks feedback for 300 ms, control shall transfer to an available standby pump.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: Both run commands shall never be TRUE simultaneously.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_Failure shall latch if A_Demand cannot be served by an available pump with feedback after failover.\n- **R5**: Subsystem A shall satisfy: A_Demand FALSE shall stop both pumps; A_Reset may clear A_Failure only with A_Demand FALSE.\n- **R6**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A healthy B_HeatRequest shall enter ventilation proving and command the damper and fan before the heater.\n- **R7** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_HeaterCommand may energize only after B_DamperOpen and B_AirflowOK remain TRUE for 300 ms.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Failure to establish both proofs within 600 ms shall latch B_Fault and force all commands FALSE.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Loss of B_GuardClosed, B_DamperOpen, or B_AirflowOK while heating shall immediately trip and latch B_Fault.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Stop shall return to idle without clearing B_Fault; B_Reset clears B_Fault only while idle with B_HeatRequest FALSE.\n- **R11** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_HeaterCommand shall never be TRUE unless B_DamperCommand and B_FanCommand are both TRUE.\n- **R12** **[safety-critical]**: A TRUE A_Pump1Run shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: Pump feedback is sampled at scan start.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: Proof inputs are sampled at scan start.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C10_C03_08",
+    "inputs": {
+      "A_Demand": "BOOL",
+      "A_DutyIsPump1": "BOOL",
+      "A_Pump1Available": "BOOL",
+      "A_Pump2Available": "BOOL",
+      "A_Pump1Feedback": "BOOL",
+      "A_Pump2Feedback": "BOOL",
+      "A_Reset": "BOOL",
+      "B_HeatRequest": "BOOL",
+      "B_Stop": "BOOL",
+      "B_GuardClosed": "BOOL",
+      "B_DamperOpen": "BOOL",
+      "B_AirflowOK": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Pump1Run": "BOOL",
+      "A_Pump2Run": "BOOL",
+      "A_FailoverActive": "BOOL",
+      "A_Failure": "BOOL",
+      "B_DamperCommand": "BOOL",
+      "B_FanCommand": "BOOL",
+      "B_HeaterCommand": "BOOL",
+      "B_Fault": "BOOL",
+      "B_State": "INT",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

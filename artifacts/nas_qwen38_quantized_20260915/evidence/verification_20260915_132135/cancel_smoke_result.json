@@ -1,0 +1,11 @@
+{
+  "elapsed_seconds": 1.9032245348207653,
+  "first_content_seconds": 1.818952715024352,
+  "content": "# Offline Verification Checklist",
+  "reasoning_content": "",
+  "usage": null,
+  "finish_reason": null,
+  "done_marker": false,
+  "intentionally_cancelled": true,
+  "output_tokens_per_second_end_to_end": null
+}

@@ -1,0 +1,51 @@
+{
+  "id": "TR_C09_C08_05",
+  "requirement": "# TR_C09_C08_05: Composed supervisory control: Delayed warning, immediate trip, shelving, acknowledgement, and reset -> Paused three-stage sequence with abort and per-stage timeout\n\n## Objective\n\nImplement `TR_C09_C08_05` as an IEC-ST Core v1 function block in the Alarms and fault recovery category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: An enabled A_WarningCondition shall become A_Warning after 300 ms unless A_Shelved or a A_Trip is active.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: A_Shelve may suppress only warnings; A_TripCondition shall latch A_Trip and A_LockedOut immediately regardless of A_Shelve.\n- **R3**: Subsystem A shall satisfy: Every newly displayed A_Warning or A_Trip shall set A_Unacked; A_Acknowledge clears A_Unacked without clearing active alarms.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_Shelved follows A_Shelve only while no A_Trip is active; a A_Trip cancels A_Shelved.\n- **R5**: Subsystem A shall satisfy: A_Enable FALSE shall suppress A_Warning but shall not clear A_Trip or A_LockedOut.\n- **R6** **[safety-critical]**: Subsystem A shall satisfy: A_Reset clears A_Trip and A_LockedOut only when disabled and both conditions are FALSE.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Start in idle shall enter stage 1; each matching Done input advances exactly one stage, and B_Stage3Done returns idle with a one-scan B_Complete pulse.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Pause shall retain B_State while forcing every actuator FALSE; Done inputs while B_Paused shall not advance.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: The active stage shall time out after 500 ms of unpaused execution and latch B_Fault.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Abort shall immediately return idle, force safe outputs, and latch B_Fault.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset clears B_Fault only in idle while B_Start, B_Abort, and every Done input are FALSE.\n- **R12** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: At most one actuator may be TRUE, and B_Complete shall never coincide with an actuator.\n- **R13** **[safety-critical]**: A TRUE A_Warning shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R14** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R15**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R16** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: A_Acknowledge may be held for more than one scan.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: Pausing resets rather than accumulates the stage timeout.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C09_C08_05",
+    "inputs": {
+      "A_WarningCondition": "BOOL",
+      "A_TripCondition": "BOOL",
+      "A_Enable": "BOOL",
+      "A_Shelve": "BOOL",
+      "A_Acknowledge": "BOOL",
+      "A_Reset": "BOOL",
+      "B_Start": "BOOL",
+      "B_Stage1Done": "BOOL",
+      "B_Stage2Done": "BOOL",
+      "B_Stage3Done": "BOOL",
+      "B_Pause": "BOOL",
+      "B_Abort": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Warning": "BOOL",
+      "A_Trip": "BOOL",
+      "A_Unacked": "BOOL",
+      "A_Shelved": "BOOL",
+      "A_LockedOut": "BOOL",
+      "B_Actuator1": "BOOL",
+      "B_Actuator2": "BOOL",
+      "B_Actuator3": "BOOL",
+      "B_Paused": "BOOL",
+      "B_Complete": "BOOL",
+      "B_Fault": "BOOL",
+      "B_State": "INT",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

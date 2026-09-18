@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "epoch": 1789567911.9678092,
+  "model": "deepseek-v4-flash-0731-ud-q8-k-xl",
+  "precision": "UD-Q8_K_XL",
+  "image": "sha256:70a098d90dbab428a001d9e852fc0fc8d67da5beb03e7851a22247653bf35923",
+  "container": "kemei-deepseek-flash-128k-baseline100-p2",
+  "parallel": 2,
+  "per_slot_context": 131072,
+  "reasoning": "off",
+  "cpu_moe_layers": 20,
+  "capacity_attempts": [
+    {
+      "container": "kemei-deepseek-flash-128k-baseline100-p2",
+      "slots": 2,
+      "ready": true,
+      "elapsed_seconds": 95.4071626663208
+    }
+  ],
+  "formal_task_calls": 0
+}

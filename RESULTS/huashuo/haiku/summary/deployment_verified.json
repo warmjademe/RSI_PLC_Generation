@@ -1,0 +1,15 @@
+{
+  "epoch": 1789615902.7396913,
+  "status": "running",
+  "native_requests_audited": 12,
+  "generation_visibility_checks": 15,
+  "frozen_protocol_verified": true,
+  "test_dataset_tasks": 100,
+  "arms": 4,
+  "candidate_limit": 10,
+  "total_model_call_limit": 64,
+  "old_haiku_stopped": true,
+  "old_scores_unchanged": true,
+  "new_model_preflight_calls": 0,
+  "new_compiler_preflight_calls": 0
+}

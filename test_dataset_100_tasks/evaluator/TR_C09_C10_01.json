@@ -1,0 +1,940 @@
+{
+  "id": "TR_C09_C10_01",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": true,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": true,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_WarningCondition": false,
+              "A_TripCondition": true,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": false,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": true,
+              "A_Reset": true,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": false,
+              "A_TripCondition": false,
+              "A_Enable": false,
+              "A_Acknowledge": false,
+              "A_Reset": true,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": false,
+              "B_DutyIsPump1": false,
+              "B_Pump1Available": false,
+              "B_Pump2Available": false,
+              "B_Pump1Feedback": false,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Warning",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Unacked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LockedOut",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": true,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_WarningCondition": true,
+              "A_TripCondition": false,
+              "A_Enable": true,
+              "A_Acknowledge": false,
+              "A_Reset": false,
+              "B_Demand": true,
+              "B_DutyIsPump1": true,
+              "B_Pump1Available": true,
+              "B_Pump2Available": true,
+              "B_Pump1Feedback": true,
+              "B_Pump2Feedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C09_C10_01.json",
+  "source_suite_sha256": "530f5e3d5125691900ad18f5ffc8f4eae4703f346dd296fda1e64a995a5606c9",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

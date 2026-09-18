@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 0.3978983210399747,
+  "first_content_seconds": 0.26622453005984426,
+  "content": "{\"ok\":true}",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 6,
+    "prompt_tokens": 22,
+    "total_tokens": 28,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 15.079229247105097
+}

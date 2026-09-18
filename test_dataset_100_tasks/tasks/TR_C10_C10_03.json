@@ -1,0 +1,44 @@
+{
+  "id": "TR_C10_C10_03",
+  "requirement": "# TR_C10_C10_03: Composed supervisory control: Alternating two-pump starts -> Fair two-client resource arbiter with emergency lockout\n\n## Objective\n\nImplement `TR_C10_C10_03` as an IEC-ST Core v1 function block in the Multi-device coordination category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1** **[safety-critical]**: Subsystem A shall satisfy: Each rising A_Demand shall start at most one available pump.\n- **R2**: Subsystem A shall satisfy: When both pumps are available, successive A_Demand episodes shall alternate the selected pump.\n- **R3**: Subsystem A shall satisfy: If the preferred pump is A_Unavailable, the other available pump shall run.\n- **R4**: Subsystem A shall satisfy: A_Unavailable shall be TRUE exactly when A_Demand is TRUE and neither pump is available.\n- **R5**: Subsystem A shall satisfy: A_Reset without A_Demand shall set A_NextPump to 1 and stop both pumps.\n- **R6** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_GrantA and B_GrantB shall never be TRUE simultaneously.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When idle, a single request shall receive the resource; simultaneous requests shall follow B_Turn.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Done shall release the resource before a new owner is selected on a later scan.\n- **R9**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: After A completes B_Turn shall prefer B, and after B completes B_Turn shall prefer A.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Emergency shall immediately revoke all grants and latch B_LockedOut.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset shall clear B_LockedOut only while B_Emergency and both requests are FALSE.\n- **R12** **[safety-critical]**: A TRUE A_Pump1Run shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The function block is called exactly once per PLC scan.\n- Subsystem A: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The function block is called exactly once per PLC scan.\n- Subsystem B: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C10_C10_03",
+    "inputs": {
+      "A_Demand": "BOOL",
+      "A_Pump1Available": "BOOL",
+      "A_Pump2Available": "BOOL",
+      "A_Reset": "BOOL",
+      "B_RequestA": "BOOL",
+      "B_RequestB": "BOOL",
+      "B_Done": "BOOL",
+      "B_Emergency": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Pump1Run": "BOOL",
+      "A_Pump2Run": "BOOL",
+      "A_NextPump": "INT",
+      "A_Unavailable": "BOOL",
+      "B_GrantA": "BOOL",
+      "B_GrantB": "BOOL",
+      "B_Busy": "BOOL",
+      "B_Turn": "INT",
+      "B_LockedOut": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

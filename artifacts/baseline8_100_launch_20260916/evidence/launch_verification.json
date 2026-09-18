@@ -1,0 +1,112 @@
+{
+  "epoch": 1789539609.1589904,
+  "samples": [
+    {
+      "epoch": 1789539597.1433198,
+      "active_slots": 8,
+      "reserved_tokens": 79310,
+      "queued": 0
+    },
+    {
+      "epoch": 1789539601.1448922,
+      "active_slots": 8,
+      "reserved_tokens": 79310,
+      "queued": 0
+    },
+    {
+      "epoch": 1789539605.146349,
+      "active_slots": 8,
+      "reserved_tokens": 79310,
+      "queued": 0
+    },
+    {
+      "epoch": 1789539609.151923,
+      "active_slots": 8,
+      "reserved_tokens": 79310,
+      "queued": 0
+    }
+  ],
+  "first_requests": [
+    {
+      "method": "FewShot",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "FinalCodeRAG",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "MSCE",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "Memento",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "EverMemOS",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "Vanilla",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    },
+    {
+      "method": "MemSkill",
+      "task": "TR_C07_C10_06",
+      "role": "plc.generate",
+      "previous_code": "",
+      "feedback": [],
+      "known_source_tasks": [],
+      "wire_max_tokens": 8192
+    }
+  ],
+  "old_run_stopped": true,
+  "new_stop_exists": false,
+  "state": {
+    "completed": 0,
+    "epoch": 1789539597.6381893,
+    "phase": "running_under_watchdog",
+    "planned": 800
+  },
+  "units": "plc-qwen38q4-100-max10-v1-evermemos-initial.service        loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane EverMemOS\nplc-qwen38q4-100-max10-v1-fewshot-initial.service          loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane FewShot\nplc-qwen38q4-100-max10-v1-finalcoderag-initial.service     loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane FinalCodeRAG\nplc-qwen38q4-100-max10-v1-memento-initial.service          loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane Memento\nplc-qwen38q4-100-max10-v1-memskill-initial.service         loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane MemSkill\nplc-qwen38q4-100-max10-v1-msce-initial.service             loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane MSCE\nplc-qwen38q4-100-max10-v1-rawtrajectoryrag-initial.service loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane RawTrajectoryRAG\nplc-qwen38q4-100-max10-v1-vanilla-initial.service          loaded active running [systemd-run] /home/qyb/RESEARCH/PLC_Generation_Recursive_Self_Improvement/source_codes/baselines/named_paper_baselines/.venv/bin/python -B -m baseline8_online200_watchdog.worker --root /home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1 lane Vanilla\n"
+}

@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Current 100-task evidence in artifacts/ is intentionally versioned.
+runs/
+*.audit/
+*.env
+.env
+.env.*
+!.env.example
+.DS_Store
+*.pem
+*.key
+id_ed25519*
+id_rsa*
+credentials.json
+*_api_key
+*bark_endpoint*
+RESULTS/**/*.partial
+/experiments/

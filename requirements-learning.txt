@@ -1,0 +1,6 @@
+# Optional, not needed by the standard-library CLI, corpus adapter or simple methods.
+# Record exact installed versions and pinned encoder revisions in each real experiment.
+numpy>=1.24
+torch>=2.2
+transformers>=4.40
+sentence-transformers>=3.0

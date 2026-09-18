@@ -1,0 +1,17 @@
+{
+  "epoch": 1789615822.7786252,
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3",
+  "units": [
+    "plc-history-feedback100-haiku-20260917-v3.service",
+    "plc-history-feedback100-haiku-v3-watchdog.service",
+    "plc-history-feedback100-haiku-v3-costs.service"
+  ],
+  "tasks_per_arm": 100,
+  "planned": 400,
+  "candidate_limit": 10,
+  "total_model_call_limit": 64,
+  "model": "claude-haiku-4-5",
+  "endpoint": "https://api.teamorouter.cn/v1",
+  "status": "launched, ongoing",
+  "previous_preserved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2"
+}

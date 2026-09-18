@@ -1,0 +1,1108 @@
+{
+  "id": "TR_C07_C07_04",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 11.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 12.0,
+              "A_SensorB": 50.0,
+              "A_ValidA": true,
+              "A_ValidB": false,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 12.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 11.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 11.5,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 1.5,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 9.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": -2.5,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 10.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 1.0,
+              "A_MaxRate": 2.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 10.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 13.0,
+              "A_SensorB": 13.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 1.0,
+              "A_MaxRate": 2.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 10.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 15.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 1.0,
+              "A_MaxRate": 2.0,
+              "A_Reset": true,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 10.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 10.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": false,
+              "A_MaxDifference": 1.0,
+              "A_MaxRate": 2.0,
+              "A_Reset": true,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 10.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 11.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 3.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 13.0,
+              "B_Enable": false,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 0.0,
+              "B_Enable": false,
+              "B_MaxRise": 0.0,
+              "B_MaxFall": 0.0,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_ProcessValue",
+                "operator": "eq",
+                "expected": 11.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "A_ValidOutput",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Degraded",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Disagree",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_RateTrip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_SensorA": 10.0,
+              "A_SensorB": 12.0,
+              "A_ValidA": true,
+              "A_ValidB": true,
+              "A_Enable": true,
+              "A_MaxDifference": 2.0,
+              "A_MaxRate": 5.0,
+              "A_Reset": false,
+              "B_Value": 10.0,
+              "B_Enable": true,
+              "B_MaxRise": 2.0,
+              "B_MaxFall": 3.0,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Delta",
+                "operator": "eq",
+                "expected": 0.0,
+                "abs_tol": 0.001
+              },
+              {
+                "variable": "B_Trip",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Ready",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C07_C07_04.json",
+  "source_suite_sha256": "e27907a8fb3bfbbeefd6df38038960de2b73acefd5516eca55939a3d8837c5d6",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

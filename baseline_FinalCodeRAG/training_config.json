@@ -1,0 +1,30 @@
+{
+  "provider": {
+    "kind": "anthropic",
+    "base_url": "https://your-provider.example/v1",
+    "model": "claude-sonnet-4-6",
+    "allowed_resolved_models": [
+      "claude-sonnet-4-6"
+    ],
+    "api_key_env": "PLC_BASELINE_API_KEY",
+    "temperature": 0
+  },
+  "budgets": {
+    "max_candidates": 5,
+    "max_model_calls": 10000,
+    "max_tool_calls": 50,
+    "max_total_tokens": 100000000,
+    "max_output_tokens": 8192,
+    "max_wall_seconds": 86400
+  },
+  "method": {
+    "memory_characters": 24000,
+    "validation_stages": [
+      "compile",
+      "specification"
+    ],
+    "unknown_tool_retries": 1,
+    "memory_root": "../artifacts/FinalCodeRAG",
+    "top_k": 2
+  }
+}

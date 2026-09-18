@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 11.615256515797228,
+  "first_content_seconds": 1.2007847679778934,
+  "content": "# Offline Verification Checklist for PLC Structured Text (ST) Programs\n**Version 5.0**\n**Scope:** Comprehensive static analysis, logical review, and pre-compilation verification for IEC 61131-3 Structured Text code.\n\n**Instructions:**\n- Mark each item as **Pass (P)**, **Fail (F)**, or **N/A**.\n- Any \"Fail\" requires immediate correction and re-verification.\n- This checklist assumes the code is written in a standard IEC 61131-3 compliant environment (e.g., TIA Portal, CODESYS, Studio 5000, etc.).\n\n---\n\n## Section 1: Code Structure & Naming Conventions (Items 1–8)\n\n1. **Naming Convention Compliance**: Verify all variables, tags, and function blocks follow the project’s defined naming convention (e.g., `PLC_`, `DI_`, `DO_`, `AI_`, `AO_`, `FB_`, `FC_`, `VAR_`).\n2. **Identifier Length & Uniqueness**: Ensure no identifiers exceed the maximum length allowed by the target PLC and that no two identifiers are identical (case-insensitive check if applicable).",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 256,
+    "prompt_tokens": 41,
+    "total_tokens": 297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 22.039978165943168
+}

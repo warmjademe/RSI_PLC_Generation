@@ -1,0 +1,77 @@
+{
+  "epoch": 1789635480.4976807,
+  "completed": 400,
+  "planned": 400,
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 100,
+      "planned": 100,
+      "success": 46,
+      "first_success": 4,
+      "fail": 53,
+      "unknown": 1,
+      "completed_model_calls": 892,
+      "completed_tokens": 21312020,
+      "current": {
+        "phase": "task_committed",
+        "completed": 100,
+        "task_id": "TR_C08_C10_01",
+        "epoch": 1789633562.9850683
+      }
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 100,
+      "planned": 100,
+      "success": 44,
+      "first_success": 0,
+      "fail": 54,
+      "unknown": 2,
+      "completed_model_calls": 772,
+      "completed_tokens": 14886467,
+      "current": {
+        "phase": "task_committed",
+        "completed": 100,
+        "task_id": "TR_C08_C10_01",
+        "epoch": 1789632442.4095738
+      }
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 100,
+      "planned": 100,
+      "success": 24,
+      "first_success": 4,
+      "fail": 74,
+      "unknown": 2,
+      "completed_model_calls": 1002,
+      "completed_tokens": 20107115,
+      "current": {
+        "phase": "task_committed",
+        "completed": 100,
+        "task_id": "TR_C08_C10_01",
+        "epoch": 1789635435.8431976
+      }
+    },
+    {
+      "arm": "Neither",
+      "completed": 100,
+      "planned": 100,
+      "success": 37,
+      "first_success": 8,
+      "fail": 63,
+      "unknown": 0,
+      "completed_model_calls": 781,
+      "completed_tokens": 9912418,
+      "current": {
+        "phase": "task_committed",
+        "completed": 100,
+        "task_id": "TR_C08_C10_01",
+        "epoch": 1789631198.6033876
+      }
+    }
+  ],
+  "phase": "complete",
+  "audit": "pass"
+}

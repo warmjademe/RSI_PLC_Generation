@@ -1,0 +1,22 @@
+{
+  "model": "qwen3.8-27b-q4_k_m",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Return a JSON object with one string field code. Write IEC 61131-3 Structured Text FUNCTION_BLOCK FB_StartStop with BOOL inputs StartButton and StopButton and BOOL output Motor. Stop has priority. Start latches Motor TRUE; otherwise retain Motor. Return the complete function block; no Markdown."
+    }
+  ],
+  "max_tokens": 512,
+  "temperature": 0,
+  "seed": 20260915,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "response_format": {
+    "type": "json_object"
+  }
+}

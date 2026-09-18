@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 6.407942941877991,
+  "first_content_seconds": 0.3186978339217603,
+  "content": "# Offline Verification Checklist for PLC Structured Text (ST) Programs\n\nThis checklist is designed for manual code review and static analysis of IEC 61131-3 Structured Text programs before they are compiled or downloaded to the target PLC. It covers syntax, logic, data integrity, safety, and maintainability.\n\n### 1. Syntax and Language Compliance\n1. **Semicolon Termination**: Verify that every statement ends with a semicolon (`;`). Missing semicolons are a common source of compilation errors.\n2. **Case Sensitivity**: Confirm that variable names, tags, and keywords are used consistently. While ST is generally case-insensitive, consistent casing (e.g., `CamelCase` for variables, `UPPERCASE` for keywords) improves readability.\n3. **Reserved Words**: Ensure no variable names, function names, or tag names conflict with IEC 61131-3 reserved keywords (e.g., `IF`, `THEN`, `ELSE`, `END_IF`, `VAR`, `END_VAR`).\n4. **Block Structure**: Verify that all program blocks (`PROGRAM`, `FUNCTION`, `FUNCTION_BLOCK`, `TYPE`) are properly opened and closed with corresponding `END_` statements",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 256,
+    "prompt_tokens": 36,
+    "total_tokens": 292,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 39.95041814853824
+}

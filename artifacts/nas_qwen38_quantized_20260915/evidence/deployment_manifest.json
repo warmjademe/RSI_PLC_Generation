@@ -1,0 +1,145 @@
+{
+  "status": "deployed_verified",
+  "epoch": 1789449923.119159,
+  "configuration": {
+    "model_id": "qwen3.8-27b-q4_k_m",
+    "source_model": "Qwen/Qwen3.8-27B",
+    "quantized_repo": "ggml-org/Qwen3.8-27B-GGUF",
+    "huggingface_revision": "0669b98607d47046c7c2b3f801011d54a08cfccf",
+    "modelscope_revision": "c627fc44e9c888bf2d8e23c3671288c8fa808189",
+    "model_file": "Qwen3.8-27B-Q4_K_M.gguf",
+    "model_bytes": 18973870432,
+    "model_sha256": "31629f53165ab6a7dad8c9847dcfd1fdf55829dac1e6e748f4a68581b0033d34",
+    "engine": "llama.cpp",
+    "engine_release": "b10964 (v0.4.1)",
+    "engine_revision": "b29c606e28a01b1bc8c1351026a0fa6e616bf6c4",
+    "upstream_image": "ghcr.io/ggml-org/llama.cpp:server-cuda-b10964",
+    "image_index_digest": "sha256:6cdceb771b5ab1b15acab46e9a235e4df4a138bfe1ca1ec9e531f061303b72b3",
+    "image": "ghcr.nju.edu.cn/ggml-org/llama.cpp@sha256:b59a1c8f4c6cb85bbcdfb9ce20af20345d24b9c2ceb14492ed9d7a652f857683",
+    "image_provenance": "linux/amd64 manifest digest independently read from upstream GHCR",
+    "cuda_version": "12.8.1",
+    "runtime_kind": "native_cuda_from_verified_official_image_layers",
+    "unit": "nas-qwen38-27b-q4km.service",
+    "host": "127.0.0.1",
+    "port": 18185,
+    "parallel_slots": 8,
+    "shared_context_tokens": 131072,
+    "slot_context_limit": 131072,
+    "kv_cache_type": "q8_0",
+    "batch_size": 1024,
+    "ubatch_size": 128,
+    "enable_thinking": false,
+    "default_max_output_tokens": 8192,
+    "deployment_root": "/home/qyb/qwen38-27b-quantized",
+    "scope": "independent text inference service; does not resume or change stopped PLC experiments"
+  },
+  "health": {
+    "status": "ok"
+  },
+  "service": "active",
+  "enabled": "enabled",
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 24006 MiB, 580.126.09",
+  "native_runtime": {
+    "epoch": 1789449034.8991137,
+    "engine_source": "extracted from verified official CUDA image layers",
+    "image_manifest": "sha256:b59a1c8f4c6cb85bbcdfb9ce20af20345d24b9c2ceb14492ed9d7a652f857683",
+    "layers": [
+      {
+        "digest": "sha256:f4d4714cecf0bfc00b1eec6a807053058dbaec112fab64e000175847b5d279d8",
+        "bytes": 168318902
+      },
+      {
+        "digest": "sha256:ca006b015d8d75dd6c369ddbbeece7cd5b91d5c18afd2a9dddd854e084774343",
+        "bytes": 25223
+      }
+    ],
+    "cuda_libraries": [
+      {
+        "source": "/home/qyb/miniforge3/envs/rsi_robot_design/lib/python3.11/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12",
+        "installed": "/home/qyb/qwen38-27b-quantized/runtime/cuda/libcudart.so.12",
+        "sha256": "c3a75b33af334a3486d197dbd1584a2985183ba4688d237a2be5f2f679329920",
+        "bytes": 728800
+      },
+      {
+        "source": "/home/qyb/miniforge3/envs/rsi_robot_design/lib/python3.11/site-packages/nvidia/cublas/lib/libcublas.so.12",
+        "installed": "/home/qyb/qwen38-27b-quantized/runtime/cuda/libcublas.so.12",
+        "sha256": "031ce6c2cbfbb9468f040527cab5c599069ce5609e73e28f87503881063eac21",
+        "bytes": 116388640
+      },
+      {
+        "source": "/home/qyb/miniforge3/envs/rsi_robot_design/lib/python3.11/site-packages/nvidia/cublas/lib/libcublasLt.so.12",
+        "installed": "/home/qyb/qwen38-27b-quantized/runtime/cuda/libcublasLt.so.12",
+        "sha256": "10b5e6631cf8115c661eb895ed1533826308b58f7956466f53d236a40c9b622c",
+        "bytes": 751771728
+      },
+      {
+        "source": "/home/qyb/miniforge3/envs/rsi_robot_design/lib/python3.11/site-packages/nvidia/nccl/lib/libnccl.so.2",
+        "installed": "/home/qyb/qwen38-27b-quantized/runtime/cuda/libnccl.so.2",
+        "bytes": 429634192,
+        "sha256": "1fc36eebc84f4b10923eee21538ed8fa25725647d06f4840bc0fe399a6ed9bc4"
+      }
+    ]
+  },
+  "configuration_source_hashes": {
+    "ops/download_state.json": "1d12af884583a624403eda6bd69f9217fd3164f32540f55af979c11e4736b8a0",
+    "ops/upstream_image_manifest.json": "ab5f574baf5ec4d9c398e6f10119eb124048f371768886c68709cf24a520e4ec",
+    "ops/config.json": "c8a2cf07ef6083fb100f13272e0c4eeb652911049663fa9e5edecdbd69c680b7",
+    "ops/verify_service.py": "5950be69b8affbcc528490ba0e3a73f5bdf6e230ad3755a37fad64ab1428f5fb",
+    "ops/native_runtime_provenance.json": "6b1be8175152e2782ed531685ddf8770ebfc3516fdc07278adbcc7acf90b9696",
+    "ops/cdi_repair.json": "d95234864bc6130c41d345d65f7afe294fbac57816ec2f2ab3f9b0ee487f2182",
+    "ops/install_service.py": "ff226c3df9a37dd967c25593373e9983e2d152ad3435669d7a1069880e462f82",
+    "ops/serve.py": "d855ec83d4a231beb93be5d25e416a0e3839513d7267af35d726fdbd4ba142ce",
+    "ops/bootstrap_state.json": "1787c009432f93d26f4c6c648013d763fa076bfd6d0ff56f0837a9f53ff2f3fe",
+    "ops/bootstrap.py": "3e7cd1409a72a85b53deb79153511a4de58a2fd2702c3f823f1c4a1eac6a5d63",
+    "ops/download_model.py": "9b87ed5cf88ec64a445f6ee13c4ec48b00fddb0803a33b539b06f19475584f84"
+  },
+  "api_verification": {
+    "status": "pass",
+    "epoch": 1789449718.9497807,
+    "model": "qwen3.8-27b-q4_k_m",
+    "base_url": "http://127.0.0.1:18185/v1",
+    "single_stream_output_tokens_per_second": 39.95041814853824,
+    "parallel_clients": 8,
+    "parallel_wall_seconds": 11.629427112871781,
+    "parallel_aggregate_output_tokens_per_second": 176.10497749568552,
+    "parallel_median_client_output_tokens_per_second": 22.03902365269733,
+    "parallel_first_content_seconds": [
+      1.2055547588970512,
+      1.1985319138038903,
+      1.2017791271209717,
+      1.2041695879306644,
+      1.1974682949949056,
+      1.2007847679778934,
+      1.203286882955581,
+      1.199571245815605
+    ],
+    "cancelled_request_slot_released": true,
+    "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB, 24002 MiB, 18 %",
+    "baseline_experiment_remains_stopped": true,
+    "scope": "short synthetic text probes; no PLC benchmark accuracy or full-context capacity claim",
+    "evidence_directory": "/home/qyb/qwen38-27b-quantized/evidence/verification_20260915_132135"
+  },
+  "long_input_verification": {
+    "elapsed_seconds": 22.016220486955717,
+    "first_content_seconds": 21.2577534429729,
+    "content": "{\n  \"reference_code\": \"NAS-QWEN38-CHECK-20260915\"\n}",
+    "reasoning_content": "",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 39153,
+      "total_tokens": 39182,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "done_marker": true,
+    "intentionally_cancelled": false,
+    "output_tokens_per_second_end_to_end": 1.317210645541185,
+    "status": "pass",
+    "raw_prompt_tokens": 39141,
+    "scope": "one long prompt; not a full 128K or eight-long-prompt capacity test"
+  },
+  "baseline_study_unchanged_and_stopped": true,
+  "nas_reboot_tested": false
+}

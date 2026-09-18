@@ -1,0 +1,17 @@
+{
+  "epoch": 1789615086.3680182,
+  "status": "running",
+  "original_results_and_source_unchanged": true,
+  "extension_source_frozen": true,
+  "retained_and_new_native_calls_audited": 68,
+  "preflight_tasks": 29,
+  "task_workers": 4,
+  "active_orders": [
+    3,
+    7,
+    10,
+    11
+  ],
+  "paid_calls_replayed": 0,
+  "additional_reported_calls": 25
+}

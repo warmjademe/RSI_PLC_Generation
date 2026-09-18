@@ -1,0 +1,694 @@
+{
+  "schema_version": "1.0",
+  "suite": "openplc",
+  "task_id": "TR_C05_C05_01",
+  "scan_period_ms": 100,
+  "real_absolute_tolerance": 0.001,
+  "oracle_source": "independent_base_oracles_plus_explicit_composition_rules",
+  "independent_requirement_oracle": true,
+  "cases": [
+    {
+      "name": "A_feedback_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R1",
+        "R2"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": true,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 2,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": true,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": true,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 3,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT01"
+    },
+    {
+      "name": "B_feedback_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R7",
+        "R8",
+        "R9"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": true,
+            "B_Star": true,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": true,
+            "B_Star": false,
+            "B_Delta": true,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 10,
+          "check": "last_only"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT02"
+    },
+    {
+      "name": "A_hidden_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R3",
+        "R5",
+        "R6"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": true,
+            "A_Fault": true,
+            "A_State": 4,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 10,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Start": false,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": false,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": false,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": true,
+            "A_State": 0,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Start": false,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": false,
+            "A_MotorFeedback": false,
+            "A_Reset": true,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": false,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 0,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT03"
+    },
+    {
+      "name": "A_hidden_2",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R4",
+        "R5"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": true,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 2,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": true,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": true,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 3,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": false,
+            "A_MotorFeedback": true,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": true,
+            "A_Fault": true,
+            "A_State": 4,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT04"
+    },
+    {
+      "name": "B_hidden_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R10",
+        "R11"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": true,
+            "B_Star": true,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": true,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT05"
+    },
+    {
+      "name": "cross_reset_priority",
+      "description": "The explicitly specified supervisory reset isolates B in the same scan.",
+      "requirement_ids": [
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_LubePump": true,
+            "A_MotorCommand": false,
+            "A_Cooldown": false,
+            "A_Fault": false,
+            "A_State": 1,
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Main": true,
+            "B_Star": true,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_Start": true,
+            "A_Stop": false,
+            "A_Permit": true,
+            "A_OilPressure": true,
+            "A_MotorFeedback": false,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Overload": false,
+            "B_Reset": false,
+            "SubsystemBEnable": true,
+            "CrossReset": true
+          },
+          "expect": {
+            "B_Main": false,
+            "B_Star": false,
+            "B_Delta": false,
+            "B_Fault": false,
+            "CrossReady": false,
+            "CrossBlocked": true
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independently_specified_supervisory_contract",
+      "id": "OT06"
+    }
+  ]
+}

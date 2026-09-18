@@ -1,0 +1,1297 @@
+{
+  "nas": {
+    "host": "qyb-SJHY-ubuntu25",
+    "runs": [
+      {
+        "name": "baseline8_qwen38q4_100_max10_20260916_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1",
+        "directories": [
+          {
+            "path": "source",
+            "disk_bytes": 1835008
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": "ops",
+            "disk_bytes": 155648
+          },
+          {
+            "path": "shared_context_admission",
+            "disk_bytes": 8192
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "canary_wire",
+            "disk_bytes": 49152
+          },
+          {
+            "path": "preflight_tools",
+            "disk_bytes": 1155072
+          },
+          {
+            "path": "progress",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "model_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "notifications",
+            "disk_bytes": 94208
+          },
+          {
+            "path": "watchdog",
+            "disk_bytes": 64483328
+          },
+          {
+            "path": "bootstrap",
+            "disk_bytes": 507904
+          },
+          {
+            "path": "public",
+            "disk_bytes": 823296
+          },
+          {
+            "path": "streams",
+            "disk_bytes": 8687132672
+          },
+          {
+            "path": "preflight_boundaries",
+            "disk_bytes": 31166464
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 6205702144
+          },
+          {
+            "path": "validation_admission",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "incidents",
+            "disk_bytes": 221184
+          },
+          {
+            "path": "logs",
+            "disk_bytes": 4096
+          },
+          {
+            "path": ".",
+            "disk_bytes": 15010897920
+          }
+        ],
+        "top_files": [
+          {
+            "name": "control_inputs.json",
+            "bytes": 5160
+          },
+          {
+            "name": "validator200.py",
+            "bytes": 5455
+          },
+          {
+            "name": "cost_task_rows.json",
+            "bytes": 1827405
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 1112
+          },
+          {
+            "name": "report.json",
+            "bytes": 1844
+          },
+          {
+            "name": "study.json",
+            "bytes": 4813
+          },
+          {
+            "name": "partial_audit.json",
+            "bytes": 285
+          },
+          {
+            "name": "model_service_amendment.json",
+            "bytes": 1540
+          },
+          {
+            "name": "state.json",
+            "bytes": 91
+          },
+          {
+            "name": "config.json",
+            "bytes": 2153
+          },
+          {
+            "name": "feedback_cost_audit.json",
+            "bytes": 95
+          },
+          {
+            "name": "protocol.lock.json",
+            "bytes": 215777
+          },
+          {
+            "name": "cost_report.json",
+            "bytes": 5971
+          },
+          {
+            "name": "timing_report.json",
+            "bytes": 2172
+          },
+          {
+            "name": "tool_config.json",
+            "bytes": 263
+          },
+          {
+            "name": "task_rows.json",
+            "bytes": 1390273
+          },
+          {
+            "name": "startup_verified.json",
+            "bytes": 1089
+          },
+          {
+            "name": "launch_verification.json",
+            "bytes": 5372
+          },
+          {
+            "name": "timing_validity.json",
+            "bytes": 425
+          },
+          {
+            "name": "model_deployment_manifest.json",
+            "bytes": 6666
+          },
+          {
+            "name": "canary.json",
+            "bytes": 861
+          },
+          {
+            "name": "source_origin.json",
+            "bytes": 4007
+          },
+          {
+            "name": "launch.json",
+            "bytes": 594
+          }
+        ],
+        "top_symlinks": []
+      },
+      {
+        "name": "baseline8_deepseek_v41_official_100_max10_20260917_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_deepseek_v41_official_100_max10_20260917_v1",
+        "directories": [
+          {
+            "path": "source",
+            "disk_bytes": 1404928
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": "ops",
+            "disk_bytes": 155648
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "canary_wire",
+            "disk_bytes": 53248
+          },
+          {
+            "path": "preflight_tools",
+            "disk_bytes": 1155072
+          },
+          {
+            "path": "progress",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "notifications",
+            "disk_bytes": 40960
+          },
+          {
+            "path": "watchdog",
+            "disk_bytes": 39137280
+          },
+          {
+            "path": "bootstrap",
+            "disk_bytes": 53248
+          },
+          {
+            "path": "public",
+            "disk_bytes": 823296
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 3444736
+          },
+          {
+            "path": "streams",
+            "disk_bytes": 8852426752
+          },
+          {
+            "path": "preflight_boundaries",
+            "disk_bytes": 31166464
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 7573512192
+          },
+          {
+            "path": "validation_admission",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "incidents",
+            "disk_bytes": 299008
+          },
+          {
+            "path": "logs",
+            "disk_bytes": 4096
+          },
+          {
+            "path": ".",
+            "disk_bytes": 16521232384
+          }
+        ],
+        "top_files": [
+          {
+            "name": "control_inputs.json",
+            "bytes": 5160
+          },
+          {
+            "name": "validator200.py",
+            "bytes": 5455
+          },
+          {
+            "name": "launch.lock",
+            "bytes": 0
+          },
+          {
+            "name": "cost_task_rows.json",
+            "bytes": 1850000
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 1112
+          },
+          {
+            "name": "report.json",
+            "bytes": 1840
+          },
+          {
+            "name": "study.json",
+            "bytes": 5265
+          },
+          {
+            "name": "partial_audit.json",
+            "bytes": 284
+          },
+          {
+            "name": "state.json",
+            "bytes": 63
+          },
+          {
+            "name": "config.json",
+            "bytes": 2224
+          },
+          {
+            "name": "feedback_cost_audit.json",
+            "bytes": 94
+          },
+          {
+            "name": "protocol.lock.json",
+            "bytes": 214057
+          },
+          {
+            "name": "cost_report.json",
+            "bytes": 5989
+          },
+          {
+            "name": "timing_report.json",
+            "bytes": 933
+          },
+          {
+            "name": "tool_config.json",
+            "bytes": 263
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 287
+          },
+          {
+            "name": "launch_started.json",
+            "bytes": 113
+          },
+          {
+            "name": "task_rows.json",
+            "bytes": 1383705
+          },
+          {
+            "name": "timing_validity.json",
+            "bytes": 425
+          },
+          {
+            "name": "model_deployment_manifest.json",
+            "bytes": 432
+          },
+          {
+            "name": "canary.json",
+            "bytes": 380
+          },
+          {
+            "name": "source_origin.json",
+            "bytes": 3197
+          },
+          {
+            "name": "launch.json",
+            "bytes": 706
+          }
+        ],
+        "top_symlinks": []
+      },
+      {
+        "name": "baseline8_haiku45_100_extend10_20260917_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_haiku45_100_extend10_20260917_v1",
+        "directories": [
+          {
+            "path": "source",
+            "disk_bytes": 1490944
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "locks",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "progress",
+            "disk_bytes": 36864
+          },
+          {
+            "path": "extension_learning",
+            "disk_bytes": 4348477440
+          },
+          {
+            "path": "notifications",
+            "disk_bytes": 36864
+          },
+          {
+            "path": "bootstrap",
+            "disk_bytes": 45056
+          },
+          {
+            "path": "public",
+            "disk_bytes": 823296
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 4120576
+          },
+          {
+            "path": "streams",
+            "disk_bytes": 4610207744
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 4278497280
+          },
+          {
+            "path": "validation_admission",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "restarts",
+            "disk_bytes": 36864
+          },
+          {
+            "path": ".",
+            "disk_bytes": 13258293248
+          }
+        ],
+        "top_files": [
+          {
+            "name": "control_inputs.json",
+            "bytes": 5160
+          },
+          {
+            "name": "validator200.py",
+            "bytes": 5455
+          },
+          {
+            "name": "report.json",
+            "bytes": 1016
+          },
+          {
+            "name": "study.json",
+            "bytes": 5594
+          },
+          {
+            "name": "config.json",
+            "bytes": 2307
+          },
+          {
+            "name": "extension_launch_verification.json",
+            "bytes": 2695
+          },
+          {
+            "name": "prepared.json",
+            "bytes": 77
+          },
+          {
+            "name": "extension_preflight.json",
+            "bytes": 596
+          },
+          {
+            "name": "protocol.lock.json",
+            "bytes": 215425
+          },
+          {
+            "name": "extension_protocol.json",
+            "bytes": 232603
+          },
+          {
+            "name": "extension_completion.json",
+            "bytes": 429
+          },
+          {
+            "name": "tool_config.json",
+            "bytes": 263
+          },
+          {
+            "name": "extension_full_audit.json",
+            "bytes": 429
+          },
+          {
+            "name": "launch.json",
+            "bytes": 155
+          }
+        ],
+        "top_symlinks": []
+      },
+      {
+        "name": "baseline8_haiku45_100_max4_20260917_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_haiku45_100_max4_20260917_v1",
+        "directories": [
+          {
+            "path": "source",
+            "disk_bytes": 1458176
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": "ops",
+            "disk_bytes": 155648
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "canary_wire",
+            "disk_bytes": 36864
+          },
+          {
+            "path": "preflight_tools",
+            "disk_bytes": 1155072
+          },
+          {
+            "path": "progress",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "notifications",
+            "disk_bytes": 53248
+          },
+          {
+            "path": "watchdog",
+            "disk_bytes": 56545280
+          },
+          {
+            "path": "bootstrap",
+            "disk_bytes": 45056
+          },
+          {
+            "path": "public",
+            "disk_bytes": 823296
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 1818624
+          },
+          {
+            "path": "streams",
+            "disk_bytes": 4610207744
+          },
+          {
+            "path": "preflight_boundaries",
+            "disk_bytes": 31166464
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 1589665792
+          },
+          {
+            "path": "validation_admission",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "incidents",
+            "disk_bytes": 81920
+          },
+          {
+            "path": "logs",
+            "disk_bytes": 4096
+          },
+          {
+            "path": ".",
+            "disk_bytes": 6310731776
+          }
+        ],
+        "top_files": [
+          {
+            "name": "control_inputs.json",
+            "bytes": 5160
+          },
+          {
+            "name": "validator200.py",
+            "bytes": 5455
+          },
+          {
+            "name": "launch.lock",
+            "bytes": 0
+          },
+          {
+            "name": "cost_task_rows.json",
+            "bytes": 1813832
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 1112
+          },
+          {
+            "name": "report.json",
+            "bytes": 1840
+          },
+          {
+            "name": "study.json",
+            "bytes": 5286
+          },
+          {
+            "name": "partial_audit.json",
+            "bytes": 270
+          },
+          {
+            "name": "state.json",
+            "bytes": 64
+          },
+          {
+            "name": "config.json",
+            "bytes": 2281
+          },
+          {
+            "name": "feedback_cost_audit.json",
+            "bytes": 95
+          },
+          {
+            "name": "protocol.lock.json",
+            "bytes": 215434
+          },
+          {
+            "name": "cost_report.json",
+            "bytes": 6010
+          },
+          {
+            "name": "timing_report.json",
+            "bytes": 1417
+          },
+          {
+            "name": "tool_config.json",
+            "bytes": 263
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 285
+          },
+          {
+            "name": "launch_started.json",
+            "bytes": 114
+          },
+          {
+            "name": "task_rows.json",
+            "bytes": 1374684
+          },
+          {
+            "name": "timing_validity.json",
+            "bytes": 424
+          },
+          {
+            "name": "model_deployment_manifest.json",
+            "bytes": 574
+          },
+          {
+            "name": "canary.json",
+            "bytes": 740
+          },
+          {
+            "name": "source_origin.json",
+            "bytes": 4670
+          },
+          {
+            "name": "launch.json",
+            "bytes": 663
+          }
+        ],
+        "top_symlinks": []
+      }
+    ]
+  },
+  "hua": {
+    "host": "qyb-HuaShuo",
+    "runs": [
+      {
+        "name": "history_feedback100_twolevel_20260916_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_twolevel_20260916_v1",
+        "directories": [
+          {
+            "path": "status_notifications",
+            "disk_bytes": 8192
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 233447424
+          },
+          {
+            "path": "context_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "operations_watchdog",
+            "disk_bytes": 475136
+          },
+          {
+            "path": "validation_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "source",
+            "disk_bytes": 3416064
+          },
+          {
+            "path": "public_dataset",
+            "disk_bytes": 1851392
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 22986752
+          },
+          {
+            "path": "arms",
+            "disk_bytes": 4821499904
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "progress_reports",
+            "disk_bytes": 57344
+          },
+          {
+            "path": "model_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": ".",
+            "disk_bytes": 5098123264
+          }
+        ],
+        "top_files": [
+          {
+            "name": "protocol.lock.json",
+            "bytes": 275884
+          },
+          {
+            "name": "validator_config.json",
+            "bytes": 179
+          },
+          {
+            "name": "completion_notification.json",
+            "bytes": 50
+          },
+          {
+            "name": "study.json",
+            "bytes": 4492
+          },
+          {
+            "name": "study_inputs.json",
+            "bytes": 4874
+          },
+          {
+            "name": "launch_receipt.json",
+            "bytes": 840
+          },
+          {
+            "name": "REPORT.zh.md",
+            "bytes": 865
+          },
+          {
+            "name": "state.json",
+            "bytes": 1724
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 239
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 2939
+          },
+          {
+            "name": "offline_tests.txt",
+            "bytes": 129
+          },
+          {
+            "name": "live_status.json",
+            "bytes": 1724
+          },
+          {
+            "name": "local_dataset_gate.json",
+            "bytes": 2300
+          },
+          {
+            "name": "launch_verification.json",
+            "bytes": 8011
+          },
+          {
+            "name": "launch_notification.json",
+            "bytes": 50
+          },
+          {
+            "name": "run_config.json",
+            "bytes": 2988
+          },
+          {
+            "name": "method_continuity.json",
+            "bytes": 14219
+          },
+          {
+            "name": "run.lock",
+            "bytes": 0
+          }
+        ],
+        "top_symlinks": []
+      },
+      {
+        "name": "history_feedback100_deepseek_final_20260917",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_final_20260917",
+        "directories": [
+          {
+            "path": "tests",
+            "disk_bytes": 84705280
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 20680704
+          },
+          {
+            "path": "arms",
+            "disk_bytes": 1310375936
+          },
+          {
+            "path": "execution_source",
+            "disk_bytes": 28672
+          },
+          {
+            "path": ".",
+            "disk_bytes": 1416871936
+          }
+        ],
+        "top_files": [
+          {
+            "name": "protocol.lock.json",
+            "bytes": 273
+          },
+          {
+            "name": "validator_config.json",
+            "bytes": 179
+          },
+          {
+            "name": "study.json",
+            "bytes": 4967
+          },
+          {
+            "name": "consolidation_bark.json",
+            "bytes": 50
+          },
+          {
+            "name": "study_inputs.json",
+            "bytes": 5100
+          },
+          {
+            "name": "REPORT.zh.md",
+            "bytes": 507
+          },
+          {
+            "name": "task_results.json",
+            "bytes": 999673
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 391
+          },
+          {
+            "name": "live_status.json",
+            "bytes": 829
+          },
+          {
+            "name": "consolidation_receipt.json",
+            "bytes": 236
+          },
+          {
+            "name": "summary.json",
+            "bytes": 1486
+          },
+          {
+            "name": "STOP",
+            "bytes": 78
+          }
+        ],
+        "top_symlinks": [
+          {
+            "name": "qualification",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/qualification"
+          },
+          {
+            "name": "source",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/source"
+          },
+          {
+            "name": "public_dataset",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/public_dataset"
+          },
+          {
+            "name": "dataset",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/dataset"
+          },
+          {
+            "name": "evaluator_source",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/evaluator_source"
+          }
+        ]
+      },
+      {
+        "name": "history_feedback100_haiku_twolevel_20260917_v3",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v3",
+        "directories": [
+          {
+            "path": "qualification",
+            "disk_bytes": 684032
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 277372928
+          },
+          {
+            "path": "operations_watchdog",
+            "disk_bytes": 266240
+          },
+          {
+            "path": "validation_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "source",
+            "disk_bytes": 3735552
+          },
+          {
+            "path": "public_dataset",
+            "disk_bytes": 1851392
+          },
+          {
+            "path": "cost_accounting",
+            "disk_bytes": 22134784
+          },
+          {
+            "path": "arms",
+            "disk_bytes": 2805415936
+          },
+          {
+            "path": "qualification_before_source_warning",
+            "disk_bytes": 684032
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": ".",
+            "disk_bytes": 3126538240
+          }
+        ],
+        "top_files": [
+          {
+            "name": "deployed_tests.json",
+            "bytes": 259
+          },
+          {
+            "name": "protocol.lock.json",
+            "bytes": 280942
+          },
+          {
+            "name": "launch.lock",
+            "bytes": 0
+          },
+          {
+            "name": "validator_config.json",
+            "bytes": 179
+          },
+          {
+            "name": "completion_notification.json",
+            "bytes": 50
+          },
+          {
+            "name": "study.json",
+            "bytes": 5230
+          },
+          {
+            "name": "study_inputs.json",
+            "bytes": 5097
+          },
+          {
+            "name": "format_health.json",
+            "bytes": 1805
+          },
+          {
+            "name": "launch_receipt.json",
+            "bytes": 639
+          },
+          {
+            "name": "deployment_verified.json",
+            "bytes": 395
+          },
+          {
+            "name": "launch_started.json",
+            "bytes": 123
+          },
+          {
+            "name": "deployed_tests.txt",
+            "bytes": 4992
+          },
+          {
+            "name": "REPORT.zh.md",
+            "bytes": 1032
+          },
+          {
+            "name": "state.json",
+            "bytes": 1731
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 284
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 1858
+          },
+          {
+            "name": "live_status.json",
+            "bytes": 1731
+          },
+          {
+            "name": "repair_deployed_bark.json",
+            "bytes": 50
+          },
+          {
+            "name": "run_config.json",
+            "bytes": 2841
+          },
+          {
+            "name": "method_continuity.json",
+            "bytes": 20631
+          },
+          {
+            "name": "run.lock",
+            "bytes": 0
+          }
+        ],
+        "top_symlinks": []
+      },
+      {
+        "name": "history_feedback100_deepseek_official_twolevel_20260917_v1",
+        "symlink": false,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1",
+        "directories": [
+          {
+            "path": "qualification",
+            "disk_bytes": 12288
+          },
+          {
+            "path": "tests",
+            "disk_bytes": 233992192
+          },
+          {
+            "path": "operations_watchdog",
+            "disk_bytes": 278528
+          },
+          {
+            "path": "validation_slots",
+            "disk_bytes": 4096
+          },
+          {
+            "path": "source",
+            "disk_bytes": 3768320
+          },
+          {
+            "path": "public_dataset",
+            "disk_bytes": 1851392
+          },
+          {
+            "path": "arms",
+            "disk_bytes": 2494435328
+          },
+          {
+            "path": "dataset",
+            "disk_bytes": 7053312
+          },
+          {
+            "path": "evaluator_source",
+            "disk_bytes": 6942720
+          },
+          {
+            "path": ".",
+            "disk_bytes": 2748465152
+          }
+        ],
+        "top_files": [
+          {
+            "name": "protocol.lock.json",
+            "bytes": 273
+          },
+          {
+            "name": "launch.lock",
+            "bytes": 0
+          },
+          {
+            "name": "FINAL_RESULTS.json",
+            "bytes": 306
+          },
+          {
+            "name": "validator_config.json",
+            "bytes": 179
+          },
+          {
+            "name": "completion_notification.json",
+            "bytes": 50
+          },
+          {
+            "name": "study.json",
+            "bytes": 4967
+          },
+          {
+            "name": "REPORT.md",
+            "bytes": 507
+          },
+          {
+            "name": "study_inputs.json",
+            "bytes": 5100
+          },
+          {
+            "name": "launch_receipt.json",
+            "bytes": 680
+          },
+          {
+            "name": "MODEL_CHOICE_RESOLVED.json",
+            "bytes": 428
+          },
+          {
+            "name": "launch_started.json",
+            "bytes": 122
+          },
+          {
+            "name": "state.json",
+            "bytes": 829
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 391
+          },
+          {
+            "name": "readiness.json",
+            "bytes": 1931
+          },
+          {
+            "name": "offline_tests.txt",
+            "bytes": 117
+          },
+          {
+            "name": "live_status.json",
+            "bytes": 829
+          },
+          {
+            "name": "launch_verification.json",
+            "bytes": 7578
+          },
+          {
+            "name": "launch_notification.json",
+            "bytes": 50
+          },
+          {
+            "name": "run_config.json",
+            "bytes": 3007
+          },
+          {
+            "name": "MODEL_CHOICE_PENDING.resolved.json",
+            "bytes": 193
+          },
+          {
+            "name": "method_continuity.json",
+            "bytes": 20698
+          },
+          {
+            "name": "STOP",
+            "bytes": 86
+          },
+          {
+            "name": "run.lock",
+            "bytes": 0
+          }
+        ],
+        "top_symlinks": [
+          {
+            "name": "cost_accounting",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_final_20260917/cost_accounting"
+          }
+        ]
+      },
+      {
+        "name": "history_feedback100_deepseek_full20_20260917_v1",
+        "symlink": true,
+        "resolved": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_final_20260917",
+        "directories": [
+          {
+            "path": ".",
+            "disk_bytes": 4096
+          }
+        ],
+        "top_files": [
+          {
+            "name": "protocol.lock.json",
+            "bytes": 273
+          },
+          {
+            "name": "validator_config.json",
+            "bytes": 179
+          },
+          {
+            "name": "study.json",
+            "bytes": 4967
+          },
+          {
+            "name": "consolidation_bark.json",
+            "bytes": 50
+          },
+          {
+            "name": "study_inputs.json",
+            "bytes": 5100
+          },
+          {
+            "name": "REPORT.zh.md",
+            "bytes": 507
+          },
+          {
+            "name": "task_results.json",
+            "bytes": 999673
+          },
+          {
+            "name": "completion_audit.json",
+            "bytes": 391
+          },
+          {
+            "name": "live_status.json",
+            "bytes": 829
+          },
+          {
+            "name": "consolidation_receipt.json",
+            "bytes": 236
+          },
+          {
+            "name": "summary.json",
+            "bytes": 1486
+          },
+          {
+            "name": "STOP",
+            "bytes": 78
+          }
+        ],
+        "top_symlinks": [
+          {
+            "name": "qualification",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/qualification"
+          },
+          {
+            "name": "source",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/source"
+          },
+          {
+            "name": "public_dataset",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/public_dataset"
+          },
+          {
+            "name": "dataset",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/dataset"
+          },
+          {
+            "name": "evaluator_source",
+            "target": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_official_twolevel_20260917_v1/evaluator_source"
+          }
+        ]
+      }
+    ]
+  },
+  "huashuo_deepseek_followed_disk_bytes": 4164866048,
+  "nas_current_disk_bytes": 44790423552,
+  "huashuo_current_followed_disk_bytes": 12389527552,
+  "total_current_disk_bytes": 57179951104,
+  "summary_files_and_cost_ledgers_approx_bytes": 82470308,
+  "nas_followed_disk_bytes": [
+    15013302272,
+    16521232384,
+    13258293248
+  ],
+  "total_followed_disk_bytes": 57182355456,
+  "scope": "Current 100-task runs; disk allocation, uncompressed; follow DeepSeek final symlinks; no transfer or deletion"
+}

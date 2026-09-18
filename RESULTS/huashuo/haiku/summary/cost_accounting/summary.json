@@ -1,0 +1,78 @@
+{
+  "epoch": 1789635446.0158753,
+  "planned": 400,
+  "tasks_started": 400,
+  "tasks_completed": 400,
+  "successful_tasks": 151,
+  "completed_budgets_reconciled": true,
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 100,
+      "success": 46,
+      "success_rate": 0.46,
+      "mean_calls_until_success_among_successes": 4.3478260869565215,
+      "mean_accounted_tokens_until_success_among_successes": 100238.71739130435,
+      "completed_tasks_total_calls_including_failures_and_learning": 892,
+      "completed_tasks_accounted_tokens_including_failures_and_learning": 21312020,
+      "completed_tasks_reported_tokens": 21212129,
+      "completed_tasks_estimated_tokens": 99891,
+      "estimated_usage_calls": 2,
+      "all_completed_calls_per_success_including_failures_and_learning": 19.391304347826086,
+      "all_completed_accounted_tokens_per_success_including_failures_and_learning": 463304.7826086957
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 100,
+      "success": 44,
+      "success_rate": 0.44,
+      "mean_calls_until_success_among_successes": 5.204545454545454,
+      "mean_accounted_tokens_until_success_among_successes": 99530.5,
+      "completed_tasks_total_calls_including_failures_and_learning": 772,
+      "completed_tasks_accounted_tokens_including_failures_and_learning": 14886467,
+      "completed_tasks_reported_tokens": 14886467,
+      "completed_tasks_estimated_tokens": 0,
+      "estimated_usage_calls": 0,
+      "all_completed_calls_per_success_including_failures_and_learning": 17.545454545454547,
+      "all_completed_accounted_tokens_per_success_including_failures_and_learning": 338328.79545454547
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 100,
+      "success": 24,
+      "success_rate": 0.24,
+      "mean_calls_until_success_among_successes": 4.291666666666667,
+      "mean_accounted_tokens_until_success_among_successes": 72797.83333333333,
+      "completed_tasks_total_calls_including_failures_and_learning": 1002,
+      "completed_tasks_accounted_tokens_including_failures_and_learning": 20107115,
+      "completed_tasks_reported_tokens": 20107115,
+      "completed_tasks_estimated_tokens": 0,
+      "estimated_usage_calls": 0,
+      "all_completed_calls_per_success_including_failures_and_learning": 41.75,
+      "all_completed_accounted_tokens_per_success_including_failures_and_learning": 837796.4583333334
+    },
+    {
+      "arm": "Neither",
+      "completed": 100,
+      "success": 37,
+      "success_rate": 0.37,
+      "mean_calls_until_success_among_successes": 4.081081081081081,
+      "mean_accounted_tokens_until_success_among_successes": 51250.64864864865,
+      "completed_tasks_total_calls_including_failures_and_learning": 781,
+      "completed_tasks_accounted_tokens_including_failures_and_learning": 9912418,
+      "completed_tasks_reported_tokens": 9876901,
+      "completed_tasks_estimated_tokens": 35517,
+      "estimated_usage_calls": 1,
+      "all_completed_calls_per_success_including_failures_and_learning": 21.10810810810811,
+      "all_completed_accounted_tokens_per_success_including_failures_and_learning": 267903.1891891892
+    }
+  ],
+  "previous_interrupted_launch_cost": null,
+  "definitions": {
+    "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+    "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+    "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+    "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+    "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+  }
+}

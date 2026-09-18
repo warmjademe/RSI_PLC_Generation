@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "task_count": 100,
+  "parent_reference_hashes_and_lines_verified": 200,
+  "task_suite_plan_files_copied_byte_for_byte": 300,
+  "source_200_dataset_modified": false,
+  "references_copied": 0,
+  "formal_properties_copied": 0,
+  "model_calls": 0,
+  "PLC_executions": 0,
+  "preparation_script_sha256": "d1ef45f21b2905f3822b92ff8d5bdd11383773309432466e4a267ea26dfbd6b7",
+  "source_test_cases": 516,
+  "source_test_steps": 1883,
+  "normalized_test_steps": 1886,
+  "scheduled_scans": 2845,
+  "scheduled_assertions": 16644
+}

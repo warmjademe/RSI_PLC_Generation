@@ -1,0 +1,85 @@
+{
+  "identical_wire_request_groups_with_both_cache_modes": 24,
+  "example": [
+    {
+      "arm": "Full",
+      "order": 1,
+      "candidate": 1,
+      "category": "accepted_json",
+      "input_tokens": 5806,
+      "input_cache_tokens": 0,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/Full/wire/0001/00001"
+    },
+    {
+      "arm": "Neither",
+      "order": 1,
+      "candidate": 1,
+      "category": "invalid_fields:applicability_notes",
+      "input_tokens": 5806,
+      "input_cache_tokens": 0,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/Neither/wire/0001/00001"
+    },
+    {
+      "arm": "NoAssets",
+      "order": 1,
+      "candidate": 1,
+      "category": "one_raw_st_function_block_not_json",
+      "input_tokens": 13444,
+      "input_cache_tokens": 13443,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoAssets/wire/0001/00001"
+    },
+    {
+      "arm": "NoFeedback",
+      "order": 1,
+      "candidate": 1,
+      "category": "one_raw_st_function_block_not_json",
+      "input_tokens": 13620,
+      "input_cache_tokens": 13619,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoFeedback/wire/0001/00001"
+    },
+    {
+      "arm": "NoFeedback",
+      "order": 1,
+      "candidate": 3,
+      "category": "accepted_json",
+      "input_tokens": 6666,
+      "input_cache_tokens": 0,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoFeedback/wire/0001/00003"
+    },
+    {
+      "arm": "NoFeedback",
+      "order": 1,
+      "candidate": 4,
+      "category": "accepted_json",
+      "input_tokens": 6819,
+      "input_cache_tokens": 0,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoFeedback/wire/0001/00004"
+    },
+    {
+      "arm": "NoFeedback",
+      "order": 1,
+      "candidate": 5,
+      "category": "one_raw_st_function_block_not_json",
+      "input_tokens": 13706,
+      "input_cache_tokens": 13705,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoFeedback/wire/0001/00005"
+    },
+    {
+      "arm": "NoFeedback",
+      "order": 1,
+      "candidate": 10,
+      "category": "accepted_json",
+      "input_tokens": 6473,
+      "input_cache_tokens": 0,
+      "wire_request_sha256": "c2dba7e48b378c27468341269f1fab86ebddd6b7a555bb31f2f172ac6d1b1dfa",
+      "wire_path": "arms/NoFeedback/wire/0001/00010"
+    }
+  ]
+}

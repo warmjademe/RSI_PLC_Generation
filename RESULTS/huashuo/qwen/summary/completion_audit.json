@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "tasks_audited": 400,
+  "epoch": 1789675755.4823573,
+  "formal_calls": 0,
+  "scope": "Frozen artifacts, source-bound receipts, ordered publication, arm visibility and recorded budgets. Finite runtime tests only."
+}

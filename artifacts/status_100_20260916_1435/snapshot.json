@@ -1,0 +1,778 @@
+{
+  "captured_at": "2026-09-16T06:35:02.629886+00:00",
+  "nas_root": "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_qwen38q4_100_max10_20260916_v1",
+  "rows": [
+    {
+      "method": "Vanilla",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 4,
+      "model_calls_booked": 4,
+      "current_judge_status": null
+    },
+    {
+      "method": "FewShot",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 4,
+      "model_calls_booked": 4,
+      "current_judge_status": null
+    },
+    {
+      "method": "FinalCodeRAG",
+      "completed": 2,
+      "passed": 1,
+      "failed": 0,
+      "unknown": 1,
+      "current_order": 3,
+      "generation_attempts_booked": 1,
+      "model_calls_booked": 1,
+      "current_judge_status": null
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "completed": 2,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 2,
+      "current_order": 3,
+      "generation_attempts_booked": 4,
+      "model_calls_booked": 4,
+      "current_judge_status": null
+    },
+    {
+      "method": "Memento",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 6,
+      "model_calls_booked": 6,
+      "current_judge_status": null
+    },
+    {
+      "method": "EverMemOS",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 7,
+      "model_calls_booked": 7,
+      "current_judge_status": null
+    },
+    {
+      "method": "MemSkill",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 5,
+      "model_calls_booked": 5,
+      "current_judge_status": null
+    },
+    {
+      "method": "MSCE",
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "unknown": 0,
+      "current_order": 1,
+      "generation_attempts_booked": 6,
+      "model_calls_booked": 6,
+      "current_judge_status": null
+    }
+  ],
+  "completed": 4,
+  "passed": 1,
+  "unknown_details": [
+    {
+      "method": "FinalCodeRAG",
+      "task_id": "TR_C07_C10_06",
+      "order": 1,
+      "generation_calls": 2,
+      "diagnostics": [
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        },
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        }
+      ]
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C07_C04_03",
+      "order": 2,
+      "generation_calls": 1,
+      "diagnostics": [
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        },
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        }
+      ]
+    },
+    {
+      "method": "RawTrajectoryRAG",
+      "task_id": "TR_C07_C10_06",
+      "order": 1,
+      "generation_calls": 1,
+      "diagnostics": [
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        },
+        {
+          "status": "unknown",
+          "diagnostics": "['candidate public interface mismatch: CrossReady']"
+        }
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "auxiliary_and_learning_calls": 0,
+      "budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 102.764893,
+        "estimated_charge_calls": 0,
+        "input_tokens": 8535,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 1541,
+        "remaining_candidates": 9,
+        "tool_calls": 2,
+        "total_tokens": 10076
+      },
+      "code_hash": "9803817f00b0b8f6dfca6a4172ce49258860dac5f065198fbd2b499eba0f4c5e",
+      "completed_epoch": 1789539789.0860016,
+      "first_candidate_test_pass": false,
+      "formal_executed": false,
+      "generation_budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 102.760681,
+        "estimated_charge_calls": 0,
+        "input_tokens": 8535,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 1541,
+        "remaining_candidates": 9,
+        "tool_calls": 2,
+        "total_tokens": 10076
+      },
+      "generation_calls": 1,
+      "generation_incident": null,
+      "generation_result_sha256": "c5006ac6d1cb34ce85bbf2691a63630e9c86ff12673ffb5d08dbe15e7e24191f",
+      "generation_status": "incomplete",
+      "judge_sha256": "8cce39f65755032567a37a891c4dc8df9c0338c6014e8c795859497198c7ca47",
+      "judge_status": "unknown",
+      "learned_after": 2,
+      "learned_before": 1,
+      "learning": {
+        "error": null,
+        "method": "RawTrajectoryRAG",
+        "order": 2,
+        "preloaded_history_records": 0,
+        "source_task_id": "TR_C07_C04_03",
+        "status": "updated"
+      },
+      "method": "RawTrajectoryRAG",
+      "order": 2,
+      "preloaded_history_records": 0,
+      "required_stages": [
+        "compile",
+        "runtime"
+      ],
+      "snapshot_sha256": "33b47fc0e682d03ef8fd313ff34bf3e6ee4d1ba97247c998e531feac6c12bba8",
+      "success": false,
+      "task_id": "TR_C07_C04_03"
+    },
+    {
+      "auxiliary_and_learning_calls": 0,
+      "budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 119.253224,
+        "estimated_charge_calls": 0,
+        "input_tokens": 1664,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 2430,
+        "remaining_candidates": 9,
+        "tool_calls": 2,
+        "total_tokens": 4094
+      },
+      "code_hash": "ef85bc4f803f7f8d3ece9b5bc60bf48331ea630cb725aa283bb3624c39d694af",
+      "completed_epoch": 1789539686.0914938,
+      "first_candidate_test_pass": false,
+      "formal_executed": false,
+      "generation_budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 119.249132,
+        "estimated_charge_calls": 0,
+        "input_tokens": 1664,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 2430,
+        "remaining_candidates": 9,
+        "tool_calls": 2,
+        "total_tokens": 4094
+      },
+      "generation_calls": 1,
+      "generation_incident": null,
+      "generation_result_sha256": "cb169a20a7af153b7b7d18c8cc7ac6685920fab4e3db8bd4ab7be2b738e3be13",
+      "generation_status": "incomplete",
+      "judge_sha256": "b88bcc862c355dd6a0038ca1d52aecef36e7ed7227d2934901a3ec758c7efd7f",
+      "judge_status": "unknown",
+      "learned_after": 1,
+      "learned_before": 0,
+      "learning": {
+        "error": null,
+        "method": "RawTrajectoryRAG",
+        "order": 1,
+        "preloaded_history_records": 0,
+        "source_task_id": "TR_C07_C10_06",
+        "status": "updated"
+      },
+      "method": "RawTrajectoryRAG",
+      "order": 1,
+      "preloaded_history_records": 0,
+      "required_stages": [
+        "compile",
+        "runtime"
+      ],
+      "snapshot_sha256": "4a33e9a9826747b4b78112802c18a53eb376ff2662525de3916edee08377448b",
+      "success": false,
+      "task_id": "TR_C07_C10_06"
+    },
+    {
+      "auxiliary_and_learning_calls": 0,
+      "budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 116.756108,
+        "estimated_charge_calls": 0,
+        "input_tokens": 1647,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 1714,
+        "remaining_candidates": 9,
+        "tool_calls": 1,
+        "total_tokens": 3361
+      },
+      "code_hash": "024fc949f5586d83192e53b9a09654609ef9e3d057e11b81e3c581219cb61eb0",
+      "completed_epoch": 1789540334.539668,
+      "first_candidate_test_pass": true,
+      "formal_executed": false,
+      "generation_budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 1,
+        "elapsed_seconds": 116.751115,
+        "estimated_charge_calls": 0,
+        "input_tokens": 1647,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 1,
+        "output_tokens": 1714,
+        "remaining_candidates": 9,
+        "tool_calls": 1,
+        "total_tokens": 3361
+      },
+      "generation_calls": 1,
+      "generation_incident": null,
+      "generation_result_sha256": "2666a02b84025b76c2953242f74e017200c371cd60cede3481dfcbda03df87e7",
+      "generation_status": "passed",
+      "judge_sha256": "845b7cf5473cbd54c6b12a98ac2f7d15fa4895464b92c81450c7e50ba4eff9bd",
+      "judge_status": "pass",
+      "learned_after": 1,
+      "learned_before": 0,
+      "learning": {
+        "error": null,
+        "method": "FinalCodeRAG",
+        "order": 2,
+        "preloaded_history_records": 0,
+        "source_task_id": "TR_C07_C04_03",
+        "status": "updated"
+      },
+      "method": "FinalCodeRAG",
+      "order": 2,
+      "preloaded_history_records": 0,
+      "required_stages": [
+        "compile",
+        "runtime"
+      ],
+      "snapshot_sha256": "de015887b82591b70ec3d8bae78e97a02b477915c4667424d85f8786ae8fa6c6",
+      "success": true,
+      "task_id": "TR_C07_C04_03"
+    },
+    {
+      "auxiliary_and_learning_calls": 0,
+      "budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 2,
+        "elapsed_seconds": 650.803235,
+        "estimated_charge_calls": 0,
+        "input_tokens": 3326,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 2,
+        "output_tokens": 10570,
+        "remaining_candidates": 8,
+        "tool_calls": 2,
+        "total_tokens": 13896
+      },
+      "code_hash": "f73d0618c674e409302780a9ad2e1a8a3c498859b8534bfcb3058deb3ec5d2ee",
+      "completed_epoch": 1789540217.5582588,
+      "first_candidate_test_pass": false,
+      "formal_executed": false,
+      "generation_budget": {
+        "admission_estimator": "utf8_bytes_plus_512_framing",
+        "candidates": 2,
+        "elapsed_seconds": 650.798647,
+        "estimated_charge_calls": 0,
+        "input_tokens": 3326,
+        "limits": {
+          "max_candidates": 10,
+          "max_model_calls": 64,
+          "max_output_tokens": 65536,
+          "max_tool_calls": 200,
+          "max_total_tokens": 2000000,
+          "max_wall_seconds": 86400
+        },
+        "model_calls": 2,
+        "output_tokens": 10570,
+        "remaining_candidates": 8,
+        "tool_calls": 2,
+        "total_tokens": 13896
+      },
+      "generation_calls": 2,
+      "generation_incident": null,
+      "generation_result_sha256": "c53b0252ca560cd210c15b892564b1ce7d1a3215f0ab699c084bb72fa5f65c4d",
+      "generation_status": "incomplete",
+      "judge_sha256": "e2a13417305904b61fcb62e9b763d385849c556024baf3e7730b97e379d2bc74",
+      "judge_status": "unknown",
+      "learned_after": 0,
+      "learned_before": 0,
+      "learning": {
+        "error": null,
+        "method": "FinalCodeRAG",
+        "order": 1,
+        "preloaded_history_records": 0,
+        "source_task_id": "TR_C07_C10_06",
+        "status": "updated"
+      },
+      "method": "FinalCodeRAG",
+      "order": 1,
+      "preloaded_history_records": 0,
+      "required_stages": [
+        "compile",
+        "runtime"
+      ],
+      "snapshot_sha256": "13983474c315832948678239d848e3fcd7c46fd314c659df2daba4e7da9dee17",
+      "success": false,
+      "task_id": "TR_C07_C10_06"
+    }
+  ],
+  "watchdog_state": {
+    "attempts": {},
+    "epoch": 1789540486.6321805,
+    "methods": [
+      {
+        "active_request": {
+          "call": 3,
+          "characters_per_second_window": 61.08368084977851,
+          "content_characters": 12779,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 227.3978259563446,
+          "stream_idle_seconds": 0.9929361343383789,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 0.9927866458892822,
+        "lane_pids": [
+          {
+            "pid": 3113778,
+            "start": "119884230"
+          }
+        ],
+        "method": "Vanilla",
+        "model_calls": 3,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113801,
+            "start": "119884263"
+          }
+        ],
+        "task_seconds": 919.7932348251343,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 4,
+          "characters_per_second_window": null,
+          "content_characters": 1884,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 44.17198657989502,
+          "stream_idle_seconds": 0.19935274124145508,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 0.19915533065795898,
+        "lane_pids": [
+          {
+            "pid": 3113780,
+            "start": "119884232"
+          }
+        ],
+        "method": "FewShot",
+        "model_calls": 4,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113798,
+            "start": "119884253"
+          }
+        ],
+        "task_seconds": 919.8928558826447,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 1,
+          "characters_per_second_window": null,
+          "content_characters": 8527,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 151.78842091560364,
+          "stream_idle_seconds": 0.9949674606323242,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 2,
+        "exists": true,
+        "idle_seconds": 0.9948184490203857,
+        "lane_pids": [
+          {
+            "pid": 3113782,
+            "start": "119884233"
+          }
+        ],
+        "method": "FinalCodeRAG",
+        "model_calls": 1,
+        "order": 3,
+        "passed": 1,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C05_C10_04",
+        "task_pids": [
+          {
+            "pid": 3119981,
+            "start": "119961064"
+          }
+        ],
+        "task_seconds": 151.8680877685547,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 4,
+          "characters_per_second_window": null,
+          "content_characters": 8900,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 145.9614233970642,
+          "stream_idle_seconds": 0.9936106204986572,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 2,
+        "exists": true,
+        "idle_seconds": 0.9934401512145996,
+        "lane_pids": [
+          {
+            "pid": 3113784,
+            "start": "119884233"
+          }
+        ],
+        "method": "RawTrajectoryRAG",
+        "model_calls": 4,
+        "order": 3,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C05_C10_04",
+        "task_pids": [
+          {
+            "pid": 3115614,
+            "start": "119906520"
+          }
+        ],
+        "task_seconds": 697.3165829181671,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 6,
+          "characters_per_second_window": null,
+          "content_characters": 1132,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 29.04878878593445,
+          "stream_idle_seconds": 0.9922914505004883,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 0.9921550750732422,
+        "lane_pids": [
+          {
+            "pid": 3113786,
+            "start": "119884234"
+          }
+        ],
+        "method": "Memento",
+        "model_calls": 6,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113800,
+            "start": "119884255"
+          }
+        ],
+        "task_seconds": 919.9433250427246,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 7,
+          "characters_per_second_window": null,
+          "content_characters": 3183,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 71.18956279754639,
+          "stream_idle_seconds": 0.9962975978851318,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 0.9960854053497314,
+        "lane_pids": [
+          {
+            "pid": 3113788,
+            "start": "119884235"
+          }
+        ],
+        "method": "EverMemOS",
+        "model_calls": 7,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113806,
+            "start": "119884268"
+          }
+        ],
+        "task_seconds": 919.7357289791107,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 5,
+          "characters_per_second_window": null,
+          "content_characters": 0,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 2.0785791873931885,
+          "stream_idle_seconds": null,
+          "stream_started": false,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 2.0277421474456787,
+        "lane_pids": [
+          {
+            "pid": 3113790,
+            "start": "119884236"
+          }
+        ],
+        "method": "MemSkill",
+        "model_calls": 5,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113807,
+            "start": "119884268"
+          }
+        ],
+        "task_seconds": 919.8133504390717,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      },
+      {
+        "active_request": {
+          "call": 6,
+          "characters_per_second_window": null,
+          "content_characters": 7374,
+          "local_queue": false,
+          "role": "plc.generate",
+          "seconds": 130.44874358177185,
+          "stream_idle_seconds": 0.9943268299102783,
+          "stream_started": true,
+          "transport_finished": false
+        },
+        "complete": false,
+        "completed": 0,
+        "exists": true,
+        "idle_seconds": 0.9941670894622803,
+        "lane_pids": [
+          {
+            "pid": 3113792,
+            "start": "119884236"
+          }
+        ],
+        "method": "MSCE",
+        "model_calls": 6,
+        "order": 1,
+        "passed": 0,
+        "task_duration_termination_enabled": false,
+        "task_id": "TR_C07_C10_06",
+        "task_pids": [
+          {
+            "pid": 3113805,
+            "start": "119884267"
+          }
+        ],
+        "task_seconds": 919.819771528244,
+        "timing_finalization_pending": false,
+        "timing_policy_revision": "normal_interaction_no_task_wall_cutoff_v4"
+      }
+    ],
+    "missing_since": {
+      "EverMemOS": 1789540486.6321805,
+      "FewShot": 1789540486.6321805,
+      "FinalCodeRAG": 1789540486.6321805,
+      "MSCE": 1789540486.6321805,
+      "MemSkill": 1789540486.6321805,
+      "Memento": 1789540486.6321805,
+      "RawTrajectoryRAG": 1789540486.6321805,
+      "Vanilla": 1789540486.6321805
+    },
+    "phase": "monitoring",
+    "recovering": {}
+  },
+  "timing_report": {
+    "epoch": 1789540486.6803563,
+    "limits": {
+      "first_output_limit_seconds": 180,
+      "learning_limit_seconds": 300,
+      "low_speed_window_seconds": 180,
+      "minimum_characters_per_second": 10,
+      "request_limit_seconds": 600,
+      "task_limit_seconds": null
+    },
+    "revision": "normal_interaction_no_task_wall_cutoff_v4",
+    "revoked_rule_terminations": [],
+    "scope": "30-minute task cutoff revoked prospectively; original results and costs retained",
+    "terminated_tasks": [],
+    "unknown_due_to_timing": 0
+  }
+}

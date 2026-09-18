@@ -1,0 +1,1 @@
+{"epoch":1789611302.7995822,"errors":0,"failures":0,"fixture_adaptations":["Conservative measurement in tokenizer mock","Add mandatory source_split to old temporary fixture"],"missing_wire_recovery_official_fields":"pass","status":"pass","tests":23}

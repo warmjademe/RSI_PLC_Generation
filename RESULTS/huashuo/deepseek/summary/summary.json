@@ -1,0 +1,60 @@
+{
+  "epoch": 1789621849.5520074,
+  "model": "DeepSeek official V4.1 Flash",
+  "status": "final",
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 100,
+      "success": 84,
+      "success_rate": 0.84,
+      "maximum_candidates": 20,
+      "model_calls": 1009,
+      "input_tokens": 11237821,
+      "output_tokens": 1877006,
+      "total_tokens": 13114827,
+      "estimated_usage_calls": 0
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 100,
+      "success": 73,
+      "success_rate": 0.73,
+      "maximum_candidates": 10,
+      "model_calls": 533,
+      "input_tokens": 4661283,
+      "output_tokens": 1124706,
+      "total_tokens": 5785989,
+      "estimated_usage_calls": 0
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 100,
+      "success": 71,
+      "success_rate": 0.71,
+      "maximum_candidates": 10,
+      "model_calls": 675,
+      "input_tokens": 6484000,
+      "output_tokens": 1210986,
+      "total_tokens": 7694986,
+      "estimated_usage_calls": 0
+    },
+    {
+      "arm": "Neither",
+      "completed": 100,
+      "success": 63,
+      "success_rate": 0.63,
+      "maximum_candidates": 10,
+      "model_calls": 627,
+      "input_tokens": 3939337,
+      "output_tokens": 1311181,
+      "total_tokens": 5250518,
+      "estimated_usage_calls": 0
+    }
+  ],
+  "total_model_calls": 2844,
+  "total_tokens": 31846320,
+  "task_results": "task_results.json",
+  "artifact_kind": "read_only_final_result_archive",
+  "execution_records_preserved": true
+}

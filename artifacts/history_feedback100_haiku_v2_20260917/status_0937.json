@@ -1,0 +1,116 @@
+{
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2",
+  "summary": {
+    "epoch": 1789609024.952063,
+    "planned": 400,
+    "tasks_started": 25,
+    "tasks_completed": 21,
+    "successful_tasks": 8,
+    "completed_budgets_reconciled": true,
+    "arms": [
+      {
+        "arm": "Full",
+        "completed": 6,
+        "success": 4,
+        "success_rate": 0.6666666666666666,
+        "mean_calls_until_success_among_successes": 6,
+        "mean_accounted_tokens_until_success_among_successes": 95808.25,
+        "completed_tasks_total_calls_including_failures_and_learning": 54,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 897945,
+        "completed_tasks_reported_tokens": 897945,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 13.5,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 224486.25
+      },
+      {
+        "arm": "NoAssets",
+        "completed": 4,
+        "success": 0,
+        "success_rate": 0.0,
+        "mean_calls_until_success_among_successes": null,
+        "mean_accounted_tokens_until_success_among_successes": null,
+        "completed_tasks_total_calls_including_failures_and_learning": 40,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 577074,
+        "completed_tasks_reported_tokens": 577074,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": null,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": null
+      },
+      {
+        "arm": "NoFeedback",
+        "completed": 6,
+        "success": 3,
+        "success_rate": 0.5,
+        "mean_calls_until_success_among_successes": 5,
+        "mean_accounted_tokens_until_success_among_successes": 57824,
+        "completed_tasks_total_calls_including_failures_and_learning": 55,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 805518,
+        "completed_tasks_reported_tokens": 805518,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 18.333333333333332,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 268506.0
+      },
+      {
+        "arm": "Neither",
+        "completed": 5,
+        "success": 1,
+        "success_rate": 0.2,
+        "mean_calls_until_success_among_successes": 7,
+        "mean_accounted_tokens_until_success_among_successes": 73262,
+        "completed_tasks_total_calls_including_failures_and_learning": 47,
+        "completed_tasks_accounted_tokens_including_failures_and_learning": 563066,
+        "completed_tasks_reported_tokens": 563066,
+        "completed_tasks_estimated_tokens": 0,
+        "estimated_usage_calls": 0,
+        "all_completed_calls_per_success_including_failures_and_learning": 47.0,
+        "all_completed_accounted_tokens_per_success_including_failures_and_learning": 563066.0
+      }
+    ],
+    "previous_interrupted_launch_cost": null,
+    "definitions": {
+      "cost_to_success": "All generate/reflect calls from task start through the first passing candidate, confirmed by independent final judge; excludes post-task learning.",
+      "tokens": "reported_* is provider-reported usage only; estimated_* is the original conservative budget charge for missing usage; accounted_* sums them. actual_total_tokens is null when any usage is unknown.",
+      "failed_tasks": "Retained with all consumed costs. In-progress tasks are not counted as failed.",
+      "call_count": "Logical model calls charged by the original 64-call budget. Confirmed physical dispatch is recorded separately; replayed historical calls appear once.",
+      "comparison": "Success-only averages are selection-conditioned; totals including failed tasks and post-task learning are also reported."
+    }
+  },
+  "all_started_totals": {
+    "model_calls": 211,
+    "reported_usage_calls": 207,
+    "estimated_usage_calls": 0,
+    "pending_usage_calls": 4,
+    "reported_input_tokens": 2549164,
+    "reported_output_tokens": 464074,
+    "reported_total_tokens": 3013238
+  },
+  "ledger_epoch": 1789609024.952063,
+  "all_roles_normalization": {
+    "accepted": 211,
+    "rejected": 1
+  },
+  "generation_normalization": {
+    "accepted": 191,
+    "rejected": 1
+  },
+  "rejection_reasons": {
+    "no unique complete output object or ST program": 1
+  },
+  "same_prefix": {
+    "tasks_per_arm": 5,
+    "success": {
+      "Full": 3,
+      "NoAssets": 0,
+      "NoFeedback": 3,
+      "Neither": 1
+    }
+  },
+  "noassets_candidate_outcomes": {
+    "runtime_fail": 8,
+    "compile_fail": 41,
+    "response_error": 1
+  }
+}

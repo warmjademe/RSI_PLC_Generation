@@ -1,0 +1,1397 @@
+{
+  "id": "TR_C10_C05_07",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 4,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": false,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": false,
+              "A_Pump2Feedback": false,
+              "A_Reset": true,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 10,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT06",
+        "steps": [
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_Pump1Run",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Pump2Run",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_FailoverActive",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Failure",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_Demand": true,
+              "A_DutyIsPump1": true,
+              "A_Pump1Available": true,
+              "A_Pump2Available": true,
+              "A_Pump1Feedback": true,
+              "A_Pump2Feedback": false,
+              "A_Reset": false,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C10_C05_07.json",
+  "source_suite_sha256": "455aa0e2b88a595a69c553dc0147840bbcf607ddd6aa95deae2e5849ae31aa63",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

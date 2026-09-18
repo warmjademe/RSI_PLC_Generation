@@ -1,0 +1,47 @@
+{
+  "id": "TR_C10_C07_02",
+  "requirement": "# TR_C10_C07_02: Composed supervisory control: Alternating two-pump starts -> Redundant sensor fusion with plausibility and rate trip\n\n## Objective\n\nImplement `TR_C10_C07_02` as an IEC-ST Core v1 function block in the Multi-device coordination category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1** **[safety-critical]**: Subsystem A shall satisfy: Each rising A_Demand shall start at most one available pump.\n- **R2**: Subsystem A shall satisfy: When both pumps are available, successive A_Demand episodes shall alternate the selected pump.\n- **R3**: Subsystem A shall satisfy: If the preferred pump is A_Unavailable, the other available pump shall run.\n- **R4**: Subsystem A shall satisfy: A_Unavailable shall be TRUE exactly when A_Demand is TRUE and neither pump is available.\n- **R5**: Subsystem A shall satisfy: A_Reset without A_Demand shall set A_NextPump to 1 and stop both pumps.\n- **R6**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When both sensors are valid and their absolute difference is at most B_MaxDifference, the B_Candidate value is their average.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When exactly one sensor is valid, the B_Candidate is that sensor and B_Degraded is TRUE.\n- **R8** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: When both valid sensors differ by more than B_MaxDifference, B_Disagree is TRUE and B_ValidOutput is FALSE.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: After initialization, an otherwise valid B_Candidate changing by more than B_MaxRate shall latch B_RateTrip and shall not replace B_ProcessValue.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_RateTrip or B_Enable FALSE shall force B_ValidOutput FALSE; B_Reset clears B_RateTrip only while disabled.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: At equality boundaries for B_MaxDifference and B_MaxRate, the B_Candidate remains acceptable.\n- **R12** **[safety-critical]**: A TRUE A_Pump1Run shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The function block is called exactly once per PLC scan.\n- Subsystem A: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The function block is called exactly once per PLC scan.\n- Subsystem B: Inputs are sampled at scan start and outputs are checked at scan end.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C10_C07_02",
+    "inputs": {
+      "A_Demand": "BOOL",
+      "A_Pump1Available": "BOOL",
+      "A_Pump2Available": "BOOL",
+      "A_Reset": "BOOL",
+      "B_SensorA": "REAL",
+      "B_SensorB": "REAL",
+      "B_ValidA": "BOOL",
+      "B_ValidB": "BOOL",
+      "B_Enable": "BOOL",
+      "B_MaxDifference": "REAL",
+      "B_MaxRate": "REAL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Pump1Run": "BOOL",
+      "A_Pump2Run": "BOOL",
+      "A_NextPump": "INT",
+      "A_Unavailable": "BOOL",
+      "B_ProcessValue": "REAL",
+      "B_ValidOutput": "BOOL",
+      "B_Degraded": "BOOL",
+      "B_Disagree": "BOOL",
+      "B_RateTrip": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

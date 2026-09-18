@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "files_scanned": 1272,
+  "tar_members_scanned": 310,
+  "credential_pattern_findings": [],
+  "files_over_50MiB": [],
+  "python_syntax_errors": [],
+  "symlinks": [],
+  "dataset_counts": {
+    "tasks": 100,
+    "test_cases": 100,
+    "evaluator": 100
+  },
+  "dataset_manifest_hashes": "pass",
+  "current_history_and_dataset_git_ignored": false,
+  "retained_logical_bytes": 27930305,
+  "scope": "heuristic credential scan including tar contents; no remote deletion; no full legacy integration tests"
+}

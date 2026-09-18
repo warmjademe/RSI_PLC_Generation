@@ -1,0 +1,18 @@
+{
+  "epoch": 1789608486.0743437,
+  "user_instruction": "使用DeepSeek 官方  V4.1 Flash",
+  "status": "authorized",
+  "requested_model_family": "DeepSeek V4.1 Flash",
+  "api_model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/v1",
+  "tasks_per_arm": 100,
+  "arms": [
+    "Full",
+    "NoAssets",
+    "NoFeedback",
+    "Neither"
+  ],
+  "max_candidates": 10,
+  "max_total_model_calls": 64,
+  "fresh_stores": true
+}

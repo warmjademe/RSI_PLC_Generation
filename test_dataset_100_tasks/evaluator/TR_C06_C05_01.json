@@ -1,0 +1,2055 @@
+{
+  "id": "TR_C06_C05_01",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 3,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 3,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 3,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": true,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 10,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 5,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 3
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": false,
+              "B_MotorFeedback": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 4
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT06",
+        "steps": [
+          {
+            "inputs": {
+              "A_GoodPart": true,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": false,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": false,
+              "B_Stop": false,
+              "B_Permit": false,
+              "B_OilPressure": false,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_GoodCount",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_RejectCount",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_BatchDone",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_QualityFault",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_GoodPart": false,
+              "A_RejectPart": true,
+              "A_Reset": false,
+              "A_BatchTarget": 2,
+              "A_RejectLimit": 2,
+              "B_Start": true,
+              "B_Stop": false,
+              "B_Permit": true,
+              "B_OilPressure": true,
+              "B_MotorFeedback": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_LubePump",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_MotorCommand",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Cooldown",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Fault",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C06_C05_01.json",
+  "source_suite_sha256": "594bd9eaf2da09380f201d21bb987f6a4c263ffc91c9085e3fae5c5cf73b3566",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

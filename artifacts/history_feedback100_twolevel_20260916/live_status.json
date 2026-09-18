@@ -1,0 +1,76 @@
+{
+  "epoch": 1789539523.0118299,
+  "completed": 0,
+  "planned": 400,
+  "arms": [
+    {
+      "arm": "Full",
+      "completed": 0,
+      "planned": 100,
+      "success": 0,
+      "first_success": 0,
+      "fail": 0,
+      "unknown": 0,
+      "completed_model_calls": 0,
+      "completed_tokens": 0,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789539433.2910962
+      }
+    },
+    {
+      "arm": "NoAssets",
+      "completed": 0,
+      "planned": 100,
+      "success": 0,
+      "first_success": 0,
+      "fail": 0,
+      "unknown": 0,
+      "completed_model_calls": 0,
+      "completed_tokens": 0,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789539433.326983
+      }
+    },
+    {
+      "arm": "NoFeedback",
+      "completed": 0,
+      "planned": 100,
+      "success": 0,
+      "first_success": 0,
+      "fail": 0,
+      "unknown": 0,
+      "completed_model_calls": 0,
+      "completed_tokens": 0,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789539433.327745
+      }
+    },
+    {
+      "arm": "Neither",
+      "completed": 0,
+      "planned": 100,
+      "success": 0,
+      "first_success": 0,
+      "fail": 0,
+      "unknown": 0,
+      "completed_model_calls": 0,
+      "completed_tokens": 0,
+      "current": {
+        "phase": "generating",
+        "order": 1,
+        "task_id": "TR_C07_C10_06",
+        "epoch": 1789539433.2910938
+      }
+    }
+  ],
+  "phase": "running"
+}

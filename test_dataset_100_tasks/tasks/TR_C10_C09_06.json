@@ -1,0 +1,50 @@
+{
+  "id": "TR_C10_C09_06",
+  "requirement": "# TR_C10_C09_06: Composed supervisory control: Three-pump staged dispatch with lead preference and feedback exclusion -> Time-qualified sensor disagreement alarm\n\n## Objective\n\nImplement `TR_C10_C09_06` as an IEC-ST Core v1 function block in the Multi-device coordination category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A_LowDemand shall request one pump and A_HighDemand shall request two, with A_HighDemand taking priority.\n- **R2**: Subsystem A shall satisfy: Dispatch shall prefer A_Lead, then the next pump numbers cyclically, excluding unavailable or feedback-failed pumps.\n- **R3** **[safety-critical]**: Subsystem A shall satisfy: A commanded pump without feedback for 300 ms shall be excluded and replaced when capacity permits.\n- **R4** **[safety-critical]**: Subsystem A shall satisfy: A_ActiveCount shall equal the number of TRUE run outputs, and no more than two pumps may run.\n- **R5** **[safety-critical]**: Subsystem A shall satisfy: A_Failover shall be TRUE when an unhealthy preferred pump is bypassed or requested capacity cannot be met; insufficient capacity shall latch A_Fault.\n- **R6** **[safety-critical]**: Subsystem A shall satisfy: A_Stop shall immediately clear every run command; A_Reset clears failures only while both demand inputs and A_Stop are FALSE.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Disagreeing shall be TRUE exactly when monitoring is enabled and the absolute difference exceeds B_MaxDifference.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A disagreement lasting 300 ms shall latch B_Alarm.\n- **R9**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A shorter disagreement shall not latch B_Alarm.\n- **R10**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Reset shall clear B_Alarm only while no disagreement is present.\n- **R11** **[safety-critical]**: A TRUE A_Run2 shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R12** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R13**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R14** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: At most two pumps are required simultaneously.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: B_MaxDifference is non-negative.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C10_C09_06",
+    "inputs": {
+      "A_LowDemand": "BOOL",
+      "A_HighDemand": "BOOL",
+      "A_Lead": "INT",
+      "A_Available1": "BOOL",
+      "A_Available2": "BOOL",
+      "A_Available3": "BOOL",
+      "A_Feedback1": "BOOL",
+      "A_Feedback2": "BOOL",
+      "A_Feedback3": "BOOL",
+      "A_Stop": "BOOL",
+      "A_Reset": "BOOL",
+      "B_SensorA": "REAL",
+      "B_SensorB": "REAL",
+      "B_MaxDifference": "REAL",
+      "B_Enable": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Run1": "BOOL",
+      "A_Run2": "BOOL",
+      "A_Run3": "BOOL",
+      "A_ActiveCount": "INT",
+      "A_Failover": "BOOL",
+      "A_Fault": "BOOL",
+      "B_Alarm": "BOOL",
+      "B_Disagreeing": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

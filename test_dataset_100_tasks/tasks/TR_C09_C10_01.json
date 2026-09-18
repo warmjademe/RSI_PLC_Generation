@@ -1,0 +1,46 @@
+{
+  "id": "TR_C09_C10_01",
+  "requirement": "# TR_C09_C10_01: Composed supervisory control: Delayed warning with trip lockout and acknowledgement -> Duty-standby pump feedback failover\n\n## Objective\n\nImplement `TR_C09_C10_01` as an IEC-ST Core v1 function block in the Alarms and fault recovery category. Preserve the supplied interface exactly.\n\n## Requirements\n\n- **R1**: Subsystem A shall satisfy: A_WarningCondition shall assert A_Warning only after it remains enabled for 300 ms.\n- **R2** **[safety-critical]**: Subsystem A shall satisfy: A_TripCondition while enabled shall immediately latch A_Trip and A_LockedOut.\n- **R3**: Subsystem A shall satisfy: A newly asserted A_Warning or A_Trip shall set A_Unacked.\n- **R4**: Subsystem A shall satisfy: A_Acknowledge shall clear A_Unacked without clearing active A_Warning or latched A_Trip.\n- **R5**: Subsystem A shall satisfy: A_Reset shall clear A_Trip and A_LockedOut only while both conditions and A_Enable are FALSE.\n- **R6** **[safety-critical]**: Subsystem A shall satisfy: Disabling the system shall clear the non-latched A_Warning but not an existing A_Trip.\n- **R7**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: A new B_Demand shall command the available duty pump, or the standby if the duty pump is unavailable.\n- **R8**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: If the commanded pump lacks feedback for 300 ms, control shall transfer to an available standby pump.\n- **R9** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: Both run commands shall never be TRUE simultaneously.\n- **R10** **[safety-critical]**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Failure shall latch if B_Demand cannot be served by an available pump with feedback after failover.\n- **R11**: While SubsystemBEnable and CrossReady are TRUE, subsystem B shall satisfy: B_Demand FALSE shall stop both pumps; B_Reset may clear B_Failure only with B_Demand FALSE.\n- **R12** **[safety-critical]**: A TRUE A_Warning shall latch CrossReady unless CrossReset is TRUE in the same scan.\n- **R13** **[safety-critical]**: CrossReset shall have priority, clear CrossReady, and isolate every subsystem-B output to its type-safe default.\n- **R14**: Once set, CrossReady shall remain TRUE after the subsystem-A signal falls, until a later CrossReset scan.\n- **R15** **[safety-critical]**: Subsystem B may execute only while SubsystemBEnable and CrossReady are TRUE; CrossBlocked is TRUE exactly when SubsystemBEnable is requested without CrossReady.\n\n## Assumptions\n\n- Subsystem A: The runtime scan period is 100 ms.\n- Subsystem A: A_Acknowledge has priority over a new A_Unacked indication within the same scan.\n- Subsystem A: Each test starts from a fresh function-block instance.\n- Subsystem B: The runtime scan period is 100 ms.\n- Subsystem B: Pump feedback is sampled at scan start.\n- Subsystem B: Each test starts from a fresh function-block instance.\n- Subsystem A executes before the supervisory latch and subsystem B within each scan.\n- Requirements inherited from subsystem B apply only while SubsystemBEnable and CrossReady are TRUE.\n- When subsystem B is isolated, its externally visible outputs take their type-safe defaults.\n\n## Output constraint\n\nReturn one complete function-block implementation without vendor-specific syntax, physical addresses, Markdown fences, or explanatory prose.\n",
+  "language": "ST",
+  "target": "IEC-ST Core v1; MatIEC native scan tests; no formal or vendor certification",
+  "interface": {
+    "entry_pou": "TR_C09_C10_01",
+    "inputs": {
+      "A_WarningCondition": "BOOL",
+      "A_TripCondition": "BOOL",
+      "A_Enable": "BOOL",
+      "A_Acknowledge": "BOOL",
+      "A_Reset": "BOOL",
+      "B_Demand": "BOOL",
+      "B_DutyIsPump1": "BOOL",
+      "B_Pump1Available": "BOOL",
+      "B_Pump2Available": "BOOL",
+      "B_Pump1Feedback": "BOOL",
+      "B_Pump2Feedback": "BOOL",
+      "B_Reset": "BOOL",
+      "SubsystemBEnable": "BOOL",
+      "CrossReset": "BOOL"
+    },
+    "outputs": {
+      "A_Warning": "BOOL",
+      "A_Trip": "BOOL",
+      "A_Unacked": "BOOL",
+      "A_LockedOut": "BOOL",
+      "B_Pump1Run": "BOOL",
+      "B_Pump2Run": "BOOL",
+      "B_FailoverActive": "BOOL",
+      "B_Failure": "BOOL",
+      "CrossReady": "BOOL",
+      "CrossBlocked": "BOOL"
+    },
+    "inouts": {},
+    "scan_period_ms": 100,
+    "initialization": "fresh function-block instance for each case; declaration initial values apply",
+    "observation": "outputs sampled after each completed scan"
+  },
+  "files": {},
+  "entry_file": "candidate.st",
+  "editable_files": [
+    "candidate.st"
+  ]
+}

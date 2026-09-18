@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.0",
+  "suite": "openplc",
+  "task_id": "TR_C07_C05_07",
+  "scan_period_ms": 100,
+  "real_absolute_tolerance": 0.001,
+  "oracle_source": "independent_base_oracles_plus_explicit_composition_rules",
+  "independent_requirement_oracle": true,
+  "cases": [
+    {
+      "name": "A_feedback_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R6"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 11.0,
+            "A_ValidOutput": true,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 12.0,
+            "A_SensorB": 50.0,
+            "A_ValidA": true,
+            "A_ValidB": false,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 12.0,
+            "A_ValidOutput": true,
+            "A_Degraded": true,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT01"
+    },
+    {
+      "name": "B_feedback_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R7",
+        "R8"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 11.0,
+            "A_ValidOutput": true,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": true,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Permit": true,
+            "B_Stage1Feedback": true,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": true,
+            "B_Stage2": true,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 5,
+          "check": "last_only"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT02"
+    },
+    {
+      "name": "A_hidden_1",
+      "description": "Subsystem-A expectations are copied from its independently authored base oracle.",
+      "requirement_ids": [
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 10.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 1.0,
+            "A_MaxRate": 2.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 10.0,
+            "A_ValidOutput": true,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 13.0,
+            "A_SensorB": 13.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 1.0,
+            "A_MaxRate": 2.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 10.0,
+            "A_ValidOutput": false,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": true,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 15.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 1.0,
+            "A_MaxRate": 2.0,
+            "A_Reset": true,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 10.0,
+            "A_ValidOutput": false,
+            "A_Degraded": false,
+            "A_Disagree": true,
+            "A_RateTrip": true,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 10.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": false,
+            "A_MaxDifference": 1.0,
+            "A_MaxRate": 2.0,
+            "A_Reset": true,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 10.0,
+            "A_ValidOutput": false,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_A",
+      "id": "OT03"
+    },
+    {
+      "name": "B_hidden_1",
+      "description": "Subsystem-B expectations are copied from its independent base oracle after an authored A activation trace.",
+      "requirement_ids": [
+        "R9",
+        "R10",
+        "R11"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 11.0,
+            "A_ValidOutput": true,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 8,
+          "check": "last_only"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": true,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": true,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": true,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independent_base_oracle_B_after_A_activation",
+      "id": "OT04"
+    },
+    {
+      "name": "cross_reset_priority",
+      "description": "The explicitly specified supervisory reset isolates B in the same scan.",
+      "requirement_ids": [
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "fresh_instance": true,
+      "steps": [
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": false,
+            "B_Stop": false,
+            "B_Permit": false,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": false,
+            "CrossReset": false
+          },
+          "expect": {
+            "A_ProcessValue": 11.0,
+            "A_ValidOutput": true,
+            "A_Degraded": false,
+            "A_Disagree": false,
+            "A_RateTrip": false,
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossBlocked": false,
+            "CrossReady": true
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": false
+          },
+          "expect": {
+            "B_Stage1": true,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossReady": true,
+            "CrossBlocked": false
+          },
+          "repeat": 1,
+          "check": "each"
+        },
+        {
+          "inputs": {
+            "A_SensorA": 10.0,
+            "A_SensorB": 12.0,
+            "A_ValidA": true,
+            "A_ValidB": true,
+            "A_Enable": true,
+            "A_MaxDifference": 2.0,
+            "A_MaxRate": 5.0,
+            "A_Reset": false,
+            "B_Start": true,
+            "B_Stop": false,
+            "B_Permit": true,
+            "B_Stage1Feedback": false,
+            "SubsystemBEnable": true,
+            "CrossReset": true
+          },
+          "expect": {
+            "B_Stage1": false,
+            "B_Stage2": false,
+            "B_Fault": false,
+            "CrossReady": false,
+            "CrossBlocked": true
+          },
+          "repeat": 1,
+          "check": "each"
+        }
+      ],
+      "oracle_source": "independently_specified_supervisory_contract",
+      "id": "OT05"
+    }
+  ]
+}

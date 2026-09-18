@@ -1,0 +1,72 @@
+@prefix plc: <urn:plc-rsi:ontology:> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+plc:TaskShape a sh:NodeShape ; sh:targetClass plc:TrainingTask ;
+  sh:property [ sh:path plc:recordId ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^TR_" ] ;
+  sh:property [ sh:path plc:split ; sh:hasValue "train" ; sh:maxCount 1 ] ;
+  sh:property [ sh:path plc:sourceSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+  sh:property [ sh:path plc:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+plc:ProgramShape a sh:NodeShape ; sh:targetClass plc:ProgramArtifact ;
+  sh:property [ sh:path plc:codeSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+  sh:property [ sh:path plc:task ; sh:minCount 1 ; sh:maxCount 1 ; sh:class plc:TrainingTask ] .
+
+plc:CheckShape a sh:NodeShape ; sh:targetClass plc:CheckResult ;
+  sh:property [ sh:path plc:stage ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path plc:outcome ; sh:minCount 1 ; sh:maxCount 1 ; sh:in (plc:Pass plc:Fail plc:Unknown plc:Skipped) ] ;
+  sh:property [ sh:path plc:sourceSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] .
+
+plc:RepairShape a sh:NodeShape ; sh:targetClass plc:RepairObservation ;
+  sh:property [ sh:path plc:task ; sh:minCount 1 ; sh:maxCount 1 ; sh:class plc:TrainingTask ] ;
+  sh:property [ sh:path plc:before ; sh:minCount 1 ; sh:maxCount 1 ; sh:class plc:ProgramArtifact ] ;
+  sh:property [ sh:path plc:after ; sh:minCount 1 ; sh:maxCount 1 ; sh:class plc:ProgramArtifact ] ;
+  sh:property [ sh:path plc:sourceSha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+  sh:sparql [ sh:message "Repair endpoints must belong to the same training task and have different code hashes." ;
+    sh:select """
+      PREFIX plc: <urn:plc-rsi:ontology:>
+      SELECT $this WHERE {
+        $this plc:task ?t ; plc:before ?b ; plc:after ?a .
+        ?b plc:task ?bt ; plc:codeSha256 ?bh . ?a plc:task ?at ; plc:codeSha256 ?ah .
+        FILTER (?t != ?bt || ?t != ?at || ?bh = ?ah)
+      }
+    """ ] .
+
+plc:PassingRepairShape a sh:NodeShape ; sh:targetClass plc:FullyPassingRepair ;
+  sh:sparql [ sh:message "A passing transition needs a before failure and complete passing after compile/runtime/formal evidence." ;
+    sh:select """
+      PREFIX plc: <urn:plc-rsi:ontology:>
+      SELECT $this WHERE {
+        $this plc:before ?b ; plc:after ?a .
+        FILTER (
+          NOT EXISTS { ?b plc:hasCheck/plc:outcome plc:Fail } ||
+          EXISTS { ?a plc:hasCheck/plc:outcome ?o . FILTER (?o != plc:Pass) } ||
+          NOT EXISTS { ?a plc:hasCheck ?c . ?c plc:stage plc:Compile ; plc:outcome plc:Pass } ||
+          NOT EXISTS { ?a plc:hasCheck ?r . ?r plc:stage plc:Runtime ; plc:outcome plc:Pass } ||
+          NOT EXISTS { ?a plc:hasCheck ?f . ?f plc:stage plc:Formal ; plc:outcome plc:Pass }
+        )
+      }
+    """ ] .
+
+plc:ConditionShape a sh:NodeShape ; sh:targetClass plc:ApplicabilityCondition ;
+  sh:property [ sh:path plc:conditionField ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("target" "datatype" "direction" "scan_period_ms" "trigger_semantics" "reset_priority" "state_persistence") ] ;
+  sh:property [ sh:path plc:conditionOperator ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("equals" "in" "at_least" "at_most") ] ;
+  sh:property [ sh:path plc:conditionValue ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+plc:SkillShape a sh:NodeShape ; sh:targetClass plc:SkillProposal ;
+  sh:property [ sh:path plc:supportedBy ; sh:minCount 2 ; sh:class plc:FullyPassingRepair ] ;
+  sh:property [ sh:path plc:requires ; sh:minCount 1 ; sh:class plc:ApplicabilityCondition ] ;
+  sh:property [ sh:path plc:operation ; sh:minCount 1 ; sh:maxCount 1 ; sh:minLength 1 ] ;
+  sh:sparql [ sh:message "A skill proposal needs evidence from at least two distinct training tasks." ;
+    sh:select """
+      PREFIX plc: <urn:plc-rsi:ontology:>
+      SELECT $this WHERE {
+        FILTER NOT EXISTS {
+          $this plc:supportedBy/plc:task ?a, ?b . FILTER (?a != ?b)
+        }
+      }
+    """ ] .
+
+plc:ReleasedSkillShape a sh:NodeShape ; sh:targetClass plc:ReleasedSkill ;
+  sh:property [ sh:path plc:admittedBy ; sh:minCount 1 ; sh:class plc:AdmissionEvidence ] ;
+  sh:property [ sh:path plc:inVersion ; sh:minCount 1 ; sh:maxCount 1 ; sh:class plc:AssetVersion ] .

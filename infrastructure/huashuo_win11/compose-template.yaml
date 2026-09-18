@@ -1,0 +1,44 @@
+name: plc-win11-template
+
+services:
+  template:
+    image: plc-win11-runtime:0cff9eb0
+    pull_policy: never
+    container_name: plc-win11-template
+    environment:
+      VERSION: "11"
+      LANGUAGE: "Chinese"
+      REGION: "zh-CN"
+      KEYBOARD: "zh-CN"
+      TZ: "Asia/Hong_Kong"
+      USERNAME: "qyb"
+      PASSWORD: "${RDP_PASSWORD}"
+      HOST: "PLC-TEMPLATE"
+      CPU_CORES: "8"
+      RAM_SIZE: "16G"
+      DISK_SIZE: "96G"
+      DISK_FMT: "qcow2"
+      MACHINE: "q35"
+      BOOT_MODE: "windows_secure"
+      NETWORK: "nat"
+      ADAPTER: "e1000e"
+      VERIFY: "Y"
+      REMOVE: "Y"
+      LOG: "Y"
+      PROTECT: "Y"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "8100:8006"
+      - "33900:3389/tcp"
+      - "33900:3389/udp"
+    volumes:
+      - /home/qyb/plc-win11/template:/storage
+      - /home/qyb/plc-win11/shared/template:/shared
+      - /home/qyb/plc-win11/installers:/shared/installers:ro
+      - /home/qyb/plc-win11/oem:/oem:ro
+    restart: unless-stopped
+    stop_grace_period: 2m

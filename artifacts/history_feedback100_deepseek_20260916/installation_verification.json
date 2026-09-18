@@ -1,0 +1,29 @@
+{
+  "epoch": 1789568318.1123018,
+  "queue_unit": "plc-history-feedback100-deepseek-after-qwen-20260916.service",
+  "queue_active": true,
+  "queue_enabled": true,
+  "state": {
+    "phase": "waiting_for_qwen",
+    "epoch": 1789568301.8786879,
+    "ready": false,
+    "qwen_completed": 89,
+    "planned": 400,
+    "reason": "waiting_for_all_four_arms"
+  },
+  "qwen_protocol_unchanged": true,
+  "qwen_model_pid_unchanged": true,
+  "qwen_controller_running": true,
+  "old117_queue_masked": true,
+  "deepseek_calls_this_study": 0,
+  "deepseek_activation_attempted": false,
+  "offline_tests": 36,
+  "offline_setup_check": "pass",
+  "compatible_existing_backend_reuse": "enabled; revalidate at dispatch",
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_twolevel_20260916_v1",
+  "queue": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_deepseek_queue_20260916_v1",
+  "tasks_per_arm": 100,
+  "planned": 400,
+  "max_candidates": 10,
+  "max_model_calls": 64
+}

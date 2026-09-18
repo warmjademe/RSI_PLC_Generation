@@ -1,0 +1,1659 @@
+{
+  "id": "TR_C04_C08_01",
+  "evaluation_mode": "compile_and_runtime",
+  "runtime_plan": {
+    "scan_period_ms": 100,
+    "cases": [
+      {
+        "id": "OT01",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT02",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": true,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": true,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": true,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": true,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": true,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT03",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 2,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 2
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": true,
+              "A_MaxCount": 2,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT04",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": true,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": true,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": true,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": true,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "OT05",
+        "steps": [
+          {
+            "inputs": {
+              "A_EventA": false,
+              "A_EventB": false,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": false,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": false,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "A_PulseA",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "A_PulseB",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_Count",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "A_Locked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "A_LastSource",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": true,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": false
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 1
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": true
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": false
+              }
+            ]
+          },
+          {
+            "inputs": {
+              "A_EventA": true,
+              "A_EventB": true,
+              "A_Qualify": true,
+              "A_Inhibit": false,
+              "A_Reset": false,
+              "A_MaxCount": 3,
+              "B_Start": true,
+              "B_Advance": false,
+              "B_Pause": false,
+              "B_Resume": false,
+              "B_Abort": false,
+              "B_Reset": false,
+              "SubsystemBEnable": true,
+              "CrossReset": true
+            },
+            "cycles": 1,
+            "assertions": [
+              {
+                "variable": "B_Step1",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Step2",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Paused",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_Aborted",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "B_State",
+                "operator": "eq",
+                "expected": 0
+              },
+              {
+                "variable": "CrossReady",
+                "operator": "eq",
+                "expected": false
+              },
+              {
+                "variable": "CrossBlocked",
+                "operator": "eq",
+                "expected": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "version": 2
+  },
+  "source_suite": "test_cases/TR_C04_C08_01.json",
+  "source_suite_sha256": "4491ea9929ecce59ede7a8cd69cfd64e5840fe786dd584f8119a1442d020f902",
+  "formal_enabled": false,
+  "execution_qualification": "not_run_in_this_selection_task",
+  "scope": "Only actual candidate execution on these finite scan tests determines runtime pass/fail."
+}

@@ -1,0 +1,160 @@
+{
+  "time": "2026-09-17T11:10:53.531424",
+  "root": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2",
+  "arms": {
+    "Full": {
+      "completed": 28,
+      "passed": 10,
+      "paired_passed": 10,
+      "first_candidate_passed": 0,
+      "generation_requests": 234,
+      "rejected": 31,
+      "rejected_unique_embedded_json": 30,
+      "rejected_unique_embedded_code_real_newlines": 24,
+      "accepted_literal_newline_no_real": 0,
+      "reject_by_mode": {
+        "repair": 19,
+        "restore_best": 3,
+        "initial": 2,
+        "rebuild": 7
+      },
+      "example": [
+        {
+          "order": "0009",
+          "call": "0002",
+          "mode": "repair",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Full/wire/0009/00002/response.json"
+        },
+        {
+          "order": "0019",
+          "call": "0006",
+          "mode": "restore_best",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Full/wire/0019/00006/response.json"
+        },
+        {
+          "order": "0020",
+          "call": "0001",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Full/wire/0020/00001/response.json"
+        }
+      ]
+    },
+    "NoAssets": {
+      "completed": 29,
+      "passed": 5,
+      "paired_passed": 5,
+      "first_candidate_passed": 0,
+      "generation_requests": 260,
+      "rejected": 28,
+      "rejected_unique_embedded_json": 27,
+      "rejected_unique_embedded_code_real_newlines": 19,
+      "accepted_literal_newline_no_real": 1,
+      "reject_by_mode": {
+        "restore_best": 5,
+        "repair": 19,
+        "rebuild": 4
+      },
+      "example": [
+        {
+          "order": "0002",
+          "call": "0010",
+          "mode": "restore_best",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoAssets/wire/0002/00010/response.json"
+        },
+        {
+          "order": "0021",
+          "call": "0007",
+          "mode": "repair",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoAssets/wire/0021/00007/response.json"
+        },
+        {
+          "order": "0022",
+          "call": "0005",
+          "mode": "rebuild",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoAssets/wire/0022/00005/response.json"
+        }
+      ]
+    },
+    "NoFeedback": {
+      "completed": 27,
+      "passed": 10,
+      "paired_passed": 10,
+      "first_candidate_passed": 0,
+      "generation_requests": 236,
+      "rejected": 3,
+      "rejected_unique_embedded_json": 3,
+      "rejected_unique_embedded_code_real_newlines": 3,
+      "accepted_literal_newline_no_real": 0,
+      "reject_by_mode": {
+        "initial": 3
+      },
+      "example": [
+        {
+          "order": "0020",
+          "call": "0009",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoFeedback/wire/0020/00009/response.json"
+        },
+        {
+          "order": "0022",
+          "call": "0007",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoFeedback/wire/0022/00007/response.json"
+        },
+        {
+          "order": "0028",
+          "call": "0004",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/NoFeedback/wire/0028/00004/response.json"
+        }
+      ]
+    },
+    "Neither": {
+      "completed": 31,
+      "passed": 12,
+      "paired_passed": 11,
+      "first_candidate_passed": 0,
+      "generation_requests": 271,
+      "rejected": 3,
+      "rejected_unique_embedded_json": 3,
+      "rejected_unique_embedded_code_real_newlines": 3,
+      "accepted_literal_newline_no_real": 3,
+      "reject_by_mode": {
+        "initial": 3
+      },
+      "example": [
+        {
+          "order": "0011",
+          "call": "0006",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Neither/wire/0011/00006/response.json"
+        },
+        {
+          "order": "0026",
+          "call": "0003",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Neither/wire/0026/00003/response.json"
+        },
+        {
+          "order": "0028",
+          "call": "0008",
+          "mode": "initial",
+          "reason": "no unique complete output object or ST program",
+          "response_path": "/home/qyb/RESEARCH/RSI_PLC_Generation/history_feedback100_haiku_twolevel_20260917_v2/arms/Neither/wire/0028/00008/response.json"
+        }
+      ]
+    }
+  },
+  "paired_n": 27
+}

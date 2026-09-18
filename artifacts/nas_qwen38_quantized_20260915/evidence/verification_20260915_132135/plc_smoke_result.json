@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 2.3955006531905383,
+  "first_content_seconds": 0.32231691014021635,
+  "content": "{\n  \"code\": \"FUNCTION_BLOCK FB_StartStop\\nVAR_INPUT\\n    StartButton : BOOL;\\n    StopButton : BOOL;\\nEND_VAR\\nVAR_OUTPUT\\n    Motor : BOOL;\\nEND_VAR\\n\\nIF StopButton THEN\\n    Motor := FALSE;\\nELSIF StartButton THEN\\n    Motor := TRUE;\\nELSE\\n    Motor := Motor;\\nEND_IF;\\nEND_FUNCTION_BLOCK\"\n}",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 77,
+    "total_tokens": 165,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 36.735535798244875
+}

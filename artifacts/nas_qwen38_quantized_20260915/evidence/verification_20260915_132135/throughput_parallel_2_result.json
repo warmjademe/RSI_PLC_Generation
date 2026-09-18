@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 11.61626267619431,
+  "first_content_seconds": 1.2017791271209717,
+  "content": "# Offline Verification Checklist for PLC Structured Text (ST) Programs\n**Version 2.0**\n**Scope:** Comprehensive static analysis, logical review, and simulation-based verification prior to online deployment.\n**Applicable Standards:** IEC 61131-3, IEC 61508 (Functional Safety), IEC 62443 (Cybersecurity).\n\n---\n\n### Phase 1: Code Structure & Syntax Compliance\n*Ensure the code adheres to IEC 61131-3 standards and project-specific coding guidelines.*\n\n1.  **Syntax Validation:** Confirm zero syntax errors in the IDE/compiler. All blocks must compile without warnings or errors.\n2.  **Naming Convention Compliance:** Verify all variables, tags, and identifiers follow the project’s naming convention (e.g., `PLC_`, `DI_`, `DO_`, `AI_`, `AO_`, `M_`, `T_`, `C_`).\n3.  **Identifier Uniqueness:** Ensure no duplicate variable names exist within the same scope (local vs. global) that could cause shadowing or ambiguity.\n4.  **Comment Coverage:** Verify that every function, function block",
+  "reasoning_content": "",
+  "usage": {
+    "completion_tokens": 256,
+    "prompt_tokens": 41,
+    "total_tokens": 297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "length",
+  "done_marker": true,
+  "intentionally_cancelled": false,
+  "output_tokens_per_second_end_to_end": 22.03806913945149
+}

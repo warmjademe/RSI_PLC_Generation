@@ -1,0 +1,39 @@
+test_reserved_twentieth_candidate_keeps_ids_charges_and_old_evidence (experiments.baseline8_online117_study.test_context_budget.CheckpointTests.test_reserved_twentieth_candidate_keeps_ids_charges_and_old_evidence) ... ok
+test_oversized_nested_trace_reduced_with_attempts_statuses_and_full_original_retained (experiments.baseline8_online117_study.test_context_budget.ContextBudgetTests.test_oversized_nested_trace_reduced_with_attempts_statuses_and_full_original_retained) ... ok
+test_real_failure_size_fits_without_reduction_and_hint_reaches_transport (experiments.baseline8_online117_study.test_context_budget.ContextBudgetTests.test_real_failure_size_fits_without_reduction_and_hint_reaches_transport) ... ok
+test_smaller_native_hint_and_explicit_conservative_reservation (experiments.baseline8_online117_study.test_context_budget.ContextBudgetTests.test_smaller_native_hint_and_explicit_conservative_reservation) ... ok
+test_unfit_or_sensitive_input_never_dispatched_or_charged_as_model_call (experiments.baseline8_online117_study.test_context_budget.ContextBudgetTests.test_unfit_or_sensitive_input_never_dispatched_or_charged_as_model_call) ... ok
+test_context_transport_and_local_process_errors_do_not_stop_other_lanes (experiments.baseline8_online117_study.test_context_budget.IsolationTests.test_context_transport_and_local_process_errors_do_not_stop_other_lanes) ... ok
+test_process_failure_pauses_only_its_lane (experiments.baseline8_online117_study.test_context_budget.IsolationTests.test_process_failure_pauses_only_its_lane) ... ok
+test_bark_deduplication_and_failed_delivery_retry (baseline8_online200_watchdog.tests.WatchdogTests.test_bark_deduplication_and_failed_delivery_retry) ... ok
+test_cancelled_paid_call_keeps_full_original_reservation (baseline8_online200_watchdog.tests.WatchdogTests.test_cancelled_paid_call_keeps_full_original_reservation) ... ok
+test_completed_generation_resumes_only_unpublished_learning (baseline8_online200_watchdog.tests.WatchdogTests.test_completed_generation_resumes_only_unpublished_learning) ... ERROR
+test_completed_model_keeps_actual_usage_and_validated_candidate_needs_no_model (baseline8_online200_watchdog.tests.WatchdogTests.test_completed_model_keeps_actual_usage_and_validated_candidate_needs_no_model) ... ok
+test_missing_lane_recovery_is_bounded_and_scoped (baseline8_online200_watchdog.tests.WatchdogTests.test_missing_lane_recovery_is_bounded_and_scoped) ... ok
+test_no_progress_warning_has_grace (baseline8_online200_watchdog.tests.WatchdogTests.test_no_progress_warning_has_grace) ... ok
+test_process_matching_requires_exact_root_and_module (baseline8_online200_watchdog.tests.WatchdogTests.test_process_matching_requires_exact_root_and_module) ... ok
+test_reserved_twentieth_candidate_is_reused_without_new_candidate (baseline8_online200_watchdog.tests.WatchdogTests.test_reserved_twentieth_candidate_is_reused_without_new_candidate) ... ok
+test_slow_progress_warns_without_killing (baseline8_online200_watchdog.tests.WatchdogTests.test_slow_progress_warns_without_killing) ... ok
+test_stalled_stream_and_missing_task (baseline8_online200_watchdog.tests.WatchdogTests.test_stalled_stream_and_missing_task) ... ok
+test_stop_never_launches_or_clears_user_stop (baseline8_online200_watchdog.tests.WatchdogTests.test_stop_never_launches_or_clears_user_stop) ... ok
+test_termination_includes_detached_child_but_spares_sibling (baseline8_online200_watchdog.tests.WatchdogTests.test_termination_includes_detached_child_but_spares_sibling) ... ok
+test_transport_activity_prevents_false_stall (baseline8_online200_watchdog.tests.WatchdogTests.test_transport_activity_prevents_false_stall) ... ok
+test_twentieth_interrupted_generation_cannot_create_twenty_first (baseline8_online200_watchdog.tests.WatchdogTests.test_twentieth_interrupted_generation_cannot_create_twenty_first) ... ok
+test_unknown_tool_retries_are_not_refunded (baseline8_online200_watchdog.tests.WatchdogTests.test_unknown_tool_retries_are_not_refunded) ... ok
+
+======================================================================
+ERROR: test_completed_generation_resumes_only_unpublished_learning (baseline8_online200_watchdog.tests.WatchdogTests.test_completed_generation_resumes_only_unpublished_learning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_deepseek_v41_official_100_max10_20260917_v1/ops/watchdog_v3/baseline8_online200_watchdog/tests.py", line 172, in test_completed_generation_resumes_only_unpublished_learning
+    recover_task(root, "Vanilla", 1, lambda *args: FakeProvider())
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/qyb/RESEARCH/RSI_PLC_Generation/baseline8_deepseek_v41_official_100_max10_20260917_v1/ops/watchdog_v3/baseline8_online200_watchdog/recovery.py", line 217, in recover_task
+    episode = replace(episode, public_metadata={**episode.public_metadata, "source_split": read(root / "study.json")["source_split"],
+                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'source_split'
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.383s
+
+FAILED (errors=1)
