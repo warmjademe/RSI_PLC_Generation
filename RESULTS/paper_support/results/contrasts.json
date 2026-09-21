@@ -1,0 +1,629 @@
+{
+  "seed": 20260920,
+  "replicates": 20000,
+  "cluster": "ordered functional-category pair",
+  "cluster_count": 43,
+  "interval": "paired cluster percentile bootstrap; Bonferroni within RQ",
+  "rq1_family": 24,
+  "rq2_family": 15,
+  "contrasts": [
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-Vanilla",
+      "delta_pp": 31,
+      "ci95": [
+        20.930232558139537,
+        40.86021505376344
+      ],
+      "ci95_family": [
+        14.946396608733671,
+        46.537629198965995
+      ],
+      "gained": 36,
+      "lost": 5
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-FewShot",
+      "delta_pp": 28,
+      "ci95": [
+        16.18975468975469,
+        39.784946236559136
+      ],
+      "ci95_family": [
+        9.07566287878788,
+        46.39792740549818
+      ],
+      "gained": 36,
+      "lost": 8
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-FinalCodeRAG",
+      "delta_pp": 9,
+      "ci95": [
+        -2.0833333333333335,
+        21.59090909090909
+      ],
+      "ci95_family": [
+        -8.051540420538135,
+        29.555894241782322
+      ],
+      "gained": 23,
+      "lost": 14
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-RawTrajectoryRAG",
+      "delta_pp": 47,
+      "ci95": [
+        37.06896551724138,
+        58.415841584158414
+      ],
+      "ci95_family": [
+        31.623931623931625,
+        65.80023801882737
+      ],
+      "gained": 48,
+      "lost": 1
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-Memento",
+      "delta_pp": 49,
+      "ci95": [
+        39.6392146863845,
+        59.75609756097561
+      ],
+      "ci95_family": [
+        34.61538461538461,
+        67.03296703296704
+      ],
+      "gained": 50,
+      "lost": 1
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-EverMemOS",
+      "delta_pp": 32,
+      "ci95": [
+        20.408163265306122,
+        44.03697029270421
+      ],
+      "ci95_family": [
+        13.748511186222437,
+        51.43322353213123
+      ],
+      "gained": 40,
+      "lost": 8
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-MemSkill",
+      "delta_pp": 48,
+      "ci95": [
+        37.60666666666667,
+        60.0
+      ],
+      "ci95_family": [
+        32.01473460477941,
+        67.0886075949367
+      ],
+      "gained": 49,
+      "lost": 1
+    },
+    {
+      "rq": "rq1",
+      "model": "qwen",
+      "contrast": "Full-MSCE",
+      "delta_pp": 42,
+      "ci95": [
+        32.98941653871463,
+        52.04081632653061
+      ],
+      "ci95_family": [
+        27.83375479595396,
+        58.55069035604127
+      ],
+      "gained": 46,
+      "lost": 4
+    },
+    {
+      "rq": "rq2",
+      "model": "qwen",
+      "contrast": "history_with_feedback",
+      "delta_pp": 3,
+      "ci95": [
+        -7.826086956521739,
+        13.793103448275861
+      ],
+      "ci95_family": [
+        -12.5,
+        18.638556552564495
+      ],
+      "gained": 19,
+      "lost": 16
+    },
+    {
+      "rq": "rq2",
+      "model": "qwen",
+      "contrast": "history_without_feedback",
+      "delta_pp": 1,
+      "ci95": [
+        -6.0,
+        8.183155080213787
+      ],
+      "ci95_family": [
+        -9.50718462823726,
+        12.159564013222326
+      ],
+      "gained": 8,
+      "lost": 7
+    },
+    {
+      "rq": "rq2",
+      "model": "qwen",
+      "contrast": "feedback_with_history",
+      "delta_pp": 39,
+      "ci95": [
+        30.088495575221238,
+        49.0
+      ],
+      "ci95_family": [
+        25.24271844660194,
+        54.8780487804878
+      ],
+      "gained": 41,
+      "lost": 2
+    },
+    {
+      "rq": "rq2",
+      "model": "qwen",
+      "contrast": "feedback_without_history",
+      "delta_pp": 37,
+      "ci95": [
+        28.67384453781513,
+        46.835443037974684
+      ],
+      "ci95_family": [
+        24.80205684754522,
+        52.308051444679236
+      ],
+      "gained": 38,
+      "lost": 1
+    },
+    {
+      "rq": "rq2",
+      "model": "qwen",
+      "contrast": "interaction",
+      "delta_pp": 2,
+      "ci95": [
+        -9.375,
+        13.26530612244898
+      ],
+      "ci95_family": [
+        -15.329152731326644,
+        19.217883967883886
+      ]
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-Vanilla",
+      "delta_pp": 46,
+      "ci95": [
+        32.20338983050848,
+        59.550561797752806
+      ],
+      "ci95_family": [
+        23.508421985815605,
+        66.66666666666667
+      ],
+      "gained": 53,
+      "lost": 7
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-FewShot",
+      "delta_pp": 20,
+      "ci95": [
+        3.508771929824561,
+        36.170212765957444
+      ],
+      "ci95_family": [
+        -6.364086809003641,
+        45.58796621867971
+      ],
+      "gained": 37,
+      "lost": 17
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-FinalCodeRAG",
+      "delta_pp": 23,
+      "ci95": [
+        6.666666666666667,
+        38.75
+      ],
+      "ci95_family": [
+        -3.4046610169491522,
+        47.76088588588568
+      ],
+      "gained": 40,
+      "lost": 17
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-RawTrajectoryRAG",
+      "delta_pp": 71,
+      "ci95": [
+        61.26126126126126,
+        81.70731707317073
+      ],
+      "ci95_family": [
+        55.55555555555556,
+        87.3683082805903
+      ],
+      "gained": 71,
+      "lost": 0
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-Memento",
+      "delta_pp": 56,
+      "ci95": [
+        45.87155963302752,
+        66.3157894736842
+      ],
+      "ci95_family": [
+        39.75772638128085,
+        72.60547469558595
+      ],
+      "gained": 59,
+      "lost": 3
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-EverMemOS",
+      "delta_pp": 33,
+      "ci95": [
+        19.12970200293112,
+        47.12643678160919
+      ],
+      "ci95_family": [
+        10.960374842301574,
+        55.00942181647925
+      ],
+      "gained": 41,
+      "lost": 8
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-MemSkill",
+      "delta_pp": 40,
+      "ci95": [
+        27.19298245614035,
+        52.747252747252745
+      ],
+      "ci95_family": [
+        19.24641323443295,
+        60.42050614316233
+      ],
+      "gained": 46,
+      "lost": 6
+    },
+    {
+      "rq": "rq1",
+      "model": "deepseek",
+      "contrast": "Full-MSCE",
+      "delta_pp": 55,
+      "ci95": [
+        42.52873563218391,
+        67.3913043478261
+      ],
+      "ci95_family": [
+        35.416666666666664,
+        73.34748593530216
+      ],
+      "gained": 58,
+      "lost": 3
+    },
+    {
+      "rq": "rq2",
+      "model": "deepseek",
+      "contrast": "history_with_feedback",
+      "delta_pp": -2,
+      "ci95": [
+        -12.65995397008055,
+        8.421052631578947
+      ],
+      "ci95_family": [
+        -18.4677606585057,
+        13.333333333333334
+      ],
+      "gained": 11,
+      "lost": 13
+    },
+    {
+      "rq": "rq2",
+      "model": "deepseek",
+      "contrast": "history_without_feedback",
+      "delta_pp": 8,
+      "ci95": [
+        -3.0,
+        18.085359675785185
+      ],
+      "ci95_family": [
+        -8.75,
+        22.960637242747257
+      ],
+      "gained": 22,
+      "lost": 14
+    },
+    {
+      "rq": "rq2",
+      "model": "deepseek",
+      "contrast": "feedback_with_history",
+      "delta_pp": 0,
+      "ci95": [
+        -10.204081632653061,
+        10.75268817204301
+      ],
+      "ci95_family": [
+        -15.31712201009436,
+        16.455696202531644
+      ],
+      "gained": 15,
+      "lost": 15
+    },
+    {
+      "rq": "rq2",
+      "model": "deepseek",
+      "contrast": "feedback_without_history",
+      "delta_pp": 10,
+      "ci95": [
+        -1.0,
+        21.875
+      ],
+      "ci95_family": [
+        -6.352186421173762,
+        27.61653055051412
+      ],
+      "gained": 25,
+      "lost": 15
+    },
+    {
+      "rq": "rq2",
+      "model": "deepseek",
+      "contrast": "interaction",
+      "delta_pp": -10,
+      "ci95": [
+        -24.793553719008266,
+        5.454545454545454
+      ],
+      "ci95_family": [
+        -32.33261846405229,
+        13.399008959253786
+      ]
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-Vanilla",
+      "delta_pp": 26,
+      "ci95": [
+        11.881188118811881,
+        40.00427350427313
+      ],
+      "ci95_family": [
+        3.846153846153846,
+        47.48313373003953
+      ],
+      "gained": 36,
+      "lost": 10
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-FewShot",
+      "delta_pp": 18,
+      "ci95": [
+        1.2654272151898738,
+        33.064970894979346
+      ],
+      "ci95_family": [
+        -7.229101786225659,
+        41.27189094189304
+      ],
+      "gained": 31,
+      "lost": 13
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-FinalCodeRAG",
+      "delta_pp": 4,
+      "ci95": [
+        -11.711711711711711,
+        20.354392002622053
+      ],
+      "ci95_family": [
+        -20.373385622677695,
+        30.115744252292046
+      ],
+      "gained": 25,
+      "lost": 21
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-RawTrajectoryRAG",
+      "delta_pp": 40,
+      "ci95": [
+        27.835051546391753,
+        52.27272727272727
+      ],
+      "ci95_family": [
+        20.385334262255782,
+        58.82352941176471
+      ],
+      "gained": 42,
+      "lost": 2
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-Memento",
+      "delta_pp": 34,
+      "ci95": [
+        18.681318681318682,
+        49.0917065390749
+      ],
+      "ci95_family": [
+        9.168116110080396,
+        58.13516865079302
+      ],
+      "gained": 41,
+      "lost": 7
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-EverMemOS",
+      "delta_pp": 33,
+      "ci95": [
+        19.791666666666668,
+        46.51162790697674
+      ],
+      "ci95_family": [
+        12.244897959183675,
+        53.422387024312684
+      ],
+      "gained": 38,
+      "lost": 5
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-MemSkill",
+      "delta_pp": 39,
+      "ci95": [
+        27.522935779816514,
+        51.48589858985892
+      ],
+      "ci95_family": [
+        20.78011179496328,
+        58.36306885342743
+      ],
+      "gained": 42,
+      "lost": 3
+    },
+    {
+      "rq": "rq1",
+      "model": "haiku",
+      "contrast": "Full-MSCE",
+      "delta_pp": 38,
+      "ci95": [
+        27.722772277227723,
+        49.411764705882355
+      ],
+      "ci95_family": [
+        21.943428184281846,
+        56.61548078827411
+      ],
+      "gained": 39,
+      "lost": 1
+    },
+    {
+      "rq": "rq2",
+      "model": "haiku",
+      "contrast": "history_with_feedback",
+      "delta_pp": 2,
+      "ci95": [
+        -12.903225806451612,
+        16.86831834379765
+      ],
+      "ci95_family": [
+        -20.913280517931682,
+        24.280279429812023
+      ],
+      "gained": 23,
+      "lost": 21
+    },
+    {
+      "rq": "rq2",
+      "model": "haiku",
+      "contrast": "history_without_feedback",
+      "delta_pp": -13,
+      "ci95": [
+        -24.074074074074073,
+        -1.941747572815534
+      ],
+      "ci95_family": [
+        -29.245283018867923,
+        4.2116692257071175
+      ],
+      "gained": 11,
+      "lost": 24
+    },
+    {
+      "rq": "rq2",
+      "model": "haiku",
+      "contrast": "feedback_with_history",
+      "delta_pp": 22,
+      "ci95": [
+        7.6923076923076925,
+        35.869565217391305
+      ],
+      "ci95_family": [
+        1.0072022827282732,
+        42.67528683574859
+      ],
+      "gained": 35,
+      "lost": 13
+    },
+    {
+      "rq": "rq2",
+      "model": "haiku",
+      "contrast": "feedback_without_history",
+      "delta_pp": 7,
+      "ci95": [
+        -3.1578947368421053,
+        17.117760617760563
+      ],
+      "ci95_family": [
+        -8.503980998260404,
+        22.404379695803392
+      ],
+      "gained": 17,
+      "lost": 10
+    },
+    {
+      "rq": "rq2",
+      "model": "haiku",
+      "contrast": "interaction",
+      "delta_pp": 15,
+      "ci95": [
+        -4.166666666666667,
+        33.333333333333336
+      ],
+      "ci95_family": [
+        -13.580246913580247,
+        42.64905570164923
+      ]
+    }
+  ]
+}

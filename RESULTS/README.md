@@ -1,5 +1,15 @@
 # 当前 100 题实验的过程证据
 
+## 论文统计与 RQ4
+
+[`paper_support/results/`](paper_support/results/README.md) 提供论文 RQ1–RQ3 按每题最多 10 次尝试统计的 3600 份逐题记录、36 组指标和复算脚本。DeepSeek Full 的主比较成功率为 71%，20 次扩展预算下的 84% 单独保存在扩展结果字段中；论文 token 使用实报用量，不混入估计值。
+
+[`paper_support/vendor/`](paper_support/vendor/README.md) 提供已完成的 RQ4 厂商编译与仿真实验审计：三个模型各 100 题，每题最多 10 次尝试，Qwen、DeepSeek、Haiku 的成功率分别为 34%、54%、35%。数据包含 300 份任务记录、逐候选阶段状态、逐调用 token、123 份成功回执核查记录及 6182 项来源文件哈希。该包是普通 Git 文件，可运行 `python -B RESULTS/paper_support/vendor/verify.py` 离线复算。它保留收集时的审计结果和来源哈希，未内嵌全部厂商原始回执与工程目录。
+
+以下六个过程压缩包对应 RQ1–RQ3；RQ4 单独发布，不属于这六个包。
+
+## 六组过程证据
+
 本目录按用户要求，从 NAS 与华硕提取能证明实验过程的材料，不是整份远端运行目录备份。是否完成同步，以 `INDEX.json` 的 `status: pass` 和各组 `EXPORT.json` 的 `local_verification: all_file_hashes_pass` 为准。
 
 六组证据已收集完成，逐文件 SHA-256 全部核验通过。GitHub 中的 `process_evidence.tar.gz` 使用 Git LFS 保存完整文件。克隆仓库后需要 Git LFS 下载实际压缩包；普通 Git 文本指针不是证据内容。

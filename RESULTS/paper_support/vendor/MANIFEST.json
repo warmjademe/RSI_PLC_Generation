@@ -1,0 +1,22 @@
+{
+  "algorithm": "sha256",
+  "scope": "Published RQ4 audit, aggregate summary, offline verifier and documentation.",
+  "files": {
+    "vendor_audit.json": {
+      "bytes": 2214605,
+      "sha256": "a31ff45a15e4ef31b5005ef830c43fdaff7de6f6c226cd057fcfabab80455599"
+    },
+    "summary.json": {
+      "bytes": 2442,
+      "sha256": "2f52fcb5b3e0a5dd4bd610dd596c1fc46536567b4b3b4e4ba5ab306ea8f20763"
+    },
+    "verify.py": {
+      "bytes": 6241,
+      "sha256": "c4e9ac10fbdd92ce8d785018f9c118ce75e3b3fc7478891a7380b630a1c2ac4d"
+    },
+    "README.md": {
+      "bytes": 3060,
+      "sha256": "593755a9f9d30d71e8aea8dc998fd3a4ea0f6b4887d5222a74ee41dd0bcce936"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "target": "DVP48ES300R",
+  "candidate_limit": 10,
+  "tasks_per_model": 100,
+  "vendor_audit_sha256": "a31ff45a15e4ef31b5005ef830c43fdaff7de6f6c226cd057fcfabab80455599",
+  "dataset_manifest_sha256": "252ce3da4b63a66fe0aba91cda71a279f6d9e61a0a421c25cc10493756d79e34",
+  "cost_policy": "Reported input/output tokens across generation and learning; missing usage counted separately.",
+  "source_manifest_entries": 6182,
+  "models": {
+    "qwen": {
+      "completed": 100,
+      "success": 34,
+      "failed": 66,
+      "unknown": 0,
+      "first_success": 2,
+      "compile_passed_tasks": 98,
+      "candidate_count": 824,
+      "mean_success_attempts": 4.823529411764706,
+      "model_calls": 1003,
+      "roles": {
+        "plc.generate": 824,
+        "knowledge.curate": 94,
+        "knowledge.review": 85
+      },
+      "input_tokens": 9553240,
+      "output_tokens": 2063526,
+      "missing_usage": 0,
+      "candidate_stages": {
+        "fail/not_run": 335,
+        "pass/fail": 454,
+        "pass/pass": 34,
+        "not_run/not_run": 1
+      },
+      "tokens": 11616766
+    },
+    "deepseek": {
+      "completed": 100,
+      "success": 54,
+      "failed": 46,
+      "unknown": 0,
+      "first_success": 14,
+      "compile_passed_tasks": 88,
+      "candidate_count": 638,
+      "mean_success_attempts": 3.2962962962962963,
+      "model_calls": 774,
+      "roles": {
+        "plc.generate": 638,
+        "knowledge.curate": 74,
+        "knowledge.review": 62
+      },
+      "input_tokens": 8247182,
+      "output_tokens": 1573331,
+      "missing_usage": 0,
+      "candidate_stages": {
+        "fail/not_run": 351,
+        "pass/fail": 233,
+        "pass/pass": 54
+      },
+      "tokens": 9820513
+    },
+    "haiku": {
+      "completed": 100,
+      "success": 35,
+      "failed": 61,
+      "unknown": 4,
+      "first_success": 5,
+      "compile_passed_tasks": 89,
+      "candidate_count": 791,
+      "mean_success_attempts": 4.742857142857143,
+      "model_calls": 942,
+      "roles": {
+        "plc.generate": 791,
+        "knowledge.curate": 80,
+        "knowledge.review": 71
+      },
+      "input_tokens": 20612182,
+      "output_tokens": 2344039,
+      "missing_usage": 6,
+      "candidate_stages": {
+        "fail/not_run": 300,
+        "pass/pass": 35,
+        "pass/fail": 447,
+        "not_run/not_run": 6,
+        "pass/error": 1,
+        "unknown/not_run": 2
+      },
+      "tokens": 22956221
+    }
+  }
+}
